@@ -11,16 +11,14 @@ import {
   SafeAreaView,
   Text,
   StatusBar,
+  View,
 } from 'react-native';
-
+import SplashScreen from './screens/splash'
 
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Text>Hola Tribo App</Text>
-      </SafeAreaView>
+        <SplashScreen/>
     </>
   );
 };
