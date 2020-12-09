@@ -1,4 +1,4 @@
-export const contentText = {
+export default contentText = {
   //SplashScreen
   textoSplashScreenMade: 'Made with love in Colima, México',
   textoSplashScreenWe: '#WeAreMagma',
@@ -95,5 +95,4 @@ export const contentText = {
   textReadmeScreenPoliticaP3: 'La mayoría de los países disponen de unas leyes de privacidad que requieren que las webs que recogen datos personales tengan una política de privacidad en vigor.',
   textReadmeScreenPoliticaP4: 'El incumplimiento de estas leyes puede ocasionar graves sanciones e incluso una acusación formal.',
   textReadmeScreenPoliticaP5: '¿Qué son los datos personales? Los datos personales son un tipo de información a través de la cual se puede identificar a un individuo, ya sea directamente o cuando ésta se combina con otros datos.',
-  
 };

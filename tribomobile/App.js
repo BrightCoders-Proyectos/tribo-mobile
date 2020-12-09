@@ -13,13 +13,14 @@ import {
   StatusBar,
 } from 'react-native';
 
+import contentText from './screensText/contentText';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Text>Hola Tribo App</Text>
+        <Text>{contentText.textoSplash}</Text>
       </SafeAreaView>
     </>
   );
