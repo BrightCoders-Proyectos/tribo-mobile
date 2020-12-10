@@ -21,6 +21,7 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <Text>{contentText.textoSplash}</Text>
+        <Text>{contentText.textoWelcomeScreenGuestLaMArket}</Text>
       </SafeAreaView>
     </>
   );
