@@ -11,15 +11,18 @@ import {
   SafeAreaView,
   Text,
   StatusBar,
+  View,
 } from 'react-native';
-
+import titlesText from './src/titlesText';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Text>Hola Tribo App</Text>
+        <View style={{alignItems:"center", }}>
+          <Text>{titlesText.titleStayHome}</Text>
+        </View>
       </SafeAreaView>
     </>
   );
