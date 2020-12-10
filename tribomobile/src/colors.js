@@ -7,5 +7,7 @@ const colors = {
   GreenContent: '#7ad520',
   GrayLight: '#dfe0e5',
   GrayDark: '#9b9eb1',
+  magenta: '#710244',
+  blueP: '#037d94',
 };
 export default colors;
