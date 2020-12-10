@@ -1,12 +1,25 @@
 import React, {useState} from 'react';
 import {
-  Alert,
   Modal,
   StyleSheet,
+  Image,
   Text,
-  TouchableHighlight,
+  TouchableOpacity,
   View,
 } from 'react-native';
+
+import IconClose from '../../assets/close.png';
+import MapsPin from '../../assets/maps-pin.png';
+
+function Description(props) {
+  const {title, information, style} = props;
+  return (
+    <View style={style}>
+      <Text style={styles.descriptionTitle}>{title}</Text>
+      <Text style={styles.descriptionInfo}>{information}</Text>
+    </View>
+  );
+}
 
 function ModalInfoStore() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -18,50 +31,52 @@ function ModalInfoStore() {
           transparent={true}
           visible={modalVisible}
           onRequestClose={() => {
-            Alert.alert('Modal has been closed.');
+            console.log('Modal has been closed.');
           }}>
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-              <View style={{alignItems: 'flex-end'}}>
-                <Text>X</Text>
+              <View style={styles.iconCloseView}>
+                <TouchableOpacity
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                  }}>
+                  <Image style={styles.iconClose} source={IconClose} />
+                </TouchableOpacity>
               </View>
-              <View style={{flexDirection: 'row', alignItems: 'flex-end'}}>
-                <Text style={{fontSize: 25}}>X</Text>
+              <View style={styles.mapsPinView}>
                 <View>
-                  <Text>La tiendita de Don Memo</Text>
-                  <Text>La tiendita de abarrotes, frutas y verduras</Text>
+                  <Image style={styles.iconMapsPin} source={MapsPin} />
                 </View>
+                <Description
+                  title={'La tiendita de Don Memo'}
+                  information={'Tienda de abarrotes, frutas y verduras'}
+                  style={styles.descriptionLeft}
+                />
               </View>
-              <View>
-                <Text>Dirección</Text>
-                <Text>
-                  Monte Calvario #2387 entre Jorulio y Monte Atlas, Col.
-                  Independencia, Colima,Colima
-                </Text>
-              </View>
-              <View>
-                <Text>Teléfono</Text>
-                <Text>333 333 333 3333</Text>
-              </View>
-              <TouchableHighlight
-                style={{...styles.openButton, backgroundColor: '#2196F3'}}
-                onPress={() => {
-                  setModalVisible(!modalVisible);
-                }}>
-                <Text style={styles.textStyle}>Hide Modal</Text>
-              </TouchableHighlight>
+              <Description
+                title={'Dirección'}
+                information={
+                  'Monte Calvario #2387 entre Jorulio y Monte Atlas, Col. Independencia, Colima,Colima'
+                }
+                style={styles.description}
+              />
+              <Description
+                title={'Teléfono'}
+                information={'333 333 333 3333'}
+                style={styles.description}
+              />
             </View>
           </View>
         </Modal>
       </View>
 
-      <TouchableHighlight
+      <TouchableOpacity
         style={styles.openButton}
         onPress={() => {
           setModalVisible(true);
         }}>
         <Text style={styles.textStyle}>Show Modal</Text>
-      </TouchableHighlight>
+      </TouchableOpacity>
     </>
   );
 }
@@ -74,11 +89,11 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#f7f4f4',
     borderRadius: 7,
-    paddingTop: 5,
+    paddingTop: 25,
     paddingBottom: 15,
-    paddingHorizontal: 15,
+    paddingHorizontal: 25,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -87,6 +102,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    maxWidth: '92%',
   },
   openButton: {
     backgroundColor: '#F194FF',
@@ -97,6 +113,39 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  iconCloseView: {
+    alignItems: 'flex-end',
+  },
+  iconClose: {
+    width: 20,
+    height: 20,
+    tintColor: '#828894',
+  },
+  iconMapsPin: {
+    width: 78,
+    height: 76,
+    tintColor: 'black',
+    marginLeft: -10,
+  },
+  mapsPinView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 25,
+  },
+  descriptionLeft: {
+    maxWidth: '75%',
+    paddingHorizontal: 8,
+  },
+  description: {
+    marginBottom: 30,
+  },
+  descriptionTitle: {
+    fontSize: 17,
+    fontWeight: 'bold',
+  },
+  descriptionInfo: {
+    color: '#828894',
   },
 });
 
