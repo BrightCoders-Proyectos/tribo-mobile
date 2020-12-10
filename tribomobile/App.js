@@ -14,6 +14,7 @@ import {
   View,
 } from 'react-native';
 import titlesText from './src/titlesText';
+import ModalMyAccount from './components/modals/ModalMyAccount';
 
 const App: () => React$Node = () => {
   return (
@@ -23,6 +24,7 @@ const App: () => React$Node = () => {
         <View style={{alignItems:"center", }}>
           <Text>{titlesText.titleStayHome}</Text>
         </View>
+        <ModalMyAccount/>
       </SafeAreaView>
     </>
   );
