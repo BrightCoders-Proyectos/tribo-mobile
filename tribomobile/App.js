@@ -7,12 +7,9 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  Text,
-  StatusBar,
-  View,
-} from 'react-native';
+import {SafeAreaView, Text, StatusBar} from 'react-native';
+import ModalInfoStore from './components/modals/ModalInfoStore';
+import LittlePin from './components/modals/LittlePinInfo';
 import titlesText from './src/titlesText';
 
 const App: () => React$Node = () => {
@@ -20,9 +17,9 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <View style={{alignItems:"center", }}>
-          <Text>{titlesText.titleStayHome}</Text>
-        </View>
+        <ModalInfoStore />
+        <Text>Hola Tribo App</Text>
+        <LittlePin />
       </SafeAreaView>
     </>
   );
