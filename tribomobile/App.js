@@ -7,19 +7,20 @@
  */
 
 import React from 'react';
+import MainScreen from './components/mainScreen';
 import {
   SafeAreaView,
   Text,
   StatusBar,
 } from 'react-native';
 
-
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Text>Hola Tribo App</Text>
+        {/* <Text>Hola Tribo App</Text> */}
+        <MainScreen />
       </SafeAreaView>
     </>
   );
