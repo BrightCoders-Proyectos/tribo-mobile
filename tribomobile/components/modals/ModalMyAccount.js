@@ -20,7 +20,6 @@ function Description(props) {
   );
 }
 
-
 function ModalMyAccount() {
   const [modalVisible, setModalVisible] = useState(false);
   return (
@@ -40,11 +39,14 @@ function ModalMyAccount() {
                   onPress={() => {
                     setModalVisible(!modalVisible);
                   }}>
-                  <Text>
-                    X
-                  </Text>
+                  <Text>X</Text>
                   {/* <Image style={styles.icon} source={CloseIcon} /> */}
                 </TouchableOpacity>
+              </View>
+              <View>
+                <Text style={styles.myAccountTitle}>
+                  {titlesText.titlteMyAccountCuenta}
+                </Text>
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
@@ -73,8 +75,10 @@ function ModalMyAccount() {
               <View style={styles.rowVerticalStyle}>
                 <Description
                   title={titlesText.titlteMyAccountDireccion}
-                  information={'Monte Calvario #2386 Col. Independencia, Colima, Colima'}
-                  style={[styles.descriptionStyle,styles.fullWidth]}
+                  information={
+                    'Monte Calvario #2386 Col. Independencia, Colima, Colima'
+                  }
+                  style={[styles.descriptionStyle, styles.fullWidth]}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
@@ -93,28 +97,28 @@ function ModalMyAccount() {
                 <Description
                   title={titlesText.titlteMyAccountFormaPago}
                   information={'Efectivo'}
-                  style={[styles.descriptionStyle,styles.fullWidth]}
+                  style={[styles.descriptionStyle, styles.fullWidth]}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
                   title={titlesText.titlteMyAccountTipoEntrega}
                   information={'Recoger producto - Servicio a domicilio'}
-                  style={[styles.descriptionStyle,styles.fullWidth]}
+                  style={[styles.descriptionStyle, styles.fullWidth]}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
                   title={titlesText.titlteMyAccountServicioDomicilio}
                   information={'Lunes-Domingo'}
-                  style={[styles.descriptionStyle,styles.fullWidth]}
+                  style={[styles.descriptionStyle, styles.fullWidth]}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
                   title={titlesText.titlteMyAccountHorario}
                   information={'9:00 a.m. a 9:00 p.m.'}
-                  style={[styles.descriptionStyle,styles.fullWidth]}
+                  style={[styles.descriptionStyle, styles.fullWidth]}
                 />
               </View>
             </View>
@@ -127,7 +131,9 @@ function ModalMyAccount() {
         onPress={() => {
           setModalVisible(true);
         }}>
-        <Text style={styles.textStyle}>Show Modal With the info of an My account</Text>
+        <Text style={styles.textStyle}>
+          Show Modal With the info of an My account
+        </Text>
       </TouchableOpacity>
     </>
   );
@@ -190,9 +196,9 @@ const styles = StyleSheet.create({
     width: '50%',
     paddingHorizontal: 8,
   },
-  fullWidth:{
+  fullWidth: {
     width: '100%',
-  },  
+  },
   description: {
     marginBottom: 30,
   },
@@ -204,6 +210,11 @@ const styles = StyleSheet.create({
   descriptionInfo: {
     fontSize: 14,
     color: '#828894',
+  },
+  myAccountTitle: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#4A4A4A',
   },
   contactView: {
     flexDirection: 'row',
