@@ -24,7 +24,7 @@ const App: () => React$Node = () => {
         <View style={{alignItems:"center", }}>
           <Text>{titlesText.titleStayHome}</Text>
         </View>
-        <ModalMyAccount/>
+        <ModalMyAccount/> 
       </SafeAreaView>
     </>
   );

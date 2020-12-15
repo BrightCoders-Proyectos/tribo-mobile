@@ -8,11 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-
-// import CloseIcon from '../../assets/close.png';
-// import MapsPin from '../../assets/maps-pin.png';
-// import PhoneIcon from '../../assets/phone-call.png';
-//import WhatsappIcon from '../../assets/whatsapp.png';
+import titlesText from '../../src/titlesText';
 
 function Description(props) {
   const {title, information, style} = props;
@@ -24,15 +20,6 @@ function Description(props) {
   );
 }
 
-function Contact(props) {
-  const {icon, title} = props;
-  return (
-    <View style={styles.contactView}>
-      <Image style={styles.icon} source={icon} />
-      <Text style={styles.contactTitle}>{title}</Text>
-    </View>
-  );
-}
 
 function ModalMyAccount() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -59,30 +46,77 @@ function ModalMyAccount() {
                   {/* <Image style={styles.icon} source={CloseIcon} /> */}
                 </TouchableOpacity>
               </View>
-              <View style={styles.mapsPinView}>
-                <View>
-                  {/* <Image style={styles.iconMapsPin} source={MapsPin} /> */}
-                </View>
+              <View style={styles.rowVerticalStyle}>
                 <Description
-                  title={'La tiendita de Don Memo'}
-                  information={'Tienda de abarrotes, frutas y verduras'}
-                  style={styles.descriptionLeft}
+                  title={titlesText.titlteMyAccountTelefono}
+                  information={'333 333 3333'}
+                  style={styles.descriptionStyle}
+                />
+                <Description
+                  title={titlesText.titlteMyAccountCorreo}
+                  information={'negocio@lamarket.app'}
+                  style={styles.descriptionStyle}
                 />
               </View>
-              <Description
-                title={'Dirección'}
-                information={
-                  'Monte Calvario #2387 entre Jorulio y Monte Atlas, Col. Independencia, Colima,Colima'
-                }
-                style={styles.description}
-              />
-              <Description
-                title={'Teléfono'}
-                information={'333 333 333 3333'}
-                style={styles.description}
-              />
-              {/* <Contact icon={PhoneIcon} title={'Llamar por teléfono'} /> */}
-              {/* <Contact icon={WhatsappIcon} title={'Envía un mensaje'} /> */}
+              <View style={styles.rowVerticalStyle}>
+                <Description
+                  title={titlesText.titlteMyAccountResponsable}
+                  information={'Jose Ramirez'}
+                  style={styles.descriptionStyle}
+                />
+                <Description
+                  title={titlesText.titlteMyAccountNegocio}
+                  information={'Abarrotes Don Memo'}
+                  style={styles.descriptionStyle}
+                />
+              </View>
+              <View style={styles.rowVerticalStyle}>
+                <Description
+                  title={titlesText.titlteMyAccountDireccion}
+                  information={'Monte Calvario #2386 Col. Independencia, Colima, Colima'}
+                  style={[styles.descriptionStyle,styles.fullWidth]}
+                />
+              </View>
+              <View style={styles.rowVerticalStyle}>
+                <Description
+                  title={titlesText.titlteMyAccountGiro}
+                  information={'Abarrotes'}
+                  style={styles.descriptionStyle}
+                />
+                <Description
+                  title={titlesText.titlteMyAccountVende}
+                  information={'Productos'}
+                  style={styles.descriptionStyle}
+                />
+              </View>
+              <View style={styles.rowVerticalStyle}>
+                <Description
+                  title={titlesText.titlteMyAccountFormaPago}
+                  information={'Efectivo'}
+                  style={[styles.descriptionStyle,styles.fullWidth]}
+                />
+              </View>
+              <View style={styles.rowVerticalStyle}>
+                <Description
+                  title={titlesText.titlteMyAccountTipoEntrega}
+                  information={'Recoger producto - Servicio a domicilio'}
+                  style={[styles.descriptionStyle,styles.fullWidth]}
+                />
+              </View>
+              <View style={styles.rowVerticalStyle}>
+                <Description
+                  title={titlesText.titlteMyAccountServicioDomicilio}
+                  information={'Lunes-Domingo'}
+                  style={[styles.descriptionStyle,styles.fullWidth]}
+                />
+              </View>
+              <View style={styles.rowVerticalStyle}>
+                <Description
+                  title={titlesText.titlteMyAccountHorario}
+                  information={'9:00 a.m. a 9:00 p.m.'}
+                  style={[styles.descriptionStyle,styles.fullWidth]}
+                />
+              </View>
             </View>
           </View>
         </Modal>
@@ -146,24 +180,29 @@ const styles = StyleSheet.create({
     tintColor: 'black',
     marginLeft: -10,
   },
-  mapsPinView: {
+  rowVerticalStyle: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 25,
+    marginVertical: 10,
   },
-  descriptionLeft: {
-    maxWidth: '75%',
+  descriptionStyle: {
+    alignContent: 'center',
+    width: '50%',
     paddingHorizontal: 8,
   },
+  fullWidth:{
+    width: '100%',
+  },  
   description: {
     marginBottom: 30,
   },
   descriptionTitle: {
-    fontSize: 17,
+    fontSize: 15,
     fontWeight: 'bold',
     color: '#828282',
   },
   descriptionInfo: {
+    fontSize: 14,
     color: '#828894',
   },
   contactView: {
