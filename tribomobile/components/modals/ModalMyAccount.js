@@ -125,27 +125,21 @@ function ModalMyAccount() {
                 <TouchableOpacity
                   onPress={() => {
                     //setModalVisible(!modalVisible);
-                  }} style={{width:'50%'}}>
-                  <View style={[styles.buttonSyle,{flexDirection:'row'}]}>
-                    <Text>
-                      Icon
-                    </Text>
-                    <Text style={{color:"#fff",fontSize:16, marginLeft:5,}}>
-                      Editar info
-                    </Text>
+                  }}
+                  style={{width: '50%'}}>
+                  <View style={styles.buttonSyle}>
+                    <Text>Icon</Text>
+                    <Text style={styles.textButtonStyle}>Editar info</Text>
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => {
                     //setModalVisible(!modalVisible);
-                  }} style={{width:'50%'}}>
-                  <View style={[styles.buttonSyle,{flexDirection:'row'}]}>
-                    <Text>
-                      Icon
-                    </Text>
-                    <Text style={{color:"#fff",fontSize:16, marginLeft:5,}}>
-                      Eliminar cuenta
-                    </Text>
+                  }}
+                  style={{width: '50%'}}>
+                  <View style={styles.buttonSyle}>
+                    <Text>Icon</Text>
+                    <Text style={styles.textButtonStyle}>Eliminar cuenta</Text>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -160,7 +154,7 @@ function ModalMyAccount() {
           setModalVisible(true);
         }}>
         <Text style={styles.textStyle}>
-          Show Modal With the info of an My account
+          Show My Account Info
         </Text>
       </TouchableOpacity>
     </>
@@ -191,9 +185,10 @@ const styles = StyleSheet.create({
     maxWidth: '92%',
   },
   openButton: {
-    backgroundColor: 'blue',
+    backgroundColor: '#0ab',
     padding: 10,
-    width: '80%',
+    //width: '80%',
+    borderRadius: 10,
   },
   textStyle: {
     color: 'white',
@@ -225,14 +220,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   buttonSyle: {
-    justifyContent:'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'center',
     width: '90%',
-    marginHorizontal:'5%',
-    height:50,
-    backgroundColor:"#C1C1C1",
-    borderRadius:10,
+    marginHorizontal: '5%',
+    height: 50,
+    backgroundColor: '#C1C1C1',
+    borderRadius: 10,
   },
+  textButtonStyle: {color: '#fff', fontSize: 16, marginLeft: 5},
   fullWidth: {
     width: '100%',
   },
