@@ -126,16 +126,26 @@ function ModalMyAccount() {
                   onPress={() => {
                     //setModalVisible(!modalVisible);
                   }} style={{width:'50%'}}>
-                  <View style={styles.buttonSyle}>
-                    <Text style={{color:"#fff",fontSize:18}}>Editar info</Text>
+                  <View style={[styles.buttonSyle,{flexDirection:'row'}]}>
+                    <Text>
+                      Icon
+                    </Text>
+                    <Text style={{color:"#fff",fontSize:16, marginLeft:5,}}>
+                      Editar info
+                    </Text>
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => {
                     //setModalVisible(!modalVisible);
                   }} style={{width:'50%'}}>
-                  <View style={styles.buttonSyle}>
-                    <Text style={{color:"#fff",fontSize:18}} >Eliminar cuenta</Text>
+                  <View style={[styles.buttonSyle,{flexDirection:'row'}]}>
+                    <Text>
+                      Icon
+                    </Text>
+                    <Text style={{color:"#fff",fontSize:16, marginLeft:5,}}>
+                      Eliminar cuenta
+                    </Text>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -220,7 +230,7 @@ const styles = StyleSheet.create({
     width: '90%',
     marginHorizontal:'5%',
     height:50,
-    backgroundColor:"#828282",
+    backgroundColor:"#C1C1C1",
     borderRadius:10,
   },
   fullWidth: {
