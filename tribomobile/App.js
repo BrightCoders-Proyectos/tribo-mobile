@@ -13,12 +13,13 @@ import LittlePin from './components/modals/LittlePinInfo';
 import titlesText from './src/titlesText';
 import contentText from './screensText/contentText';
 import SplashScreen from './screens/SplashScreen';
+import RecomendationScreen from './screens/recomendationScreen';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-        <SplashScreen/>
+      <SplashScreen/>
     </>
   );
 };
