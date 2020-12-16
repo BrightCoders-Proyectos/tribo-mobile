@@ -9,9 +9,9 @@ import {
   Dimensions,
   StatusBar,
 } from 'react-native';
+import contentText from '../screensText/contentText';
 
 function SplashScreen () {
-  const logoAnim = useRef(new Animated.Value(0)).current;
   const moveAnim = useRef(new Animated.Value(0)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
   useEffect(() => {
@@ -46,9 +46,9 @@ function SplashScreen () {
           source={require('../assets/mountain.png')}
         />
         <Animated.View style={[styles.logoContainer, {marginLeft: moveAnim}]}>
-          <Animated.Text style={[styles.logoText]}>L</Animated.Text>
+          <Animated.Text style={[styles.logoText]}>{contentText.textoSplashScreenL}</Animated.Text>
             <Animated.Text style={[styles.logoText, {opacity: fadeAnim}]}>
-              AMARKET.APP
+              {contentText.textoSplashScreenLaMarket}
             </Animated.Text>
         </Animated.View>
         <Animated.Image
@@ -57,8 +57,8 @@ function SplashScreen () {
         />
       </View>
       <View style={{justifyContent: 'space-between', alignItems: 'center', marginBottom: 20}}>
-        <Animated.Text style={[styles.titleEnd, {opacity: fadeAnim} ]}>Made with love in Colima, México</Animated.Text>
-        <Animated.Text style={[styles.titleEnd, {opacity: fadeAnim} ]}>#WeAreMagma</Animated.Text>
+        <Animated.Text style={[styles.titleEnd, {opacity: fadeAnim} ]}>{contentText.textoSplashScreenMade}</Animated.Text>
+        <Animated.Text style={[styles.titleEnd, {opacity: fadeAnim} ]}>{contentText.textoSplashScreenWe}</Animated.Text>
       </View>
     </SafeAreaView>
   );
