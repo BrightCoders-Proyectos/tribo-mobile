@@ -2,7 +2,7 @@ export default contentText = {
   //SplashScreen
   textoSplashScreenMade: 'Made with love in Colima, México',
   textoSplashScreenWe: '#WeAreMagma',
-  textoSplashScreenLaMarket: 'LMARKET.APP',
+  textoSplashScreenLaMarket: 'AMARKET.APP',
   textoSplashScreenL: 'L',
 
   //WelcomeScreen

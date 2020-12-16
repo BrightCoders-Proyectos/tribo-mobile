@@ -10,6 +10,7 @@ import {
   StatusBar,
 } from 'react-native';
 import contentText from '../screensText/contentText';
+import colors from '../src/colors';
 
 function SplashScreen () {
   const moveAnim = useRef(new Animated.Value(0)).current;
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F1EFEF',
+    backgroundColor: colors.GrayDark,
   },
   contentContainer: {
     flex:1,
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
   logoText: {
     fontSize: 20,
     marginTop: 5,
-    color: '#4E4D4D',
+    color: colors.GrayLight,
     fontWeight: '700',
   },
   logoBig:{
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
   },
   titleEnd:{
     marginTop: 10,
-    color: '#928D8D',
+    color: colors.GrayLight,
     fontSize: 15,
   }
 });
