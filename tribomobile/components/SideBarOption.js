@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import { TouchableHighlight, Text, View, TouchableOpacity } from 'react-native';
+import SideBarStyle from '../styles/SideBarStyle';
 
-const  BarGray = () => {
+const BarGray = () => {
   return(
     <View style={{width: 15}}>
       <Text> </Text>
-  </View>
+    </View>
   );
 }
 
@@ -13,8 +14,8 @@ const SideBarOption = (props)=>{
   const [hide, setHide] = useState(false);
 
   const {
-    textSideBar,
-    textSideBar2
+    textBold,
+    textNormal
   } = props;
 
   const onPress = () => {
@@ -32,13 +33,13 @@ const SideBarOption = (props)=>{
           <View style={{backgroundColor: 'gray'}}>
             {hide && <BarGray/>}
           </View>
-          <View style={{marginLeft: 50, margin: 18, flexDirection: 'row'}}>
+          <View style={SideBarStyle.textContainer}>
             <View>
               <View>
-                <Text style={{fontSize:22, color:'gray', fontWeight: 'bold' }}>{textSideBar}</Text>
+                <Text style={SideBarStyle.textBold}>{textBold}</Text>
               </View>
               <View>
-                <Text style={{fontSize:21, color:'gray'}}>{textSideBar2}</Text>
+                <Text style={SideBarStyle.textNormal}>{textNormal}</Text>
               </View>
             </View>
           </View>
@@ -47,6 +48,5 @@ const SideBarOption = (props)=>{
     </>
   );
 }
-
 
 export default SideBarOption;
