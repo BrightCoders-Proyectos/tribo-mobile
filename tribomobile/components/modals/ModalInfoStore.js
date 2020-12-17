@@ -12,6 +12,7 @@ import CloseIcon from '../../assets/close.png';
 import MapsPin from '../../assets/maps-pin.png';
 import PhoneIcon from '../../assets/phone-call.png';
 import WhatsappIcon from '../../assets/whatsapp.png';
+import titlesText from '../../src/titlesText';
 
 function Description(props) {
   const {title, information, style} = props;
@@ -64,16 +65,16 @@ function ModalInfoStore() {
                   information={'Tienda de abarrotes, frutas y verduras'}
                   style={styles.descriptionLeft}
                 />
-              </View>
+              </View>              
               <Description
-                title={'Dirección'}
+                title={titlesText.titleStoreInfoAddress}
                 information={
                   'Monte Calvario #2387 entre Jorulio y Monte Atlas, Col. Independencia, Colima,Colima'
                 }
                 style={styles.description}
               />
               <Description
-                title={'Teléfono'}
+                title={titlesText.titleStoreInfoPhone}
                 information={'333 333 333 3333'}
                 style={styles.description}
               />
