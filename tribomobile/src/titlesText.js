@@ -1,5 +1,6 @@
 export default titlesText = {
   //welcomescreens
+  titleLogo: 'LAMARKET.APP',
   titleSplashGreeting: '¡Hola!',
   titleSplashWelcome: 'Te damos la bienvenida a',
   titleStayHome: '#QuédateEnCasa',
@@ -9,6 +10,8 @@ export default titlesText = {
   descriptionOfSendMessage:
     'Sólo llama o envía un mensaje y recibe tu pedido en la puerta de tu hogar.',
   inputDescription: 'Escribe tú número teléfonico',
+  titleButtonRegister: 'Registrarme',
+  titleLinkSkip: 'Omitir',
   //Store info
   titleStoreInfoAddress: 'Dirección:',
   titleStoreInfoPhone: 'Teléfono',
