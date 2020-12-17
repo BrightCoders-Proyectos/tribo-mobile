@@ -20,13 +20,14 @@ import ModalInfoStore from './components/modals/ModalInfoStore';
 import LittlePin from './components/modals/LittlePinInfo';
 import RecomendationScreen from './screens/recomendationScreen';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen'; 
+import WelcomeGuestScreen from './components/screens/welcome/WelcomeGuestScreen'; 
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <WelcomeScreen />
+        <WelcomeGuestScreen />
       </SafeAreaView>
     </>
   );
