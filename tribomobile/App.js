@@ -8,7 +8,7 @@
 
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
-import OnBoardScreenConect from './screens/OnBoardScreenReceive';
+import OnBoardScreenConect from './screens/OnBoardScreenConect';
 
 const App: () => React$Node = () => {
   return (
