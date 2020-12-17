@@ -1,4 +1,9 @@
 export default titlesText ={
+    //obBoardingScreens
+    titleOnBoardConect:"Conecta con comercios",
+    titleOnBoardCall:"Llama o envía mensaje ",
+    titleOnBoardReceive:"Recibe tu pedido",
+    
     //welcomescreens
     titleSplashGreeting:"¡Hola!",
     titleSplashWelcome:"Te damos la bienvenida a",
