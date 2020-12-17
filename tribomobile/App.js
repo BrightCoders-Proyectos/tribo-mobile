@@ -17,7 +17,6 @@ import {
 import titlesText from './src/titlesText';
 import ModalMyAccount from './components/modals/ModalMyAccount';
 
-import {SafeAreaView, Text, StatusBar} from 'react-native';
 import ModalInfoStore from './components/modals/ModalInfoStore';
 import LittlePin from './components/modals/LittlePinInfo';
 import RecomendationScreen from './screens/recomendationScreen';
