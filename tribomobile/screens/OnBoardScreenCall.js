@@ -2,7 +2,6 @@ import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import titlesText from '../src/titlesText';
 import contentText from '../screensText/contentText';
-
 import colors from '../src/colors';
 
 const callScreen = () => {
