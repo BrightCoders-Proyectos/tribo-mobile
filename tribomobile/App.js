@@ -27,6 +27,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
+        {/* <ModalInfoStore /> */}
         <WelcomeScreen />
       </SafeAreaView>
     </>
