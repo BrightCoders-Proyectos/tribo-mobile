@@ -5,7 +5,7 @@ const SideBarStyle = StyleSheet.create({
     marginLeft: 50,
     margin: 18, 
     flexDirection: 'row'
-},
+  },
   textBold: {
     fontSize:22, 
     color:'gray', 
