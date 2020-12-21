@@ -20,6 +20,7 @@ import ModalInfoStore from './components/modals/ModalInfoStore';
 import LittlePin from './components/modals/LittlePinInfo';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen'; 
 import RecomendationScreen from './screens/recomendationScreen';
+import RegistrationScreen from './screens/registrationScreen';
 
 
 const App: () => React$Node = () => {
@@ -27,7 +28,8 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <WelcomeScreen />
+        {/* <WelcomeScreen /> */}
+        <RegistrationScreen/>
       </SafeAreaView>
     </>
   );
