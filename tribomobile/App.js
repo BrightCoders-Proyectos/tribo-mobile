@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+
 import {
   SafeAreaView,
   Text,
@@ -15,18 +16,18 @@ import {
 } from 'react-native';
 import titlesText from './src/titlesText';
 import ModalMyAccount from './components/modals/ModalMyAccount';
+import ModalInfoStore from './components/modals/ModalInfoStore';
+import LittlePin from './components/modals/LittlePinInfo';
+import WelcomeScreen from './components/screens/welcome/WelcomeScreen'; 
+import RecomendationScreen from './screens/recomendationScreen';
+
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <View style={{alignItems:"center", }}>
-          <Text>{titlesText.titleStayHome}</Text>
-        </View>
-        <View style={{alignItems:'center', marginTop:'50%'}}>
-          <ModalMyAccount/> 
-        </View>
+        <WelcomeScreen />
       </SafeAreaView>
     </>
   );
