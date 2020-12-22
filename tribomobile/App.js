@@ -7,9 +7,8 @@
  */
 
 import React from 'react';
-import ModalMyAccount from './components/modals/ModalMyAccount';
-
 import {SafeAreaView, Text, StatusBar} from 'react-native';
+import ModalMyAccount from './components/modals/ModalMyAccount';
 import ModalInfoStore from './components/modals/ModalInfoStore';
 import LittlePin from './components/modals/LittlePinInfo';
 import TitlesText from './src/TitlesText';
