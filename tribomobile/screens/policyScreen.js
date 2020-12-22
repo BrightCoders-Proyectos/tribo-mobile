@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import titlesText from '../src/titlesText';
 import contentText from '../screensText/contentText';
+import colors from '../src/colors';
 
 const policyScreen = () => {
   return (
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   title: {
-    color: '#4A4A4A',
+    color: colors.GrayDark,
     fontWeight: 'bold',
     fontSize: 25,
     textAlign: 'center',
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   paragraph: {
-    color: '#939393',
+    color: colors.GrayLight,
     fontSize: 16,
     marginTop: 25,
   },

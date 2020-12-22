@@ -1,4 +1,11 @@
 export default contentText = {
+  //onBoardingScreen
+  textoOnBoardingScreenConnect:'Tribo te conecta con comercios y vendedores cerca de ti.',
+  textoOnBoardingScreenCall:'Sólo llama o envía un mensaje directamente desde tu celular para solicitar lo que necesites.',
+  textoOnBoardingScreenReceive:'Recibe tu pedido en la puerta de tu hogar o pasa directamente por el.',
+  textoOnBoardingScreenOmitir: 'Omitir',
+  textoOnBoardingScreenStart: '¡Comencemos!',
+  
   //SplashScreen
   textoSplashScreenMade: 'Made with love in Colima, México',
   textoSplashScreenWe: '#WeAreMagma',
