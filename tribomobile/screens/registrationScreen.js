@@ -87,29 +87,39 @@ const RegistrationScreen = () => {
             <Text style={[styles.title, {marginTop: 40}]}>
               {titlesText.titleRegistrationRegistro}
             </Text>
-            <Text style={styles.subtitle}>{titlesText.titlteMyAccountTelefono}</Text>
+            <Text style={styles.subtitle}>
+              {titlesText.titlteMyAccountTelefono}
+            </Text>
             <FormInput
               placeholderString={contentText.textRegistrationScreenInputEscribe}
             />
-            <Text style={styles.subtitle}>{titlesText.titleRegistrationCorreo}</Text>
+            <Text style={styles.subtitle}>
+              {titlesText.titleRegistrationCorreo}
+            </Text>
             <FormInput
               placeholderString={
                 contentText.textRegistrationScreenInputRecibirás
               }
             />
-            <Text style={styles.subtitle}>{titlesText.titleRegistrationNombreResponsble}</Text>
+            <Text style={styles.subtitle}>
+              {titlesText.titleRegistrationNombreResponsble}
+            </Text>
             <FormInput
               placeholderString={
                 contentText.textRegistrationScreenInputEgNombre
               }
             />
-            <Text style={styles.subtitle}>{titlesText.titleRegistrationNombreNegocio}</Text>
+            <Text style={styles.subtitle}>
+              {titlesText.titleRegistrationNombreNegocio}
+            </Text>
             <FormInput
               placeholderString={
                 contentText.textRegistrationScreenInputEgNegocio
               }
             />
-            <Text style={styles.subtitle}>{titlesText.titleRegistrationDireccionNegocio}</Text>
+            <Text style={styles.subtitle}>
+              {titlesText.titleRegistrationDireccionNegocio}
+            </Text>
             <FormInput
               placeholderString={contentText.textRegistrationScreenInputCalle}
             />
@@ -119,7 +129,9 @@ const RegistrationScreen = () => {
             <FormInput
               placeholderString={contentText.textRegistrationScreenInputCodigo}
             />
-            <Text style={styles.subtitle}>{titlesText.titleRegistrationGiroNegocio}</Text>
+            <Text style={styles.subtitle}>
+              {titlesText.titleRegistrationGiroNegocio}
+            </Text>
             <FormInput
               placeholderString={
                 contentText.textRegistrationScreenInputRestaurante
@@ -225,7 +237,9 @@ const RegistrationScreen = () => {
                 style={styles.inputTime}
                 placeholder={contentText.textRegistrationScreenInputHoraInicio}
               />
-              <Text style={{margin: 15}}>{contentText.textRegistrationScreenA}</Text>
+              <Text style={{margin: 15}}>
+                {contentText.textRegistrationScreenA}
+              </Text>
               <TextInput
                 style={styles.inputTime}
                 placeholder={contentText.textRegistrationScreenInputHoraFin}
@@ -263,7 +277,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     textAlign: 'center',
-    marginBottom:10,
+    marginBottom: 10,
   },
   checkboxContainer: {
     flexDirection: 'row',
@@ -278,7 +292,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     marginTop: 15,
-    marginBottom: 5
+    marginBottom: 5,
   },
   registerButton: {
     alignSelf: 'center',
@@ -293,11 +307,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     marginTop: 5,
-    marginBottom: 20 
+    marginBottom: 20,
   },
   inputTime: {
     borderRadius: 10,
-    borderWidth: 1, 
+    borderWidth: 1,
     maxWidth: 90,
   },
   registerButtonText: {
