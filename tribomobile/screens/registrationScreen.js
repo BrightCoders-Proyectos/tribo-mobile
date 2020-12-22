@@ -263,6 +263,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     textAlign: 'center',
+    marginBottom:10,
   },
   checkboxContainer: {
     flexDirection: 'row',
