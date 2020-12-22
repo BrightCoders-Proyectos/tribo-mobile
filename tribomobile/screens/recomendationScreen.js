@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import titlesText from '../src/titlesText';
-import contentText from '../screensText/contentText';
+import titlesText from '../src/TitlesText';
+import ContentText from '../screensText/ContentText';
 
 const recomendationScreen = () => {
   return (
@@ -9,10 +9,10 @@ const recomendationScreen = () => {
       <Text style={styles.title}>{titlesText.titleStayHome}</Text>
       <Text style={styles.subtitle}>{titlesText.titleRecomendations}</Text>
       <Text style={styles.paragraph}>
-        {contentText.textReadmeScreenRecomendacionesP1}
+        {ContentText.textReadmeScreenRecomendacionesP1}
       </Text>
       <Text style={styles.paragraph}>
-        {contentText.textReadmeScreenRecomendacionesP2}
+        {ContentText.textReadmeScreenRecomendacionesP2}
       </Text>
     </View>
   );

@@ -12,11 +12,11 @@ import ModalMyAccount from './components/modals/ModalMyAccount';
 import {SafeAreaView, Text, StatusBar} from 'react-native';
 import ModalInfoStore from './components/modals/ModalInfoStore';
 import LittlePin from './components/modals/LittlePinInfo';
-import titlesText from './src/titlesText';
-import contentText from './screensText/contentText';
+import TitlesText from './src/TitlesText';
+import ContentText from './screensText/ContentText';
 import SplashScreen from './screens/SplashScreen';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen'; 
-import RecomendationScreen from './screens/recomendationScreen';
+import RecomendationScreen from './screens/RecomendationScreen';
 
 const App: () => React$Node = () => {
   return (

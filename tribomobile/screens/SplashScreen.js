@@ -9,7 +9,7 @@ import {
   Dimensions,
   StatusBar,
 } from 'react-native';
-import contentText from '../screensText/contentText';
+import ContentText from '../screensText/ContentText';
 import colors from '../src/colors';
 
 function SplashScreen () {
@@ -47,9 +47,9 @@ function SplashScreen () {
           source={require('../assets/mountain.png')}
         />
         <Animated.View style={[styles.logoContainer, {marginLeft: moveAnim}]}>
-          <Animated.Text style={[styles.logoText]}>{contentText.textoSplashScreenL}</Animated.Text>
+          <Animated.Text style={[styles.logoText]}>{ContentText.textoSplashScreenL}</Animated.Text>
             <Animated.Text style={[styles.logoText, {opacity: fadeAnim}]}>
-              {contentText.textoSplashScreenLaMarket}
+              {ContentText.textoSplashScreenLaMarket}
             </Animated.Text>
         </Animated.View>
         <Animated.Image
@@ -58,8 +58,8 @@ function SplashScreen () {
         />
       </View>
       <View style={{justifyContent: 'space-between', alignItems: 'center', marginBottom: 20}}>
-        <Animated.Text style={[styles.titleEnd, {opacity: fadeAnim} ]}>{contentText.textoSplashScreenMade}</Animated.Text>
-        <Animated.Text style={[styles.titleEnd, {opacity: fadeAnim} ]}>{contentText.textoSplashScreenWe}</Animated.Text>
+        <Animated.Text style={[styles.titleEnd, {opacity: fadeAnim} ]}>{ContentText.textoSplashScreenMade}</Animated.Text>
+        <Animated.Text style={[styles.titleEnd, {opacity: fadeAnim} ]}>{ContentText.textoSplashScreenWe}</Animated.Text>
       </View>
     </SafeAreaView>
   );
