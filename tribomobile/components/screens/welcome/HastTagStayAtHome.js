@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import titlesText from '../../../src/titlesText';
+import TitlesText from '../../../src/TitlesText';
 
 function HastTagStayAtHome() {
   return (
     <View>
-      <Text style={styles.textHashTag}>{titlesText.titleStayHome}</Text>
+      <Text style={styles.textHashTag}>{TitlesText.titleStayHome}</Text>
     </View>
   );
 }
