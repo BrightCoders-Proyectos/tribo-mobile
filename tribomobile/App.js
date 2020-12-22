@@ -11,8 +11,14 @@ import {
   SafeAreaView,
   Text,
   StatusBar,
+  View,
 } from 'react-native';
-import SideNavScreen from './screens/SideNavScreen';
+import titlesText from './src/titlesText';
+import ModalMyAccount from './components/modals/ModalMyAccount';
+import ModalInfoStore from './components/modals/ModalInfoStore';
+import LittlePin from './components/modals/LittlePinInfo';
+import WelcomeScreen from './components/screens/welcome/WelcomeScreen'; 
+import RecomendationScreen from './screens/recomendationScreen';
 
 
 const App: () => React$Node = () => {
@@ -20,7 +26,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <SideNavScreen/>
+        <WelcomeScreen />
       </SafeAreaView>
     </>
   );
