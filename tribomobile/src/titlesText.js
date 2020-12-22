@@ -1,3 +1,4 @@
+
 export default titlesText ={
     //obBoardingScreens
     titleOnBoardConect: "Conecta con comercios",
@@ -48,3 +49,4 @@ export default titlesText ={
     //Randoms
     titleRecomendations: "Recomendaciones para el aislamiento preventivo",
 }
+
