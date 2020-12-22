@@ -8,6 +8,12 @@
 
 import React from 'react';
 
+import {
+  SafeAreaView,
+  Text,
+  StatusBar,
+} from 'react-native';
+import SideNavScreen from './screens/SideNavScreen';
 import {SafeAreaView, Text, StatusBar, View} from 'react-native';
 import titlesText from './src/titlesText';
 import ModalMyAccount from './components/modals/ModalMyAccount';
@@ -22,7 +28,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <RegistrationScreen />
+        <SideNavScreen/>
       </SafeAreaView>
     </>
   );
