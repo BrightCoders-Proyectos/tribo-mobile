@@ -12,6 +12,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import SideNavScreen from './screens/SideNavScreen';
 
 
 const App: () => React$Node = () => {
@@ -19,7 +20,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Text>Hola Tribo App</Text>
+        <SideNavScreen/>
       </SafeAreaView>
     </>
   );
