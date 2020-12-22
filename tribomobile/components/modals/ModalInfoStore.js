@@ -65,7 +65,7 @@ function ModalInfoStore() {
                   information={'Tienda de abarrotes, frutas y verduras'}
                   style={styles.descriptionLeft}
                 />
-              </View>              
+              </View>
               <Description
                 title={titlesText.titleStoreInfoAddress}
                 information={
