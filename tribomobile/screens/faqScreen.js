@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import titlesText from '../src/titlesText';
 import contentText from '../screensText/contentText';
+import colors from '../src/colors';
 
 const faqScreen = () => {
   return (
@@ -26,19 +27,19 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   title: {
-    color: '#4A4A4A',
+    color: colors.GrayDark,
     fontWeight: 'bold',
     fontSize: 25,
     textAlign: 'center',
     marginBottom: 40,
   },
   subtitle: {
-    color: '#939393',
+    color: colors.GrayLight,
     fontSize: 16,
     fontWeight: 'bold',
   },
   paragraph: {
-    color: '#939393',
+    color: colors.GrayLight,
     fontSize: 16,
     marginBottom: 15,
   },
