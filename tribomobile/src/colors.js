@@ -9,6 +9,5 @@ const colors = {
   GrayDark: '#9b9eb1',
   blueP: '#037d94',
   mediumvioletred: '#c71585',
-  
 };
 export default colors;

@@ -153,9 +153,7 @@ function ModalMyAccount() {
         onPress={() => {
           setModalVisible(true);
         }}>
-        <Text style={styles.textStyle}>
-          Show My Account Info
-        </Text>
+        <Text style={styles.textStyle}>Show My Account Info</Text>
       </TouchableOpacity>
     </>
   );
