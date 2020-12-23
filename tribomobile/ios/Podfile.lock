@@ -421,6 +421,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+
   RNCCheckbox:
     :path: "../node_modules/@react-native-community/checkbox"
   RNSVG:
@@ -469,6 +470,5 @@ SPEC CHECKSUMS:
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
-
 PODFILE CHECKSUM: 46e7be8995362e47858f66709e31578ba1ac1585
 COCOAPODS: 1.10.0
