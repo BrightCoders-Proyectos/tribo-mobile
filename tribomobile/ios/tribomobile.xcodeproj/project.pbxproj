@@ -14,6 +14,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		22A281CC247BE82F89CC4EF2 /* libPods-tribomobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED59E6CD1C85F8F80ED347E /* libPods-tribomobile-tvOSTests.a */; };
 		1E6C8292F5A95D9E98318FA3 /* libPods-tribomobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6772BC82C958B2CDD96CC4E8 /* libPods-tribomobile.a */; };
+		22A281CC247BE82F89CC4EF2 /* libPods-tribomobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED59E6CD1C85F8F80ED347E /* libPods-tribomobile-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -25,6 +26,10 @@
 		4076F442CC0382218F07C946 /* libPods-tribomobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 905BAD3CB5AC6D3DB036F986 /* libPods-tribomobile-tvOSTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		91164F0D7B6E1DD9EA1C5FD8 /* libPods-tribomobile-tribomobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF23CCD8044F851AF3FAD6B /* libPods-tribomobile-tribomobileTests.a */; };
+		3A4A83F85DA40218345A4030 /* libPods-tribomobile-tribomobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4B2CD9AA56D20DFEF3BAA1 /* libPods-tribomobile-tribomobileTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B11F4245F7E5713FDD65BF92 /* libPods-tribomobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2763AFB3BB451DAB3E24DF /* libPods-tribomobile-tvOS.a */; };
+		D5E05456536DA874596BA5E4 /* libPods-tribomobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7A75714320086121F41E35 /* libPods-tribomobile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,21 @@
 		905BAD3CB5AC6D3DB036F986 /* libPods-tribomobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tribomobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF23CCD8044F851AF3FAD6B /* libPods-tribomobile-tribomobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tribomobile-tribomobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E25C3F7B3A224E77CF99D4 /* Pods-tribomobile-tribomobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile-tribomobileTests.release.xcconfig"; path = "Target Support Files/Pods-tribomobile-tribomobileTests/Pods-tribomobile-tribomobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		1F6653876D4AB24C23B0A22D /* Pods-tribomobile-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile-tvOS.release.xcconfig"; path = "Target Support Files/Pods-tribomobile-tvOS/Pods-tribomobile-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* tribomobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tribomobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* tribomobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tribomobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A614144E42772E8B9A0FB11 /* Pods-tribomobile-tribomobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile-tribomobileTests.release.xcconfig"; path = "Target Support Files/Pods-tribomobile-tribomobileTests/Pods-tribomobile-tribomobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E7A75714320086121F41E35 /* libPods-tribomobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tribomobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D544369FB19ADC6DC95DB72 /* Pods-tribomobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-tribomobile-tvOS/Pods-tribomobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		59B3CA62AFC935430C074C50 /* Pods-tribomobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile.release.xcconfig"; path = "Target Support Files/Pods-tribomobile/Pods-tribomobile.release.xcconfig"; sourceTree = "<group>"; };
+		5B4B2CD9AA56D20DFEF3BAA1 /* libPods-tribomobile-tribomobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tribomobile-tribomobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B1496408514B04E41E3C9A2 /* Pods-tribomobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-tribomobile-tvOSTests/Pods-tribomobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7ED59E6CD1C85F8F80ED347E /* libPods-tribomobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tribomobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = tribomobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82E78641CA66156CDEC4EBED /* Pods-tribomobile-tribomobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile-tribomobileTests.debug.xcconfig"; path = "Target Support Files/Pods-tribomobile-tribomobileTests/Pods-tribomobile-tribomobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		911856B732EEB8FE4127CBA8 /* Pods-tribomobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile.debug.xcconfig"; path = "Target Support Files/Pods-tribomobile/Pods-tribomobile.debug.xcconfig"; sourceTree = "<group>"; };
+		912BAE7C064F4EF69B150AD1 /* Pods-tribomobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-tribomobile-tvOSTests/Pods-tribomobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB2763AFB3BB451DAB3E24DF /* libPods-tribomobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tribomobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F8F923C1DA505E842715A91F /* Pods-tribomobile-tribomobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tribomobile-tribomobileTests.debug.xcconfig"; path = "Target Support Files/Pods-tribomobile-tribomobileTests/Pods-tribomobile-tribomobileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +116,7 @@
 			files = (
 				3A4A83F85DA40218345A4030 /* libPods-tribomobile-tribomobileTests.a in Frameworks */,
 				91164F0D7B6E1DD9EA1C5FD8 /* libPods-tribomobile-tribomobileTests.a in Frameworks */,
+				3A4A83F85DA40218345A4030 /* libPods-tribomobile-tribomobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +126,7 @@
 			files = (
 				D5E05456536DA874596BA5E4 /* libPods-tribomobile.a in Frameworks */,
 				1E6C8292F5A95D9E98318FA3 /* libPods-tribomobile.a in Frameworks */,
+				D5E05456536DA874596BA5E4 /* libPods-tribomobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +137,7 @@
 				B11F4245F7E5713FDD65BF92 /* libPods-tribomobile-tvOS.a in Frameworks */,
 
 				1349A07E2ECE61BC7425CB44 /* libPods-tribomobile-tvOS.a in Frameworks */,
+				B11F4245F7E5713FDD65BF92 /* libPods-tribomobile-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +147,7 @@
 			files = (
 				22A281CC247BE82F89CC4EF2 /* libPods-tribomobile-tvOSTests.a in Frameworks */,
 				4076F442CC0382218F07C946 /* libPods-tribomobile-tvOSTests.a in Frameworks */,
+				22A281CC247BE82F89CC4EF2 /* libPods-tribomobile-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +198,10 @@
 				9FF23CCD8044F851AF3FAD6B /* libPods-tribomobile-tribomobileTests.a */,
 				4ED6292FD7172FDFFA30FD49 /* libPods-tribomobile-tvOS.a */,
 				905BAD3CB5AC6D3DB036F986 /* libPods-tribomobile-tvOSTests.a */,
+				3E7A75714320086121F41E35 /* libPods-tribomobile.a */,
+				5B4B2CD9AA56D20DFEF3BAA1 /* libPods-tribomobile-tribomobileTests.a */,
+				CB2763AFB3BB451DAB3E24DF /* libPods-tribomobile-tvOS.a */,
+				7ED59E6CD1C85F8F80ED347E /* libPods-tribomobile-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,6 +239,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				78EFAA03A18497FB00A6B21E /* Pods */,
 				DDDFC1D83E4CE0E1400C16A8 /* Pods */,
+				78EFAA03A18497FB00A6B21E /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -261,6 +290,11 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				A9855AD563EEED94BC30E170 /* [CP] Copy Pods Resources */,
+				80AB1BB613950AAE232E4CCD /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				F4A0BFFF1F7EDD8D7130BE42 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +313,7 @@
 				A0FC97B711C47C4C0906DA58 /* [CP] Check Pods Manifest.lock */,
 
 				B83E306B0DC5FE12347446AF /* [CP] Check Pods Manifest.lock */,
+				A0FC97B711C47C4C0906DA58 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -286,6 +321,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				70B4C02228A46B77F133FF51 /* [CP] Copy Pods Resources */,
 				1DBE2D24657D08984B30EFD5 /* [CP] Copy Pods Resources */,
+				70B4C02228A46B77F133FF51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,8 +336,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "tribomobile-tvOS" */;
 			buildPhases = (
-				BDD0797AB0F351795F596E43 /* [CP] Check Pods Manifest.lock */,
 				97F150D3453A001AF0C15183 /* [CP] Check Pods Manifest.lock */,
+				BDD0797AB0F351795F596E43 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -323,6 +359,7 @@
 			buildPhases = (
 				A0CB0BA93890606A8D2B6813 /* [CP] Check Pods Manifest.lock */,
 				256FE6D7379B26E7E07878B0 /* [CP] Check Pods Manifest.lock */,
+				A0CB0BA93890606A8D2B6813 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -508,6 +545,25 @@
 		80AB1BB613950AAE232E4CCD /* [CP] Check Pods Manifest.lock */ = {
 
 		97F150D3453A001AF0C15183 /* [CP] Check Pods Manifest.lock */ = {
+		70B4C02228A46B77F133FF51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tribomobile/Pods-tribomobile-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tribomobile/Pods-tribomobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80AB1BB613950AAE232E4CCD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -524,6 +580,7 @@
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-tribomobile-tribomobileTests-checkManifestLockResult.txt",
 				"$(DERIVED_FILE_DIR)/Pods-tribomobile-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-tribomobile-tribomobileTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -532,6 +589,7 @@
 		};
 		A0CB0BA93890606A8D2B6813 /* [CP] Check Pods Manifest.lock */ = {
 		A9855AD563EEED94BC30E170 /* [CP] Copy Pods Resources */ = {
+		A0CB0BA93890606A8D2B6813 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -568,6 +626,24 @@
 			showEnvVarsInLog = 0;
 		};
 		B83E306B0DC5FE12347446AF /* [CP] Check Pods Manifest.lock */ = {
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tribomobile-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0FC97B711C47C4C0906DA58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -591,6 +667,7 @@
 		};
 		BDD0797AB0F351795F596E43 /* [CP] Check Pods Manifest.lock */ = {
 		C0D643C1827A496420FB7C31 /* [CP] Check Pods Manifest.lock */ = {
+		BDD0797AB0F351795F596E43 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -607,6 +684,7 @@
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-tribomobile-tvOS-checkManifestLockResult.txt",
 				"$(DERIVED_FILE_DIR)/Pods-tribomobile-tribomobileTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-tribomobile-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -726,6 +804,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82E78641CA66156CDEC4EBED /* Pods-tribomobile-tribomobileTests.debug.xcconfig */;
 			baseConfigurationReference = F8F923C1DA505E842715A91F /* Pods-tribomobile-tribomobileTests.debug.xcconfig */;
+			baseConfigurationReference = 82E78641CA66156CDEC4EBED /* Pods-tribomobile-tribomobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -750,6 +829,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A614144E42772E8B9A0FB11 /* Pods-tribomobile-tribomobileTests.release.xcconfig */;
 			baseConfigurationReference = B5E25C3F7B3A224E77CF99D4 /* Pods-tribomobile-tribomobileTests.release.xcconfig */;
+			baseConfigurationReference = 3A614144E42772E8B9A0FB11 /* Pods-tribomobile-tribomobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -771,6 +851,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 911856B732EEB8FE4127CBA8 /* Pods-tribomobile.debug.xcconfig */;
 			baseConfigurationReference = 8DA193293B458B1F93921402 /* Pods-tribomobile.debug.xcconfig */;
+			baseConfigurationReference = 911856B732EEB8FE4127CBA8 /* Pods-tribomobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -795,6 +876,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 59B3CA62AFC935430C074C50 /* Pods-tribomobile.release.xcconfig */;
 			baseConfigurationReference = 56C720C166DFFE54D460E479 /* Pods-tribomobile.release.xcconfig */;
+			baseConfigurationReference = 59B3CA62AFC935430C074C50 /* Pods-tribomobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -817,6 +899,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D544369FB19ADC6DC95DB72 /* Pods-tribomobile-tvOS.debug.xcconfig */;
 			baseConfigurationReference = 8FD78D2179F8FB53309668B9 /* Pods-tribomobile-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 4D544369FB19ADC6DC95DB72 /* Pods-tribomobile-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -846,6 +929,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F6653876D4AB24C23B0A22D /* Pods-tribomobile-tvOS.release.xcconfig */;
 			baseConfigurationReference = 7B52CEA14F6A7250F35C4B58 /* Pods-tribomobile-tvOS.release.xcconfig */;
+			baseConfigurationReference = 1F6653876D4AB24C23B0A22D /* Pods-tribomobile-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -875,6 +959,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B1496408514B04E41E3C9A2 /* Pods-tribomobile-tvOSTests.debug.xcconfig */;
 			baseConfigurationReference = 217215CCC207D393D60C35D4 /* Pods-tribomobile-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 7B1496408514B04E41E3C9A2 /* Pods-tribomobile-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -903,6 +988,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 912BAE7C064F4EF69B150AD1 /* Pods-tribomobile-tvOSTests.release.xcconfig */;
 			baseConfigurationReference = 81A5088F50C0EE708D2E6A89 /* Pods-tribomobile-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 912BAE7C064F4EF69B150AD1 /* Pods-tribomobile-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
