@@ -1,10 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import titlesText from '../src/titlesText';
-import contentText from '../screensText/contentText';
-import colors from '../src/colors';
+import titlesText from '../src/TitlesText';
+import contentText from '../screensText/ContentText';
+import colors from '../src/Colors';
 
-const faqScreen = () => {
+const FaqScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{titlesText.titleSideNavFAQ}</Text>
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default faqScreen;
+export default FaqScreen;

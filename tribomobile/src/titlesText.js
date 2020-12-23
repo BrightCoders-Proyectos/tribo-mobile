@@ -1,5 +1,5 @@
 
-export default titlesText ={
+export default TitlesText ={
     //obBoardingScreens
     titleOnBoardConect: "Conecta con comercios",
     titleOnBoardCall: "Llama o envía mensaje ",
