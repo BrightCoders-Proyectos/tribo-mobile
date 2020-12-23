@@ -6,7 +6,7 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-import titlesText from '../../../src/titlesText';
+import TitlesText from '../../../src/TitlesText';
 import GreetingWelcome from './GreetingWelcome';
 import LaMarketLogo from './LaMarketLogo';
 import HastTagStayAtHome from './HastTagStayAtHome';
@@ -15,10 +15,10 @@ import DescriptionText from './DescriptionText';
 function InputRegister() {
   return (
     <View>
-      <Text style={styles.labelInput}>{titlesText.titleRegisterWithPhone}</Text>
+      <Text style={styles.labelInput}>{TitlesText.titleRegisterWithPhone}</Text>
       <TextInput
         style={styles.textInput}
-        placeholder={titlesText.inputDescription}
+        placeholder={TitlesText.inputDescription}
       />
     </View>
   );
@@ -43,22 +43,22 @@ function WelcomeScreen() {
       <HastTagStayAtHome />
       <DescriptionText
         marginHorizontal={60}
-        description={titlesText.descriptionOfShopsNearYou}
+        description={TitlesText.descriptionOfShopsNearYou}
       />
       <DescriptionText
         marginHorizontal={50}
-        description={titlesText.descriptionOfSendMessage}
+        description={TitlesText.descriptionOfSendMessage}
       />
       <InputRegister />
       <CustomButton
         styleTouchable={styles.buttonRegister}
         styleText={styles.textButtonRegister}
-        title={titlesText.titleButtonRegister}
+        title={TitlesText.titleButtonRegister}
       />
       <CustomButton
         styleTouchable={styles.linkSkip}
         styleText={styles.textLinkSkip}
-        title={titlesText.titleLinkSkip}
+        title={TitlesText.titleLinkSkip}
       />
     </View>
   );

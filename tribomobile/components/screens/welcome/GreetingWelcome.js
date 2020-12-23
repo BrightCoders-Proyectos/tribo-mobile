@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import titlesText from '../../../src/titlesText';
+import TitlesText from '../../../src/TitlesText';
 
 function GreetingWelcome() {
   return (
     <View>
-      <Text style={styles.textHello}>{titlesText.titleSplashGreeting}</Text>
-      <Text style={styles.textWelcome}>{titlesText.titleSplashWelcome}</Text>
+      <Text style={styles.textHello}>{TitlesText.titleSplashGreeting}</Text>
+      <Text style={styles.textWelcome}>{TitlesText.titleSplashWelcome}</Text>
     </View>
   );
 }

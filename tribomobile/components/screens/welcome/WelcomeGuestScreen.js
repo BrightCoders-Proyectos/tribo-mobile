@@ -4,8 +4,8 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import titlesText from '../../../src/titlesText';
-import contentText from '../../../screensText/contentText';
+import titlesText from '../../../src/TitlesText';
+import contentText from '../../../screensText/ContentText';
 import GreetingWelcome from './GreetingWelcome';
 import LaMarketLogo from './LaMarketLogo';
 import HastTagStayAtHome from './HastTagStayAtHome';
