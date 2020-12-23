@@ -2,9 +2,9 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import titlesText from '../src/TitlesText';
 import ContentText from '../screensText/ContentText';
-import colors from '../src/colors';
+import colors from '../src/Colors';
 
-const recomendationScreen = () => {
+const RecomendationScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{titlesText.titleStayHome}</Text>
@@ -43,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default recomendationScreen;
+export default RecomendationScreen;

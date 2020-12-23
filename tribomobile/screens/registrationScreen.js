@@ -10,8 +10,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-import titlesText from '../src/titlesText';
-import contentText from '../screensText/contentText';
+import titlesText from '../src/TitlesText';
+import contentText from '../screensText/ContentText';
 import Mountains from '../assets/mountains.png';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 

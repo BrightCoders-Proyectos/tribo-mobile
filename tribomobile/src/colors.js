@@ -1,4 +1,4 @@
-const colors = {
+const Colors = {
   BlueDark: '#1F1F1F',
   BlueLight: '#12a4ed',
   OrangeFonts: '#e98d1e',
@@ -15,4 +15,4 @@ const colors = {
   Yellow: '#FFCA00',
   White: '#ffffff',
 };
-export default colors;
+export default Colors;
