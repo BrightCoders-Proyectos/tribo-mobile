@@ -19,7 +19,6 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/* <Text>Hola Tribo App</Text> */}
         <MainScreen />
       </SafeAreaView>
     </>

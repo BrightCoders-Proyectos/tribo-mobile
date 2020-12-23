@@ -15,12 +15,10 @@ import store from '../assets/store.png';
 import user from '../assets/user1.png';
 import MapStyle from './MapStyle';
 import string from './constant';
+import IconNav from './IconNav';
 
 const MainScreen = () => {
-  function pressMenu() {
-    console.log('Se presiono el menu');
-  }
-
+  
   const regionMap = {
     latitude: 19.256127,
     longitude: -103.713536,
@@ -62,18 +60,15 @@ const MainScreen = () => {
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>
-        <TouchableOpacity onPress={pressMenu}>
+        <TouchableOpacity>
           <Image style={style.menuimage} source={menuImage} />
         </TouchableOpacity>
         <TextInput style={style.textinput} placeholder="Escribe tu dirección" />
       </View>
       <View elevation={5} style={[style.navDown, style.iconsDown]}>
-        <Image source={food} style={style.imagenServices} />
-        <Text style={style.textDown}>{string.food}</Text>
-        <Image source={store} style={style.imagenServices} />
-        <Text style={style.textDown}>{string.product}</Text>
-        <Image source={user} style={style.imagenServices} />
-        <Text style={style.textDown}>{string.service}</Text>
+        <IconNav image={food} text={string.food} />
+        <IconNav image={store} text={string.product} />
+        <IconNav image={user} text={string.service} />
       </View>
     </View>
   );
@@ -98,7 +93,6 @@ const style = StyleSheet.create({
     borderRadius: 7,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
   },
   navBar: {
     marginTop: 10,
@@ -138,5 +132,6 @@ const style = StyleSheet.create({
     height: 30,
   },
 });
+
 
 export default MainScreen;
