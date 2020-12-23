@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import titlesText from '../../src/titlesText';
+import TitlesText from '../../src/TitlesText';
 
 function Description(props) {
   const {title, information, style} = props;
@@ -45,36 +45,36 @@ function ModalMyAccount() {
               </View>
               <View>
                 <Text style={styles.myAccountTitle}>
-                  {titlesText.titlteMyAccountCuenta}
+                  {TitlesText.titlteMyAccountCuenta}
                 </Text>
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
-                  title={titlesText.titlteMyAccountTelefono}
+                  title={TitlesText.titlteMyAccountTelefono}
                   information={'333 333 3333'}
                   style={styles.descriptionStyle}
                 />
                 <Description
-                  title={titlesText.titlteMyAccountCorreo}
+                  title={TitlesText.titlteMyAccountCorreo}
                   information={'negocio@lamarket.app'}
                   style={styles.descriptionStyle}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
-                  title={titlesText.titlteMyAccountResponsable}
+                  title={TitlesText.titlteMyAccountResponsable}
                   information={'Jose Ramirez'}
                   style={styles.descriptionStyle}
                 />
                 <Description
-                  title={titlesText.titlteMyAccountNegocio}
+                  title={TitlesText.titlteMyAccountNegocio}
                   information={'Abarrotes Don Memo'}
                   style={styles.descriptionStyle}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
-                  title={titlesText.titlteMyAccountDireccion}
+                  title={TitlesText.titlteMyAccountDireccion}
                   information={
                     'Monte Calvario #2386 Col. Independencia, Colima, Colima'
                   }
@@ -83,40 +83,40 @@ function ModalMyAccount() {
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
-                  title={titlesText.titlteMyAccountGiro}
+                  title={TitlesText.titlteMyAccountGiro}
                   information={'Abarrotes'}
                   style={styles.descriptionStyle}
                 />
                 <Description
-                  title={titlesText.titlteMyAccountVende}
+                  title={TitlesText.titlteMyAccountVende}
                   information={'Productos'}
                   style={styles.descriptionStyle}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
-                  title={titlesText.titlteMyAccountFormaPago}
+                  title={TitlesText.titlteMyAccountFormaPago}
                   information={'Efectivo'}
                   style={[styles.descriptionStyle, styles.fullWidth]}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
-                  title={titlesText.titlteMyAccountTipoEntrega}
+                  title={TitlesText.titlteMyAccountTipoEntrega}
                   information={'Recoger producto - Servicio a domicilio'}
                   style={[styles.descriptionStyle, styles.fullWidth]}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
-                  title={titlesText.titlteMyAccountServicioDomicilio}
+                  title={TitlesText.titlteMyAccountServicioDomicilio}
                   information={'Lunes-Domingo'}
                   style={[styles.descriptionStyle, styles.fullWidth]}
                 />
               </View>
               <View style={styles.rowVerticalStyle}>
                 <Description
-                  title={titlesText.titlteMyAccountHorario}
+                  title={TitlesText.titlteMyAccountHorario}
                   information={'9:00 a.m. a 9:00 p.m.'}
                   style={[styles.descriptionStyle, styles.fullWidth]}
                 />

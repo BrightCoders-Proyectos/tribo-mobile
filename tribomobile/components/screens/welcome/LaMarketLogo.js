@@ -1,13 +1,13 @@
 import React from 'react';
 import {StyleSheet, Image, Text, View} from 'react-native';
-import titlesText from '../../../src/titlesText';
+import TitlesText from '../../../src/TitlesText';
 import Montain from '../../../assets/mountains.png';
 
 function LaMarketLogo() {
   return (
     <View>
       <Image style={styles.montainIcon} source={Montain} />
-      <Text style={styles.textMarket}>{titlesText.titleLogo}</Text>
+      <Text style={styles.textMarket}>{TitlesText.titleLogo}</Text>
     </View>
   );
 }

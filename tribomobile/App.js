@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+
 import {
   SafeAreaView,
   Text,
@@ -21,6 +22,9 @@ import LittlePin from './components/modals/LittlePinInfo';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen';
 import RecomendationScreen from './screens/recomendationScreen';
 import RegistrationScreen from './screens/registrationScreen';
+import ContentText from './screensText/ContentText';
+import SplashScreen from './screens/SplashScreen';
+
 
 const App: () => React$Node = () => {
   return (
