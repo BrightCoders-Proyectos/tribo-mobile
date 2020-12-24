@@ -10,7 +10,7 @@ import {
   StatusBar,
 } from 'react-native';
 import ContentText from '../screensText/ContentText';
-import colors from '../src/colors';
+import colors from '../src/Colors';
 
 function SplashScreen () {
   const moveAnim = useRef(new Animated.Value(0)).current;

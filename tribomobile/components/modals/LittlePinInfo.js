@@ -19,7 +19,6 @@ function Description(props) {
   );
 }
 
-
 function ModalInfoStore() {
   const [modalVisible, setModalVisible] = useState(false);
   return (
@@ -33,7 +32,7 @@ function ModalInfoStore() {
             console.log('Modal has been closed.');
           }}>
           <View style={styles.centeredView}>
-            <View style={styles.modalView}>              
+            <View style={styles.modalView}>
               <View style={styles.mapsPinView}>
                 <View>
                   <Image style={styles.iconMapsPin} source={MapsPin} />
