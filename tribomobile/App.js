@@ -14,12 +14,10 @@ import {
   StatusBar,
 } from 'react-native';
 import SideNavScreen from './screens/SideNavScreen';
-import {SafeAreaView, Text, StatusBar, View} from 'react-native';
-import titlesText from './src/titlesText';
-import ModalMyAccount from './components/modals/ModalMyAccount';
-import ModalInfoStore from './components/modals/ModalInfoStore';
+import titlesText from './src/TitlesText';
 import LittlePin from './components/modals/LittlePinInfo';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen';
+import WelcomeGuestScreen from './components/screens/welcome/WelcomeGuestScreen';
 import RecomendationScreen from './screens/recomendationScreen';
 import RegistrationScreen from './screens/registrationScreen';
 import ContentText from './screensText/ContentText';
@@ -31,7 +29,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <SideNavScreen/>
+        <WelcomeGuestScreen />
       </SafeAreaView>
     </>
   );
