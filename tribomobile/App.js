@@ -7,12 +7,12 @@
  */
 
 import React from 'react';
-
 import {
   SafeAreaView,
   Text,
   StatusBar,
 } from 'react-native';
+import MainScreen from './components/MainScreen';
 import SideNavScreen from './screens/SideNavScreen';
 import titlesText from './src/TitlesText';
 import LittlePin from './components/modals/LittlePinInfo';
