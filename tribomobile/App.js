@@ -22,14 +22,26 @@ import RecomendationScreen from './screens/recomendationScreen';
 import RegistrationScreen from './screens/registrationScreen';
 import ContentText from './screensText/ContentText';
 import SplashScreen from './screens/SplashScreen';
+import CheckboxCustom from './components/CheckBoxCustom';
+import RadioButtomCustom from './components/RadioButtonCustom';
 
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <WelcomeGuestScreen />
+      <SafeAreaView style={{flex:1,justifyContent:'center'}}>
+        <Text style={{marginLeft:35, marginBottom:10}}>{titlesText.titleRegistrationVenta}</Text>
+        <RadioButtomCustom/>
+        <Text style={{marginLeft:35, marginBottom:10, marginTop:10}}>{titlesText.titleRegistrationFormasPago}</Text>
+        <CheckboxCustom 
+        value={false}
+        title={ContentText.textRegistrationScreenCheckboxEfectivo}
+        />
+        <CheckboxCustom
+        value={false}
+        title={ContentText.textRegistrationScreenCheckboxTarjeta}
+        />
       </SafeAreaView>
     </>
   );
