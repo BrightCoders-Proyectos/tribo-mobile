@@ -12,7 +12,7 @@ var radio_props = [
  
 function RadioButtomCustom () {
   return (
-    <View style={{flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
+    <View style={styles.radioForm}>
          <RadioForm
           radio_props={radio_props}
           initial={0}
@@ -22,5 +22,13 @@ function RadioButtomCustom () {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  radioForm:{
+    flexDirection: 'row', 
+    alignItems:'center', 
+    justifyContent:'center'
+  }
+});
 
 export default RadioButtomCustom;
