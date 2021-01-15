@@ -22,6 +22,7 @@ import RecomendationScreen from './screens/RecomendationScreen';
 import RegistrationScreen from './screens/RegistrationScreen';
 import ContentText from './screensText/ContentText';
 import SplashScreen from './screens/SplashScreen';
+import LogoTribo from './components/LogoTribo';
 
 
 const App: () => React$Node = () => {
@@ -29,7 +30,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <WelcomeGuestScreen />
+        <LogoTribo width={128} height={43} line={true}/>
       </SafeAreaView>
     </>
   );
