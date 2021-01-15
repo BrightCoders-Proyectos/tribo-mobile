@@ -34,15 +34,13 @@ const TextInputs = (props) => {
   };
 
   return (
-    <>
-      <TextInput
-        style={textInputStyling(textInputType)}
-        placeholder={placeholderText}
-        placeholderTextColor={
-          textInputType === 'textInputNull' ? Colors.Red : Colors.GrayDark
-        }
-      />
-    </>
+    <TextInput
+      style={textInputStyling(textInputType)}
+      placeholder={placeholderText}
+      placeholderTextColor={
+        textInputType === 'textInputNull' ? Colors.Red : Colors.GrayDark
+      }
+    />
   );
 };
 
