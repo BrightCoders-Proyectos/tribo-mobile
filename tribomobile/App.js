@@ -30,7 +30,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <LogoTribo width={128} height={43} line={true}/>
+        <LogoTribo width={256} height={86} line={false}/>
       </SafeAreaView>
     </>
   );
