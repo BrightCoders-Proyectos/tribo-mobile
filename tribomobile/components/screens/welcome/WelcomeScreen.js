@@ -4,13 +4,17 @@ import {
   StyleSheet,
   Text,
   View,
+  Button,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import TitlesText from '../../../src/TitlesText';
 import GreetingWelcome from './GreetingWelcome';
 import LaMarketLogo from './LaMarketLogo';
 import HastTagStayAtHome from './HastTagStayAtHome';
 import DescriptionText from './DescriptionText';
+import {CustomButton, ConfigBtnCustom} from '../../CustomButton';
+import WhatsappIcon from '../../../assets/whatsapp.png';
 
 function InputRegister() {
   return (
@@ -20,17 +24,6 @@ function InputRegister() {
         style={styles.textInput}
         placeholder={TitlesText.inputDescription}
       />
-    </View>
-  );
-}
-
-function CustomButton(props) {
-  const {styleTouchable, styleText, title} = props;
-  return (
-    <View>
-      <TouchableOpacity style={styleTouchable} onPress={() => {}}>
-        <Text style={styleText}>{title}</Text>
-      </TouchableOpacity>
     </View>
   );
 }
@@ -50,19 +43,22 @@ function WelcomeScreen() {
         description={TitlesText.descriptionOfSendMessage}
       />
       <InputRegister />
+
       <CustomButton
-        styleTouchable={styles.buttonRegister}
-        styleText={styles.textButtonRegister}
-        title={TitlesText.titleButtonRegister}
-      />
-      <CustomButton
-        styleTouchable={styles.linkSkip}
-        styleText={styles.textLinkSkip}
-        title={TitlesText.titleLinkSkip}
+        size={ConfigBtnCustom.SIZE.SMALL}
+        titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
+        bgBtn={ConfigBtnCustom.COLOR.GREEN}
+        borderColorBtn={ConfigBtnCustom.COLOR.GREEN}
+        titleColor={ConfigBtnCustom.COLOR.WHITE}
+        widthBtn={ConfigBtnCustom.WIDTH.SMALL_WITH_ICON}
+        icon={ConfigBtnCustom.ICON.WHATSAPP}
+        title={'Button'}
+        disabled={false}
       />
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#DFDFDF',
@@ -90,13 +86,14 @@ const styles = StyleSheet.create({
   },
   buttonRegister: {
     alignItems: 'center',
+    flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: '#B9B9B9',
     width: 180,
     color: 'white',
     height: 50,
     marginHorizontal: '28%',
-    borderRadius: 10,
+    borderRadius: 25,
     marginTop: 40,
   },
   linkSkip: {
