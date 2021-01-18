@@ -7,11 +7,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {SafeAreaView, Text, StatusBar} from 'react-native';
 import MainScreen from './components/MainScreen';
 import SideNavScreen from './screens/SideNavScreen';
 import titlesText from './src/TitlesText';
@@ -24,6 +20,8 @@ import ContentText from './screensText/ContentText';
 import SplashScreen from './screens/SplashScreen';
 import CheckboxCustom from './components/CheckBoxCustom';
 import RadioButtomCustom from './components/RadioButtonCustom';
+import {CustomButton, ConfigBtnCustom} from './components/CustomButton';
+import ExampleButtons from './ExampleButtons';
 
 
 const App: () => React$Node = () => {
@@ -42,6 +40,7 @@ const App: () => React$Node = () => {
         value={false}
         title={ContentText.textRegistrationScreenCheckboxTarjeta}
         />
+        <ExampleButtons />
       </SafeAreaView>
     </>
   );
