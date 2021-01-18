@@ -6,7 +6,6 @@ const Colors = {
   BlueSky: '#E1F1F5',
   GreenContent: '#7ad520',
   GrayDark: '#9b9eb1',
-  blueP: '#037d94',
   mediumvioletred: '#c71585',
   Red: '#B91C1C' ,
   GrayLight: '#939393',
