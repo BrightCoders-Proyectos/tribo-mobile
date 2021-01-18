@@ -14,10 +14,11 @@ import titlesText from './src/TitlesText';
 import LittlePin from './components/modals/LittlePinInfo';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen';
 import WelcomeGuestScreen from './components/screens/welcome/WelcomeGuestScreen';
-import RecomendationScreen from './screens/recomendationScreen';
-import RegistrationScreen from './screens/registrationScreen';
+import RecomendationScreen from './screens/RecomendationScreen';
+import RegistrationScreen from './screens/RegistrationScreen';
 import ContentText from './screensText/ContentText';
 import SplashScreen from './screens/SplashScreen';
+import LogoTribo from './components/LogoTribo';
 import {CustomButton, ConfigBtnCustom} from './components/CustomButton';
 import ExampleButtons from './ExampleButtons';
 
@@ -26,7 +27,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ExampleButtons />
+        <LogoTribo width={256} height={86} line={false}/>
       </SafeAreaView>
     </>
   );
