@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import RadioForm  from 'react-native-simple-radio-button';
 import ContentText from '../screensText/ContentText';
 import Colors from "../src/Colors";
