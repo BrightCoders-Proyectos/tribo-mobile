@@ -21,18 +21,6 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Text>{titlesText.titleRegistrationVenta}</Text>
-        <RadioButtomCustom/>
-        <Text>{titlesText.titleRegistrationFormasPago}</Text>
-        <CheckboxCustom 
-        value={false}
-        title={ContentText.textRegistrationScreenCheckboxEfectivo}
-        />
-        <CheckboxCustom
-        value={false}
-        title={ContentText.textRegistrationScreenCheckboxTarjeta}
-        />
-        <ExampleButtons />
         <LogoTribo width={256} height={86} line={false}/>
       </SafeAreaView>
     </>
