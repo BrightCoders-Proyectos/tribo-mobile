@@ -22,8 +22,25 @@ function Description(props) {
   );
 }
 
-function ModalDeleteStore() {
+const ModalDeleteStoreTexts = {
+  title: {
+    business: TitlesText.titleDeleteBusiness,
+    account: TitlesText.titleDeleteAccount,
+  },
+  description: {
+    business: TitlesText.descriptionDeleteBussines,
+    interrogationSimbol: TitlesText.interrogationSimbol,
+    account: TitlesText.descriptionDeleteAccount,
+  },
+};
+
+function ModalDeleteStore(props) {
+  const {title, description} = props;
   const [modalVisible, setModalVisible] = useState(false);
+
+  const closeModal = () => {
+    setModalVisible(!modalVisible);
+  };
   return (
     <>
       <View style={styles.centeredView}>
@@ -31,9 +48,7 @@ function ModalDeleteStore() {
           animationType="slide"
           transparent={true}
           visible={modalVisible}
-          onRequestClose={() => {
-            console.log('Modal has been closed.');
-          }}>
+          onRequestClose={() => {}}>
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <View style={styles.iconCloseView}>
@@ -45,33 +60,34 @@ function ModalDeleteStore() {
                 </TouchableOpacity>
               </View>
               <Description
-                title={'Eliminar tu negocio'}
-                information={
-                  '¿Estas seguro que quieres eliminar tu negocio "La fonda de doña Luisa"?'
-                }
+                title={title}
+                information={description}
                 style={styles.description}
               />
-              <CustomButton
-                size={ConfigBtnCustom.SIZE.SMALL}
-                titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
-                bgBtn={ConfigBtnCustom.COLOR.GREEN}
-                borderColorBtn={ConfigBtnCustom.COLOR.GREEN}
-                titleColor={ConfigBtnCustom.COLOR.WHITE}
-                widthBtn={ConfigBtnCustom.WIDTH.LARGE_WITH_ICON}
-                title={'Confirmar'}
-                disabled={false}
-              />
-              
-              <CustomButton
-                size={ConfigBtnCustom.SIZE.SMALL}
-                titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
-                bgBtn={ConfigBtnCustom.COLOR.DISABLED}
-                borderColorBtn={ConfigBtnCustom.COLOR.DISABLED}
-                titleColor={ConfigBtnCustom.COLOR.WHITE}
-                widthBtn={ConfigBtnCustom.WIDTH.LARGE_WITH_ICON}
-                title={'Cancelar'}
-                disabled={false}
-              />
+              <View style={styles.containerButtons}>
+                <CustomButton
+                  style={{backgroundColor: 'black'}}
+                  size={ConfigBtnCustom.SIZE.SMALL}
+                  titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
+                  bgBtn={ConfigBtnCustom.COLOR.GREEN}
+                  borderColorBtn={ConfigBtnCustom.COLOR.GREEN}
+                  titleColor={ConfigBtnCustom.COLOR.WHITE}
+                  widthBtn={165}
+                  title={'Confirmar'}
+                  disabled={false}
+                />
+                <CustomButton
+                  size={ConfigBtnCustom.SIZE.SMALL}
+                  titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
+                  bgBtn={ConfigBtnCustom.COLOR.DISABLED}
+                  borderColorBtn={ConfigBtnCustom.COLOR.DISABLED}
+                  titleColor={ConfigBtnCustom.COLOR.WHITE}
+                  widthBtn={165}
+                  title={'Cancelar'}
+                  disabled={false}
+                  action={closeModal}
+                />
+              </View>
             </View>
           </View>
         </Modal>
@@ -100,7 +116,6 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     paddingTop: 25,
     paddingBottom: 40,
-    paddingHorizontal: 25,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -123,18 +138,16 @@ const styles = StyleSheet.create({
   },
   iconCloseView: {
     alignItems: 'flex-end',
+    marginHorizontal: 20,
   },
   icon: {
     width: 20,
     height: 20,
     tintColor: '#828894',
   },
-  descriptionLeft: {
-    maxWidth: '75%',
-    paddingHorizontal: 8,
-  },
   description: {
     maxWidth: '98%',
+    marginHorizontal: 15,
   },
   descriptionTitle: {
     fontSize: 30,
@@ -147,6 +160,11 @@ const styles = StyleSheet.create({
     fontSize: 24,
     textAlign: 'center',
   },
+  containerButtons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+  },
 });
 
-export default ModalDeleteStore;
+export { ModalDeleteStore, ModalDeleteStoreTexts };

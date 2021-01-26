@@ -48,5 +48,11 @@ export default TitlesText ={
     titleFAQFunciona: "¿Cómo funciona la plataforma?",
     //Randoms
     titleRecomendations: "Recomendaciones para el aislamiento preventivo",
+    //delete
+    titleDeleteBusiness: 'Eliminar tu negocio',
+    titleDeleteAccount: 'Eliminar tu cuenta',
+    descriptionDeleteBussines: '¿Estas seguro que quieres eliminar tu negocio',
+    descriptionDeleteAccount: '¿Estas seguro que quieres eliminar tu cuenta?',
+    interrogationSimbol: '?'
 }
 
