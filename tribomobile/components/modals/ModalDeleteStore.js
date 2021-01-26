@@ -11,6 +11,7 @@ import {
 import CloseIcon from '../../assets/close.png';
 import TitlesText from '../../src/TitlesText';
 import {CustomButton, ConfigBtnCustom} from '../CustomButton';
+import PropTypes from 'prop-types';
 
 function Description(props) {
   const {title, information, style} = props;
@@ -166,5 +167,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
 });
+
+ModalDeleteStore.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
+
 
 export { ModalDeleteStore, ModalDeleteStoreTexts };

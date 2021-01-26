@@ -4,7 +4,8 @@
 import 'react-native';
 import React from 'react';
 import App from '../App';
-import colors from '../src/colors';
+import colors from '../src/Colors';
+import renderer from 'react-test-renderer';
 
 const FixedDimensionsBasics = () => {
   return (
@@ -23,5 +24,9 @@ const FixedDimensionsBasics = () => {
     </View>
   );
 };
+
+It(){
+
+}
 
 export default App-test;
