@@ -8,6 +8,11 @@ import {
   View,
 } from 'react-native';
 import MapsPin from '../../assets/maps-pin.png';
+import Backicon from '../../assets/backicon.png';
+import FodPin from '../../assets/foodicon.png';
+import StorePin from '../../assets/storeicon.png';
+import ServiceIcon from '../../assets/serviceicon.png';
+
 
 function Description(props) {
   const {title, information, style} = props;
@@ -19,7 +24,9 @@ function Description(props) {
   );
 }
 
-function ModalInfoStore() {
+function ModalInfoStore(props) {
+  //const {iconColor} = props;
+  let iconColor ='red';
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
@@ -32,10 +39,10 @@ function ModalInfoStore() {
             console.log('Modal has been closed.');
           }}>
           <View style={styles.centeredView}>
-            <View style={styles.modalView}>
+            <View style={[styles.modalView,styles.shadowStyle]}>
               <View style={styles.mapsPinView}>
                 <View>
-                  <Image style={styles.iconMapsPin} source={MapsPin} />
+                  <Image style={styles.iconMapsPin} source={Backicon} />
                 </View>
                 <Description
                   title={'La tiendita de Don Memo'}
@@ -44,6 +51,8 @@ function ModalInfoStore() {
                 />
               </View>
             </View>
+            <View
+              style={[styles.modalArrow,styles.shadowStyle]}></View>
           </View>
         </Modal>
       </View>
@@ -70,6 +79,17 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 12,
     paddingHorizontal: 15,
+    maxWidth: '48%',
+    zIndex: 1,
+  },
+  modalArrow:{
+    marginTop: -45,
+    backgroundColor: '#f7f4f4',
+    height: 45,
+    width: 50,
+    transform: [{rotateZ: '45deg'}],
+  },
+  shadowStyle:{
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -78,7 +98,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    maxWidth: '48%',
   },
   openButton: {
     backgroundColor: 'green',
@@ -91,9 +110,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   iconMapsPin: {
-    width: 58,
-    height: 56,
-    tintColor: 'black',
+    //width: 60,
+    //height: 70,
+    tintColor: "#ffd087",//{iconColor},
     marginLeft: -10,
   },
   mapsPinView: {
