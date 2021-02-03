@@ -7,24 +7,35 @@
  */
 
 import React from 'react';
-import {SafeAreaView, Text, StatusBar} from 'react-native';
+import {SafeAreaView, Text, StatusBar, Modal} from 'react-native';
 import titlesText from './src/TitlesText';
 import ContentText from './screensText/ContentText';
-import CheckboxCustom from './components/CheckBoxCustom';
-import RadioButtomCustom from './components/RadioButtonCustom';
 import LogoTribo from './components/LogoTribo';
 import ExampleButtons from './ExampleButtons';
-//import ModalInfoStore from './components/modals/ModalInfoStore'
+//import ModalInfoStore from './components/modals/ModalInfoStore';
+import {
+  ModalDeleteStore,
+  ModalDeleteStoreTexts,
+} from './components/modals/ModalDeleteStore';
 import ModalInfoStore from './components/modals/LittlePinInfo'
 
-
 const App: () => React$Node = () => {
+  const nameBusinessDummy = 'La fonda de Doña Luisa';
+  const fullTextExampleWhenDeleteABussiness = `${ModalDeleteStoreTexts.description.business} "${nameBusinessDummy}" ?`;
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/* <LogoTribo width={256} height={86} line={false}/> */}
-        <ModalInfoStore iconColor={"#ffd087"}/>
+        <ModalDeleteStore
+          title={ModalDeleteStoreTexts.title.business}
+          description={fullTextExampleWhenDeleteABussiness}
+        />
+        <ModalDeleteStore
+          title={ModalDeleteStoreTexts.title.account}
+          description={ModalDeleteStoreTexts.description.account}
+        />
+
+        <ModalInfoStore/>
       </SafeAreaView>
     </>
   );

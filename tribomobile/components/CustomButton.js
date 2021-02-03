@@ -43,6 +43,7 @@ function CustomButton(props) {
     title,
     widthBtn,
     disabled,
+    action,
   } = props;
   const iconSize = titleSize;
 
@@ -70,7 +71,7 @@ function CustomButton(props) {
           },
         ]}
         disabled={disabled}
-        onPress={() => {}}>
+        onPress={() => action && action()}>
         {icon && (
           <Image
             style={{width: iconSize, height: iconSize, tintColor: colorIcon}}
