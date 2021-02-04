@@ -1,4 +1,5 @@
 const Colors = {
+  BackgroundLight: "#F6F8FF",
   BlueDark: '#1F1F1F',
   BlueLight: '#12a4ed',
   OrangeFonts: '#e98d1e',

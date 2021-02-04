@@ -35,7 +35,7 @@ const App: () => React$Node = () => {
           description={ModalDeleteStoreTexts.description.account}
         />
 
-        <ModalInfoStore/>
+        <ModalInfoStore serviceType="Service"/>
       </SafeAreaView>
     </>
   );
