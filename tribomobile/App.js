@@ -13,6 +13,8 @@ import ContentText from './screensText/ContentText';
 import LogoTribo from './components/LogoTribo';
 import ExampleButtons from './ExampleButtons';
 //import ModalInfoStore from './components/modals/ModalInfoStore';
+import SideNavScreen from './screens/SideNavScreen';
+
 import {
   ModalDeleteStore,
   ModalDeleteStoreTexts,
@@ -34,10 +36,9 @@ const App: () => React$Node = () => {
           title={ModalDeleteStoreTexts.title.account}
           description={ModalDeleteStoreTexts.description.account}
         />
-
-        <LogoTribo height={50} width={100} line={false}/>
-
         <ModalInfoStore/>
+        <SideNavScreen/>
+        {/* <LogoTribo height={50} width={100} line={false}/> */}
       </SafeAreaView>
     </>
   );
