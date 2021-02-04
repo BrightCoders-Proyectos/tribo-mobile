@@ -36,9 +36,8 @@ const App: () => React$Node = () => {
           title={ModalDeleteStoreTexts.title.account}
           description={ModalDeleteStoreTexts.description.account}
         />
-        <ModalInfoStore/>
+        <ModalInfoStore serviceType="Service"/>
         <SideNavScreen/>
-        {/* <LogoTribo height={50} width={100} line={false}/> */}
       </SafeAreaView>
     </>
   );
