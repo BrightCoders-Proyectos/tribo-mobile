@@ -35,6 +35,8 @@ const App: () => React$Node = () => {
           description={ModalDeleteStoreTexts.description.account}
         />
 
+        <LogoTribo height={50} width={100} line={false}/>
+
         <ModalInfoStore/>
       </SafeAreaView>
     </>
