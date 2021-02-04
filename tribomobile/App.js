@@ -7,33 +7,27 @@
  */
 
 import React from 'react';
-import {SafeAreaView, Text, StatusBar} from 'react-native';
-// import titlesText from './src/TitlesText';
-// import ContentText from './screensText/ContentText';
-// import CheckboxCustom from './components/CheckBoxCustom';
-// import RadioButtomCustom from './components/RadioButtonCustom';
+import {SafeAreaView, Text, StatusBar, Modal} from 'react-native';
+import titlesText from './src/TitlesText';
+import ContentText from './screensText/ContentText';
 // import LogoTribo from './components/LogoTribo';
-// import ExampleButtons from './ExampleButtons';
+import ExampleButtons from './ExampleButtons';
+import ModalInfoStore from './components/modals/ModalInfoStore';
 import SideNavScreen from './screens/SideNavScreen';
 
+import {
+  ModalDeleteStore,
+  ModalDeleteStoreTexts,
+} from './components/modals/ModalDeleteStore';
 
 const App: () => React$Node = () => {
+  const nameBusinessDummy = 'La fonda de Doña Luisa';
+  const fullTextExampleWhenDeleteABussiness = `${ModalDeleteStoreTexts.description.business} "${nameBusinessDummy}" ?`;
   return (
     <>
       <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          {/* <Text>{titlesText.titleRegistrationVenta}</Text>
-          <RadioButtomCustom/>
-          <Text>{titlesText.titleRegistrationFormasPago}</Text>
-          <CheckboxCustom 
-          value={false}
-          title={ContentText.textRegistrationScreenCheckboxEfectivo}
-          />
-          {/* <CheckboxCustom
-          value={false}
-          title={ContentText.textRegistrationScreenCheckboxTarjeta}
-          /> */}
-          {/* <ExampleButtons /> */}
+      <SafeAreaView>
+        
         <SideNavScreen/>
       </SafeAreaView>
     </>

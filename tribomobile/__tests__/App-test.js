@@ -4,7 +4,12 @@
 import 'react-native';
 import React from 'react';
 import App from '../App';
-import colors from '../src/colors';
+import colors from '../src/Colors';
+import renderer from 'react-test-renderer';
+import {
+  ModalDeleteStore,
+  ModalDeleteStoreTexts,
+} from '../components/modals/ModalDeleteStore';
 
 const FixedDimensionsBasics = () => {
   return (
@@ -24,4 +29,20 @@ const FixedDimensionsBasics = () => {
   );
 };
 
-export default App-test;
+it('renders correctly modal to delete a store', () => {
+  const fields = {
+    title: ModalDeleteStoreTexts.title.business,
+    description: 'Estas seguro de eliminar la "fonda de doña luisa?"',
+  };
+  const tree = renderer.create(<ModalDeleteStore {...fields} />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders correctly modal to delete an account', () => {
+  const fields = {
+    title: ModalDeleteStoreTexts.title.account,
+    description: ModalDeleteStoreTexts.description.account,
+  };
+  const tree = renderer.create(<ModalDeleteStore {...fields} />).toJSON();
+  expect(tree).toMatchSnapshot();
+});

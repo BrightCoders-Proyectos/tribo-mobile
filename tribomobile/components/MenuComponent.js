@@ -3,13 +3,13 @@ import {View, Text, TouchableOpacity, Button, Pressable} from 'react-native';
 import MenusHide from '../components/menuHide';
 import SideBarOption from '../components/SideBarOption';
 import TitlesText from '../screensText/ContentText';
-import LogoTribo from '../components/LogoTribo';
+// import LogoTribo from '../components/LogoTribo';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
 const MenuComp = (props) => {
 
-  const options = [1,2,3,4,5]
+  const options = [1,2,3,4,5];
 
   return(
     
