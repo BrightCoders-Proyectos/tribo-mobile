@@ -5,13 +5,14 @@ import Tribologo from '../assets/tribologo.png';
 import colors from '../src/Colors'
 
 const LogoTribo = (props) => {
-  const {height, width, line} = props;
+  const {height, width, line,sideNav} = props;
   return (
     <View style={styles.logoView}>
       <Image
         resizeMode="contain"
         style={[
-          styles.icon,
+          sideNav != true ? styles.regularicon : styles.sideNavicon,
+          // styles.icon,
           {
             width: width,
             height: height,
@@ -38,8 +39,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  icon: {
+  regularicon: {
     tintColor:colors.BlueP
+  },
+  sideNavicon: {
+    tintColor:colors.White
   },
 });
 

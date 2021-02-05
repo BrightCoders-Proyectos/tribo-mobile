@@ -4,7 +4,7 @@ import { Dimensions } from 'react-native';
 import MenusHide from '../components/menuHide';
 import SideBarOption from '../components/SideBarOption';
 import TitlesText from '../screensText/ContentText';
-// import LogoTribo from '../components/LogoTribo';
+import LogoTribo from '../components/LogoTribo';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
@@ -29,9 +29,11 @@ const MenuComp = (props) => {
         onPress={props.tap}>
         <FontAwesomeIcon icon={faTimes} size={30} color={'white'} />
       </Pressable>
-      <View>{/* <LogoTribo height={50} width={100} line={false}/> */}</View>
+      <View style={{height:150}}>
+        <LogoTribo height={65} width={192} line={false} sideNav={true}/>
+      </View>
       {options.map((item) => (
-        <SideBarOption textBold={TitlesText.title_1} />
+        <SideBarOption key={item.toString()} textBold={TitlesText.title_1} />
       ))}
     </View>
   );
