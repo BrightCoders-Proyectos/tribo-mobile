@@ -12,6 +12,7 @@ import titlesText from './src/TitlesText';
 import ContentText from './screensText/ContentText';
 import LogoTribo from './components/LogoTribo';
 import ExampleButtons from './ExampleButtons';
+import MainScreen from './components/MainScreen';
 //import ModalInfoStore from './components/modals/ModalInfoStore';
 import SideNavScreen from './screens/SideNavScreen';
 
@@ -28,20 +29,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-<<<<<<< HEAD
         <MainScreen />
-=======
-        <ModalDeleteStore
-          title={ModalDeleteStoreTexts.title.business}
-          description={fullTextExampleWhenDeleteABussiness}
-        />
-        <ModalDeleteStore
-          title={ModalDeleteStoreTexts.title.account}
-          description={ModalDeleteStoreTexts.description.account}
-        />
-        <ModalInfoStore serviceType="Service"/>
-        <SideNavScreen/>
->>>>>>> 73c00c8385dfa2e22f2cb4b6d02e87deffb55aed
       </SafeAreaView>
     </>
   );

@@ -17,7 +17,7 @@ import store from '../assets/store.png';
 import marker_service from '../assets/marker_service.png';
 import service from '../assets/services.png';
 import MapStyle from './MapStyle';
-import string from '../screensText/contentText';
+import string from '../screensText/ContentText';
 import IconNav from './IconNav';
 
 const MainScreen = () => {

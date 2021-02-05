@@ -122,11 +122,9 @@ export default ContentText = {
     'El incumplimiento de estas leyes puede ocasionar graves sanciones e incluso una acusación formal.',
   textReadmeScreenPoliticaP5:
     '¿Qué son los datos personales? Los datos personales son un tipo de información a través de la cual se puede identificar a un individuo, ya sea directamente o cuando ésta se combina con otros datos.',
-<<<<<<< HEAD
   food: 'Comida',
   product: 'Productos',
   service: 'Servicios',
-=======
   //NavBartext
   title_1:'Regístrate/Mi cuenta',
   title_2: '#QuédateEnCasa',
@@ -134,7 +132,6 @@ export default ContentText = {
   title_3:'Términos y condiciones',
   title_4:'FAQ',
   title_5:'Políticas de privacidad'
->>>>>>> 73c00c8385dfa2e22f2cb4b6d02e87deffb55aed
 };
 
 
