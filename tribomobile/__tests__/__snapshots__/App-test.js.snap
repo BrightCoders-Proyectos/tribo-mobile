@@ -1,0 +1,543 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly modal to delete a store 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(10,9,9,0.7)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="slide"
+      hardwareAccelerated={false}
+      onRequestClose={[Function]}
+      transparent={true}
+      visible={false}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(10,9,9,0.7)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#f7f4f4",
+              "borderRadius": 7,
+              "elevation": 5,
+              "margin": 20,
+              "maxWidth": "92%",
+              "paddingBottom": 40,
+              "paddingTop": 25,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 3.84,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "marginHorizontal": 20,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../assets/close.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 20,
+                    "tintColor": "#828894",
+                    "width": 20,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginHorizontal": 15,
+                "maxWidth": "98%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "black",
+                  "fontSize": 30,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Eliminar tu negocio
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "black",
+                  "fontSize": 24,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Estas seguro de eliminar la "fonda de doña luisa?"
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingHorizontal": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#037D94",
+                    "borderColor": "#037D94",
+                    "borderRadius": 50,
+                    "borderWidth": 2,
+                    "flexDirection": "row",
+                    "height": 50,
+                    "justifyContent": "center",
+                    "marginTop": 40,
+                    "opacity": 1,
+                    "width": 165,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "fontWeight": "bold",
+                        "paddingHorizontal": 10,
+                      },
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  Confirmar
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#9CA3AF",
+                    "borderColor": "#9CA3AF",
+                    "borderRadius": 50,
+                    "borderWidth": 2,
+                    "flexDirection": "row",
+                    "height": 50,
+                    "justifyContent": "center",
+                    "marginTop": 40,
+                    "opacity": 1,
+                    "width": 165,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "fontWeight": "bold",
+                        "paddingHorizontal": 10,
+                      },
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  Cancelar
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#F194FF",
+        "opacity": 1,
+        "padding": 10,
+        "width": "80%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Show Modal delete store
+    </Text>
+  </View>,
+]
+`;
+
+exports[`renders correctly modal to delete an account 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(10,9,9,0.7)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="slide"
+      hardwareAccelerated={false}
+      onRequestClose={[Function]}
+      transparent={true}
+      visible={false}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(10,9,9,0.7)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#f7f4f4",
+              "borderRadius": 7,
+              "elevation": 5,
+              "margin": 20,
+              "maxWidth": "92%",
+              "paddingBottom": 40,
+              "paddingTop": 25,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 3.84,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "marginHorizontal": 20,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../assets/close.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 20,
+                    "tintColor": "#828894",
+                    "width": 20,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginHorizontal": 15,
+                "maxWidth": "98%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "black",
+                  "fontSize": 30,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Eliminar tu cuenta
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "black",
+                  "fontSize": 24,
+                  "textAlign": "center",
+                }
+              }
+            >
+              ¿Estas seguro que quieres eliminar tu cuenta?
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingHorizontal": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#037D94",
+                    "borderColor": "#037D94",
+                    "borderRadius": 50,
+                    "borderWidth": 2,
+                    "flexDirection": "row",
+                    "height": 50,
+                    "justifyContent": "center",
+                    "marginTop": 40,
+                    "opacity": 1,
+                    "width": 165,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "fontWeight": "bold",
+                        "paddingHorizontal": 10,
+                      },
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  Confirmar
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#9CA3AF",
+                    "borderColor": "#9CA3AF",
+                    "borderRadius": 50,
+                    "borderWidth": 2,
+                    "flexDirection": "row",
+                    "height": 50,
+                    "justifyContent": "center",
+                    "marginTop": 40,
+                    "opacity": 1,
+                    "width": 165,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "fontWeight": "bold",
+                        "paddingHorizontal": 10,
+                      },
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  Cancelar
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#F194FF",
+        "opacity": 1,
+        "padding": 10,
+        "width": "80%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Show Modal delete store
+    </Text>
+  </View>,
+]
+`;
