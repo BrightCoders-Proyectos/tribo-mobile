@@ -20,7 +20,7 @@ import {
   ModalDeleteStore,
   ModalDeleteStoreTexts,
 } from './components/modals/ModalDeleteStore';
-import ModalInfoStore from './components/modals/LittlePinInfo'
+import ModalInfoStore from './components/modals/LittlePinInfo';
 
 const App: () => React$Node = () => {
   const nameBusinessDummy = 'La fonda de Doña Luisa';

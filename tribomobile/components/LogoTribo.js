@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {View, Image, Text, StyleSheet} from 'react-native';
 
 import Tribologo from '../assets/tribologo.png';
-import colors from '../src/Colors'
+import colors from '../src/Colors';
 
 const LogoTribo = (props) => {
-  const {height, width, line,sideNav} = props;
+  const {height, width, line, sideNav} = props;
   return (
     <View style={styles.logoView}>
       <Image
@@ -40,10 +40,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   regularicon: {
-    tintColor:colors.BlueP
+    tintColor: colors.BlueP,
   },
   sideNavicon: {
-    tintColor:colors.White
+    tintColor: colors.White,
   },
 });
 

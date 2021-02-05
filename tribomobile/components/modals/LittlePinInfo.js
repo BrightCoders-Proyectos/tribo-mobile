@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     alignContent: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   iconMapsPin: {
     height: 71,

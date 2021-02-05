@@ -126,12 +126,10 @@ export default ContentText = {
   product: 'Productos',
   service: 'Servicios',
   //NavBartext
-  title_1:'Regístrate/Mi cuenta',
+  title_1: 'Regístrate/Mi cuenta',
   title_2: '#QuédateEnCasa',
-  title2_1: 'Recomendaciones para el aislamiento preventivo', 
-  title_3:'Términos y condiciones',
-  title_4:'FAQ',
-  title_5:'Políticas de privacidad'
+  title2_1: 'Recomendaciones para el aislamiento preventivo',
+  title_3: 'Términos y condiciones',
+  title_4: 'FAQ',
+  title_5: 'Políticas de privacidad',
 };
-
-

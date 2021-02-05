@@ -174,5 +174,4 @@ ModalDeleteStore.propTypes = {
   description: PropTypes.string,
 };
 
-
-export { ModalDeleteStore, ModalDeleteStoreTexts };
+export {ModalDeleteStore, ModalDeleteStoreTexts};

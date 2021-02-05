@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Button, Pressable} from 'react-native';
-import { Dimensions } from 'react-native';
+import {Dimensions} from 'react-native';
 import MenusHide from '../components/menuHide';
 import SideBarOption from '../components/SideBarOption';
 import TitlesText from '../screensText/ContentText';
@@ -22,15 +22,15 @@ const MenuComp = (props) => {
         marginTop: 0,
         marginLeft: -16,
         borderTopRightRadius: 24,
-        zIndex:5
+        zIndex: 5,
       }}>
       <Pressable
         style={{alignSelf: 'flex-end', marginTop: 24, marginRight: 24}}
         onPress={props.tap}>
         <FontAwesomeIcon icon={faTimes} size={30} color={'white'} />
       </Pressable>
-      <View style={{height:150}}>
-        <LogoTribo height={65} width={192} line={false} sideNav={true}/>
+      <View style={{height: 150}}>
+        <LogoTribo height={65} width={192} line={false} sideNav={true} />
       </View>
       {options.map((item) => (
         <SideBarOption key={item.toString()} textBold={TitlesText.title_1} />

@@ -6,7 +6,7 @@ import {
   Image,
   Dimensions,
   TouchableOpacity,
-  TextInput
+  TextInput,
 } from 'react-native';
 import MapView, {Marker} from 'react-native-maps';
 import menuImage from '../assets/menuImage.png';
@@ -33,7 +33,7 @@ const MainScreen = () => {
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
-      <View style={{zIndex: 0, flexDirection:'column'}}>
+      <View style={{zIndex: 0, flexDirection: 'column'}}>
         <MapView
           style={{width: '100%', height: '100%'}}
           region={regionMap}
@@ -68,13 +68,28 @@ const MainScreen = () => {
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>
-        <BtnHideShowMenu/>
+        <BtnHideShowMenu />
         <TextInput style={style.textinput} placeholder="Escribe tu dirección" />
       </View>
       <View elevation={5} style={[style.navDown, style.iconsDown]}>
-        <IconNav image={food} text={string.food} markerSelection={markerSelection} name={'food'}/>
-        <IconNav image={store} text={string.product} markerSelection={markerSelection} name={'store'}/>
-        <IconNav image={service} text={string.service} markerSelection={markerSelection} name={'service'}/>
+        <IconNav
+          image={food}
+          text={string.food}
+          markerSelection={markerSelection}
+          name={'food'}
+        />
+        <IconNav
+          image={store}
+          text={string.product}
+          markerSelection={markerSelection}
+          name={'store'}
+        />
+        <IconNav
+          image={service}
+          text={string.service}
+          markerSelection={markerSelection}
+          name={'service'}
+        />
       </View>
     </View>
   );
@@ -119,7 +134,7 @@ const style = StyleSheet.create({
     backgroundColor: '#E1F1F5',
     borderRadius: 15,
     textAlign: 'justify',
-    fontSize:13,
+    fontSize: 13,
   },
   borderShadow: {
     shadowColor: '#000000',
