@@ -1,4 +1,5 @@
 const Colors = {
+  BackgroundLight: '#F6F8FF',
   BlueDark: '#1F1F1F',
   BlueLight: '#12a4ed',
   OrangeFonts: '#e98d1e',
@@ -7,7 +8,7 @@ const Colors = {
   GreenContent: '#7ad520',
   GrayDark: '#9b9eb1',
   mediumvioletred: '#c71585',
-  Red: '#B91C1C' ,
+  Red: '#B91C1C',
   GrayLight: '#939393',
   GrayDark: '#4A4A4A',
   SpaceGray: '#D1D5DB',

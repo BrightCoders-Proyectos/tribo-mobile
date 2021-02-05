@@ -12,11 +12,15 @@ import titlesText from './src/TitlesText';
 import ContentText from './screensText/ContentText';
 import LogoTribo from './components/LogoTribo';
 import ExampleButtons from './ExampleButtons';
-import ModalInfoStore from './components/modals/ModalInfoStore';
+import MainScreen from './components/MainScreen';
+//import ModalInfoStore from './components/modals/ModalInfoStore';
+import SideNavScreen from './screens/SideNavScreen';
+
 import {
   ModalDeleteStore,
   ModalDeleteStoreTexts,
 } from './components/modals/ModalDeleteStore';
+import ModalInfoStore from './components/modals/LittlePinInfo';
 
 const App: () => React$Node = () => {
   const nameBusinessDummy = 'La fonda de Doña Luisa';
@@ -25,14 +29,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ModalDeleteStore
-          title={ModalDeleteStoreTexts.title.business}
-          description={fullTextExampleWhenDeleteABussiness}
-        />
-        <ModalDeleteStore
-          title={ModalDeleteStoreTexts.title.account}
-          description={ModalDeleteStoreTexts.description.account}
-        />
+        <MainScreen />
       </SafeAreaView>
     </>
   );

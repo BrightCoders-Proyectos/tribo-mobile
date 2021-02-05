@@ -1,24 +1,31 @@
 export default ContentText = {
   //onBoardingScreen
-  textoOnBoardingScreenConnect:'Tribo te conecta con comercios y vendedores cerca de ti.',
-  textoOnBoardingScreenCall:'Sólo llama o envía un mensaje directamente desde tu celular para solicitar lo que necesites.',
-  textoOnBoardingScreenReceive:'Recibe tu pedido en la puerta de tu hogar o pasa directamente por el.',
+  textoOnBoardingScreenConnect:
+    'Tribo te conecta con comercios y vendedores cerca de ti.',
+  textoOnBoardingScreenCall:
+    'Sólo llama o envía un mensaje directamente desde tu celular para solicitar lo que necesites.',
+  textoOnBoardingScreenReceive:
+    'Recibe tu pedido en la puerta de tu hogar o pasa directamente por el.',
   textoOnBoardingScreenOmitir: 'Omitir',
-  textoOnBoardingScreenStart: '¡Comencemos!', 
+  textoOnBoardingScreenStart: '¡Comencemos!',
   //SplashScreen
   textoSplashScreenMade: 'Made with love in Colima, México',
   textoSplashScreenWe: '#WeAreMagma',
   textoSplashScreenLaMarket: 'AMARKET.APP',
   textoSplashScreenL: 'L',
   //WelcomeScreen
-  textoWelcomeScreenComercios: 'Comercios y vendedores cerca de ti que envían a domicilio lo que necesitas de ellos.',
-  textoWelcomeScreenSolo: 'Sólo llama o envía un mensaje y recibe tu pedido en la puerta de tu hogar.',
+  textoWelcomeScreenComercios:
+    'Comercios y vendedores cerca de ti que envían a domicilio lo que necesitas de ellos.',
+  textoWelcomeScreenSolo:
+    'Sólo llama o envía un mensaje y recibe tu pedido en la puerta de tu hogar.',
   textoWelcomeScreenInputEscribe: 'Escribe tu número telefónico',
   textoWelcomeScreenButtonRegistra: 'Registrarme',
   textoWelcomeScreenOmitir: 'Omitir',
   //WelcomeScreenGuest
-  textoWelcomeScreenGuestLaMArket: 'LaMarket.app es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
-  textoWelcomeScreenGuestSolo: 'Sólo llama o envía un mensaje por WhatsApp y recibe tu pedido en la puerta de tu hogar.',
+  textoWelcomeScreenGuestLaMArket:
+    'LaMarket.app es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
+  textoWelcomeScreenGuestSolo:
+    'Sólo llama o envía un mensaje por WhatsApp y recibe tu pedido en la puerta de tu hogar.',
   textoWelcomeScreenGuestInputEscribe: 'Escribe tu dirección',
   textoWelcomeScreenGuestEscribe:
     'Escribe tu dirección en la barra para ubicar los negocios cercanos',
@@ -115,4 +122,14 @@ export default ContentText = {
     'El incumplimiento de estas leyes puede ocasionar graves sanciones e incluso una acusación formal.',
   textReadmeScreenPoliticaP5:
     '¿Qué son los datos personales? Los datos personales son un tipo de información a través de la cual se puede identificar a un individuo, ya sea directamente o cuando ésta se combina con otros datos.',
+  food: 'Comida',
+  product: 'Productos',
+  service: 'Servicios',
+  //NavBartext
+  title_1: 'Regístrate/Mi cuenta',
+  title_2: '#QuédateEnCasa',
+  title2_1: 'Recomendaciones para el aislamiento preventivo',
+  title_3: 'Términos y condiciones',
+  title_4: 'FAQ',
+  title_5: 'Políticas de privacidad',
 };
