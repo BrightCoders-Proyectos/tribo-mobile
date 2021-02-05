@@ -6,7 +6,7 @@ import {
   Image,
   Dimensions,
   TouchableOpacity,
-  TextInput,
+  TextInput
 } from 'react-native';
 import MapView, {Marker} from 'react-native-maps';
 import menuImage from '../assets/menuImage.png';
@@ -19,6 +19,7 @@ import service from '../assets/services.png';
 import MapStyle from './MapStyle';
 import string from '../screensText/ContentText';
 import IconNav from './IconNav';
+import BtnHideShowMenu from '../components/BtnHideShowMenu';
 
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
@@ -32,7 +33,7 @@ const MainScreen = () => {
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
-      <View style={{zIndex: 0}}>
+      <View style={{zIndex: 0, flexDirection:'column'}}>
         <MapView
           style={{width: '100%', height: '100%'}}
           region={regionMap}
@@ -67,9 +68,7 @@ const MainScreen = () => {
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>
-        <TouchableOpacity>
-          <Image style={style.menuimage} source={menuImage} />
-        </TouchableOpacity>
+        <BtnHideShowMenu/>
         <TextInput style={style.textinput} placeholder="Escribe tu dirección" />
       </View>
       <View elevation={5} style={[style.navDown, style.iconsDown]}>
