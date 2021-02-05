@@ -99,7 +99,7 @@ function ModalDeleteStore(props) {
         onPress={() => {
           setModalVisible(true);
         }}>
-        <Text style={styles.textStyle}>Show Modal delete store</Text>
+        <Text style={styles.textStyle}>Show Modal delete</Text>
       </TouchableOpacity>
     </>
   );
@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
     maxWidth: '92%',
   },
   openButton: {
+    marginTop: 10,
     backgroundColor: '#F194FF',
     padding: 10,
     width: '80%',

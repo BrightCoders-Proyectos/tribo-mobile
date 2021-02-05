@@ -2,18 +2,26 @@ import {StyleSheet} from 'react-native';
 
 const SideBarStyle = StyleSheet.create({
   textContainer: {
-    marginLeft: 50,
-    margin: 18, 
-    flexDirection: 'row'
+    marginLeft: 24, 
+    marginBottom: 24,
+    flexDirection: 'row',   
+    backgroundColor: 'red',
+    height: 40,  
+    alignItems: 'center'
   },
   textBold: {
-    fontSize:22, 
-    color:'gray', 
-    fontWeight: 'bold' 
-  },
+    marginBottom: 0,
+    marginLeft: 24,
+    fontFamily: 'Rubik',
+    fontSize:18, 
+    color:'white',
+    },
   textNormal: {
-    fontSize:21,
-    color:'gray'
+    marginBottom: 0,
+    marginLeft: 24,
+    fontSize: 12,
+    letterSpacing: .6,
+    color:'white',
   }
 });
 
