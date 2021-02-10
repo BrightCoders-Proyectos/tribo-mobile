@@ -5,7 +5,6 @@ const SideBarStyle = StyleSheet.create({
     marginLeft: 24, 
     marginBottom: 24,
     flexDirection: 'row',   
-    backgroundColor: 'red',
     height: 40,  
     alignItems: 'center'
   },

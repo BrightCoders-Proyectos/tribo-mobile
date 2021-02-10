@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
-import {View, Text,TouchableOpacity} from 'react-native';
+import {View, Text,Pressable} from 'react-native';
+import ContentText from '../screensText/ContentText';
+
+const presionado = ()=>{
+  
+  console.log('pr')
+}
 
 const ClicableLink = () => {
     return (
-      <TouchableOpacity style={{alignItems: 'center', marginTop: 85}}>
-        <Text style={{textDecorationLine:'underline', color: 'gray'}}>Salir de mi cuenta</Text>
-      </TouchableOpacity>
+      <Pressable style={{alignItems: 'center', marginTop: 85}}
+        onPress={presionado}
+      >
+        <Text style={{textDecorationLine:'underline', color: 'white'}}>{ContentText.salirCuenta}</Text>
+      </Pressable>
     );
   }
 

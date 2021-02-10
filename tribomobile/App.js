@@ -15,6 +15,7 @@ import ExampleButtons from './ExampleButtons';
 import MainScreen from './components/MainScreen';
 //import ModalInfoStore from './components/modals/ModalInfoStore';
 import SideNavScreen from './screens/SideNavScreen';
+import BtnHideShowMenu from './components/BtnHideShowMenu';
 
 import {
   ModalDeleteStore,
@@ -29,7 +30,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <MainScreen />
+        <BtnHideShowMenu />
       </SafeAreaView>
     </>
   );

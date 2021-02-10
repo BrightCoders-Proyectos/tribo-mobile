@@ -19,7 +19,7 @@ import service from '../assets/services.png';
 import MapStyle from './MapStyle';
 import string from '../screensText/ContentText';
 import IconNav from './IconNav';
-import BtnHideShowMenu from '../components/BtnHideShowMenu';
+import BtnHideShowMenu from './BtnHideShowMenu';
 
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
@@ -68,7 +68,7 @@ const MainScreen = () => {
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>
-        <BtnHideShowMenu />
+        <BtnHideShowMenu/>
         <TextInput style={style.textinput} placeholder="Escribe tu dirección" />
       </View>
       <View elevation={5} style={[style.navDown, style.iconsDown]}>

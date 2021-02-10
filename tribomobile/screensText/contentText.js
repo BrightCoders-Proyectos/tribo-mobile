@@ -132,4 +132,5 @@ export default ContentText = {
   title_3: 'Términos y condiciones',
   title_4: 'FAQ',
   title_5: 'Políticas de privacidad',
+  salirCuenta: 'Salir de mi cuenta',
 };

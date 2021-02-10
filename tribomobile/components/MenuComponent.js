@@ -7,10 +7,17 @@ import TitlesText from '../screensText/ContentText';
 import LogoTribo from '../components/LogoTribo';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
+import ClicableLink from '../components/ClicableLink';
+import ContentText from '../screensText/ContentText';
 
 const MenuComp = (props) => {
-  const options = [1, 2, 3, 4, 5];
-  const windowWidth = Dimensions.get('window').width;
+  const options = [
+    ContentText.title_1, 
+    ContentText.title_2,
+    ContentText.title_3,
+    ContentText.title_4,
+    ContentText.title_5,
+  ];
   const windowHeight = Dimensions.get('window').height;
 
   return (
@@ -33,10 +40,13 @@ const MenuComp = (props) => {
         <LogoTribo height={65} width={192} line={false} sideNav={true} />
       </View>
       {options.map((item) => (
-        <SideBarOption key={item.toString()} textBold={TitlesText.title_1} />
+        <SideBarOption key={item.toString()} textBold={item} />
       ))}
+      <ClicableLink/>
     </View>
   );
 };
 
 export default MenuComp;
+
+
