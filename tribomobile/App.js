@@ -29,7 +29,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <MainScreen />
+        {/* Screen Shot 2021-02-10 at 10.58.58 */}
       </SafeAreaView>
     </>
   );
