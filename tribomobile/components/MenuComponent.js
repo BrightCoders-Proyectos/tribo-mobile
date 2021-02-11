@@ -1,14 +1,13 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Button, Pressable} from 'react-native';
 import {Dimensions} from 'react-native';
-import MenusHide from '../components/menuHide';
 import SideBarOption from '../components/SideBarOption';
-import TitlesText from '../screensText/ContentText';
 import LogoTribo from '../components/LogoTribo';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
-import ClicableLink from '../components/ClicableLink';
 import ContentText from '../screensText/ContentText';
+import ClicableLink from '../components/ClicableLink';
+
 
 const MenuComp = (props) => {
   const options = [

@@ -3,6 +3,7 @@ import {TouchableHighlight, Text, View, TouchableOpacity} from 'react-native';
 import SideBarStyle from '../styles/SideBarStyle';
 import ContentText from '../screensText/ContentText';
 
+
 const SideBarOption = (props) => {
   const [hide, setHide] = useState(false);
 

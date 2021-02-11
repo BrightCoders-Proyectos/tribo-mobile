@@ -9,7 +9,7 @@ const presionado = ()=>{
 
 const ClicableLink = () => {
     return (
-      <Pressable style={{alignItems: 'center', marginTop: 85}}
+      <Pressable style={{marginLeft: 60, marginTop: 84}}
         onPress={presionado}
       >
         <Text style={{textDecorationLine:'underline', color: 'white'}}>{ContentText.salirCuenta}</Text>
