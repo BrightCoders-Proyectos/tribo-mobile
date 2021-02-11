@@ -13,14 +13,15 @@ import ContentText from './screensText/ContentText';
 import LogoTribo from './components/LogoTribo';
 import ExampleButtons from './ExampleButtons';
 import MainScreen from './components/MainScreen';
-//import ModalInfoStore from './components/modals/ModalInfoStore';
+import ModalInfoStore from './components/modals/ModalInfoStore';
+import LittlePinInfo from './components/modals/LittlePinInfo';
 import SideNavScreen from './screens/SideNavScreen';
-
+import RegisterMarket  from './screens/RegisterMarket';
+import RegistrationScreen  from './screens/RegistrationScreen';
 import {
   ModalDeleteStore,
   ModalDeleteStoreTexts,
 } from './components/modals/ModalDeleteStore';
-import ModalInfoStore from './components/modals/LittlePinInfo';
 
 const App: () => React$Node = () => {
   const nameBusinessDummy = 'La fonda de Doña Luisa';
@@ -29,7 +30,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/* Screen Shot 2021-02-10 at 10.58.58 */}
+        <RegisterMarket/>
       </SafeAreaView>
     </>
   );

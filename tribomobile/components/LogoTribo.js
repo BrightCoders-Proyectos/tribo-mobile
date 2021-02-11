@@ -12,7 +12,6 @@ const LogoTribo = (props) => {
         resizeMode="contain"
         style={[
           sideNav != true ? styles.regularicon : styles.sideNavicon,
-          // styles.icon,
           {
             width: width,
             height: height,
@@ -23,7 +22,6 @@ const LogoTribo = (props) => {
       {line == true && (
         <View
           style={{
-            marginTop: 30,
             borderBottomWidth: 1,
             borderColor: '#9CA3AF',
             width: '80%',
