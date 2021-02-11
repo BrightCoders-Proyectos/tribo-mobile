@@ -9,50 +9,48 @@ import {
   Image,
 } from 'react-native';
 import TitlesText from '../../../src/TitlesText';
-import GreetingWelcome from './GreetingWelcome';
-import LaMarketLogo from './LaMarketLogo';
-import HastTagStayAtHome from './HastTagStayAtHome';
 import DescriptionText from './DescriptionText';
 import {CustomButton, ConfigBtnCustom} from '../../CustomButton';
-import WhatsappIcon from '../../../assets/whatsapp.png';
+import TriboLogo from '../../../assets/tribologo.png';
+import ContentText from '../../../screensText/ContentText';
+import TextInputCustom from '../../TextInputs';
 
-function InputRegister() {
-  return (
-    <View>
-      <Text style={styles.labelInput}>{TitlesText.titleRegisterWithPhone}</Text>
-      <TextInput
-        style={styles.textInput}
-        placeholder={TitlesText.inputDescription}
-      />
-    </View>
-  );
-}
+
+
 
 function WelcomeScreen() {
   return (
     <View style={styles.container}>
-      <GreetingWelcome />
-      <LaMarketLogo />
-      <HastTagStayAtHome />
+      <View>
+        <Image style={styles.triboLogo} source={TriboLogo} />
+      </View>
       <DescriptionText
-        marginHorizontal={60}
-        description={TitlesText.descriptionOfShopsNearYou}
+        marginHorizontal={22}
+        description={ContentText.textWelcomeScreenDescription}
       />
-      <DescriptionText
-        marginHorizontal={50}
-        description={TitlesText.descriptionOfSendMessage}
+      <Text style={styles.textBold}>{TitlesText.titleBeginNow}</Text>
+      <TextInputCustom textInputType={"searchBar"} placeholderText={TitlesText.titleWriteDirection} />
+      <Text style={styles.textBold}>{TitlesText.titleAnounceBussiness}</Text>
+      <CustomButton
+        size={ConfigBtnCustom.SIZE.SMALL}
+        titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
+        bgBtn={ConfigBtnCustom.COLOR.YELLOW}
+        borderColorBtn={ConfigBtnCustom.COLOR.YELLOW}
+        titleColor={ConfigBtnCustom.COLOR.WHITE}
+        widthBtn={ConfigBtnCustom.WIDTH.SMALL_WITH_ICON}
+        marginTop={30}
+        title={'Inicia Sesión'}
+        disabled={false}
       />
-      <InputRegister />
-
       <CustomButton
         size={ConfigBtnCustom.SIZE.SMALL}
         titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
         bgBtn={ConfigBtnCustom.COLOR.GREEN}
         borderColorBtn={ConfigBtnCustom.COLOR.GREEN}
         titleColor={ConfigBtnCustom.COLOR.WHITE}
-        widthBtn={ConfigBtnCustom.WIDTH.SMALL_WITH_ICON}
-        icon={ConfigBtnCustom.ICON.WHATSAPP}
-        title={'Button'}
+        widthBtn={ConfigBtnCustom.WIDTH.MEDIUM}
+        title={'Registrate'}
+        marginTop={20}
         disabled={false}
       />
     </View>
@@ -61,50 +59,19 @@ function WelcomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#DFDFDF',
     height: '100%',
   },
-  labelInput: {
-    fontSize: 17,
+  triboLogo: {
+    marginTop: 115,
+    marginBottom: 25,
+    alignSelf: 'center',
+  },
+  textBold: {
     fontWeight: 'bold',
-    color: '#828282',
-    marginTop: 30,
-    marginHorizontal: 30,
+    fontSize: 28,
+    textAlign: 'center',
+    marginTop: 25,
   },
-  textInput: {
-    height: 60,
-    borderColor: '#828894',
-    borderRadius: 10,
-    borderWidth: 1.5,
-    marginTop: 10,
-    marginHorizontal: 30,
-    paddingHorizontal: 15,
-  },
-  textButtonRegister: {
-    color: 'white',
-    fontWeight: 'bold',
-  },
-  buttonRegister: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: '#B9B9B9',
-    width: 180,
-    color: 'white',
-    height: 50,
-    marginHorizontal: '28%',
-    borderRadius: 25,
-    marginTop: 40,
-  },
-  linkSkip: {
-    alignItems: 'center',
-    marginTop: 20,
-  },
-  textLinkSkip: {
-    color: '#828282',
-    fontWeight: 'bold',
-    textDecorationLine: 'underline',
-  },
-});
+ });
 
 export default WelcomeScreen;

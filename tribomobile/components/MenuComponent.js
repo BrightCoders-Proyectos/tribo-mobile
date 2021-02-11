@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Button, Pressable} from 'react-native';
 import {Dimensions} from 'react-native';
-import MenusHide from '../components/menuHide';
+import MenusHide from '../components/MenuHide';
 import SideBarOption from '../components/SideBarOption';
 import TitlesText from '../screensText/ContentText';
 import LogoTribo from '../components/LogoTribo';

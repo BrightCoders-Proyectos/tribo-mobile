@@ -4,12 +4,14 @@ export default TitlesText ={
     titleOnBoardConect: "Conecta con comercios",
     titleOnBoardCall: "Llama o envía mensaje ",
     titleOnBoardReceive: "Recibe tu pedido",
-    
+    titleWriteDirection: "Escribe tu dirección",    
     //welcomescreens
     titleSplashGreeting: "¡Hola!",
     titleSplashWelcome: "Te damos la bienvenida a",
     titleStayHome: "#QuédateEnCasa",
     titleRegisterWithPhone: "Regístrate con tu Teléfono Celular",
+    titleBeginNow: "Empieza ahora mismo",
+    titleAnounceBussiness: "¿Quieres anunciar tu negocio?",
     //Store info
     titleStoreInfoAddress: "Dirección:",
     titleStoreInfoPhone: "Teléfono",

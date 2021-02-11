@@ -44,6 +44,7 @@ function CustomButton(props) {
     widthBtn,
     disabled,
     action,
+    marginTop,
   } = props;
   const iconSize = titleSize;
 
@@ -68,6 +69,7 @@ function CustomButton(props) {
               : borderColorBtn,
             width: widthBtn,
             height: size,
+            marginTop: marginTop,
           },
         ]}
         disabled={disabled}
