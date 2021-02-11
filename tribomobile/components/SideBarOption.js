@@ -12,6 +12,8 @@ const SideBarOption = (props) => {
     console.log('Pressed');
   };
 
+  const styleCont = [SideBarStyle.textContainer, SideBarStyle.textContainer2]
+
   return (
     <>
       <TouchableHighlight
@@ -19,25 +21,22 @@ const SideBarOption = (props) => {
           maxWidth: '80%',
           borderTopRightRadius: 20,
           borderBottomRightRadius: 20,
+          margin: 12
         }}
         onPress={onPress}
         underlayColor="#FFCF87">
-        <View>
-          <View style={SideBarStyle.textContainer}>
-            <View>
+          <View style={[textBold === '#QuédateEnCasa' ? styleCont[1]: styleCont[0]]}>
               <View>
                 <Text style={SideBarStyle.textBold}>{textBold}</Text>
               </View>
               {textBold == '#QuédateEnCasa' && (
-                <View>
-                  <Text style={SideBarStyle.textNormal}>
-                    {ContentText.title2_1}
-                  </Text>
-                </View>
+              <View>
+                <Text style={SideBarStyle.textNormal}>
+                  {ContentText.title2_1}
+                </Text>
+              </View>
               )}
             </View>
-          </View>
-        </View>
       </TouchableHighlight>
     </>
   );
