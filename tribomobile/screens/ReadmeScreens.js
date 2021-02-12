@@ -186,6 +186,7 @@ const ReadmeScreens = (props) => {
 const styles = StyleSheet.create({
   container: {
     alignSelf: 'center',
+    backgroundColor: Colors.White,
     borderRadius: 20,
     height: '95%',
     margin: 20,
