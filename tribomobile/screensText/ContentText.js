@@ -97,6 +97,8 @@ export default ContentText = {
   textMyAccountScreenHorario: '9:00 a.m. a 9:00 p.m.',
   textMyAccountScreenButtonEditar: 'Editar info',
   textMyAccountScreenButtonEliminar: 'Eliminar cuenta',
+  textWelcomeScreenDescription:
+    'Conecta con comercios y vendedores cerca de ti que pueden enviar lo que necesitas de ellos.',
   //textReadmeScreen
   textReadmeScreenRecomendacionesP1:
     'A pesar de que cada uno reaccionamos de modo distinto a situaciones estresantes, una epidemia infeccionsa como el coronavirus puede generar rasgos comunes en lo que a salud mental se refiere. Las situaciones derivadas del estado de alarma implican así que las personas experimenten síntomas derivados del distanciamiento social, la cuarentena o el aislamiento, generando sensación de ansiedad, preocupación o miedo.',
