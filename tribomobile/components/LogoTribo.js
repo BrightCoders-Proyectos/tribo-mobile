@@ -11,8 +11,7 @@ const LogoTribo = (props) => {
       <Image
         resizeMode="contain"
         style={[
-          sideNav != true ? styles.regularicon : styles.sideNavicon,
-          // styles.icon,
+          styles.sideNavicon,
           {
             width: width,
             height: height,

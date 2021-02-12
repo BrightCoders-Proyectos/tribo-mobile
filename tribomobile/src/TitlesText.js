@@ -19,7 +19,7 @@ export default TitlesText ={
     titleSideNavRegister: "Regístrate/Mi Cuenta",
     titleSideNavTerms: "Términos y condiciones",
     titleSideNavFAQ: "FAQ",
-    titleSideNavPolicy: "Política de Privacidad",
+    titleSideNavPolicy: "Políticas de Privacidad",
     //Registration screen
     titleRegistrationBienvenida: "Te damos la Bienvenida",
     titleRegistrationRegistro: "Registro",
