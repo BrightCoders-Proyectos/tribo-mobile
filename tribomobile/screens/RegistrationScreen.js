@@ -9,7 +9,6 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
 import titlesText from '../src/TitlesText';
 import contentText from '../screensText/ContentText';
 import Mountains from '../assets/mountains.png';
@@ -17,55 +16,7 @@ import LogoTribo from '../components/LogoTribo';
 import Titles from '../components/Titles';
 import TextInputs from '../components/TextInputs';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-
-const FormInput = (props) => {
-  const {title, placeholderText} = props;
-  return (
-    <View style={{alignItems: 'flex-start', marginBottom: 10, width: '100%'}}>
-      <TextInput
-        style={{
-          backgroundColor: 'white',
-          borderWidth: 1,
-          borderRadius: 5,
-          color: '#4A4A4A',
-          fontSize: 16,
-          fontWeight: 'bold',
-          height: 50,
-          paddingHorizontal: 10,
-          width: '100%',
-        }}
-        placeholder={placeholderText}
-      />
-    </View>
-  );
-};
-
-const RegistrationCheckbox = (props) => {
-  const [toggleCheckBox, setToggleCheckBox] = useState(false);
-  const {checkboxLabel} = props;
-  return (
-    <View
-      style={{
-        alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-      }}>
-      <CheckBox
-        disabled={false}
-        value={toggleCheckBox}
-        onValueChange={(newValue) => setToggleCheckBox(newValue)}
-      />
-      <Text
-        style={{
-          color: '#4A4A4A',
-          fontSize: 14,
-          fontWeight: 'bold',
-        }}>
-        {checkboxLabel}
-      </Text>
-    </View>
-  );
-};
+import CheckBoxCustom from '../components/CheckBoxCustom';
 
 const RegistrationScreen = () => {
   return (
@@ -75,9 +26,8 @@ const RegistrationScreen = () => {
           <View style={{width: '100%', height: 100, marginTop: 20}}>
             <LogoTribo width={150} height={150} line={true} sideNav={false} />
           </View>
-          <Text style={styles.title}> {titlesText.titleLogo} </Text>
-          <View>
-            <View style={{alignItems: 'center'}}>
+          <View style={{width: '100%', height: 100, marginTop: 20}}>
+            <View style={{alignItems: 'center',marginTop: 20}}>
               <Titles
                 titleType="screenTitle"
                 title={titlesText.titleRegistrationBienvenida}
@@ -88,9 +38,9 @@ const RegistrationScreen = () => {
                 title="Cuéntanos sobre tu negocio y empieza a conectar con tus clientes"
               />
             </View>
-            
           </View>
-          <View style={{alignItems: 'flex-start', width: '100%', marginTop:50}}>
+          <View
+            style={{alignItems: 'flex-start', width: '100%', marginTop: 50}}>
             <Titles
               txtAlign="center"
               titleType="formTitle"
@@ -114,38 +64,6 @@ const RegistrationScreen = () => {
               textInputType=""
               placeholderText="Ingresa el telefono celular"
             />
-            {/* <Titles
-              txtAlign="left"
-              titleType=""
-              title={titlesText.titlteMyAccountTelefono}
-            />
-            <TextInputs
-              placeholderText={contentText.textRegistrationScreenInputEscribe}
-            />
-            <Titles
-              txtAlign="left"
-              titleType=""
-              title={titlesText.titleRegistrationCorreo}
-            />
-            <TextInputs
-              placeholderText={contentText.textRegistrationScreenInputRecibirás}
-            /> 
-            <Titles
-              txtAlign="left"
-              titleType=""
-              title={titlesText.titleRegistrationNombreResponsble}
-            />
-            <TextInputs
-              placeholderText={contentText.textRegistrationScreenInputEgNombre}
-            />
-            <Titles
-              txtAlign="left"
-              titleType=""
-              title={titlesText.titleRegistrationNombreNegocio}
-            />
-            <TextInputs
-              placeholderText={contentText.textRegistrationScreenInputEgNegocio}
-            />*/}
             <Titles
               txtAlign="left"
               titleType=""
@@ -170,110 +88,118 @@ const RegistrationScreen = () => {
                 contentText.textRegistrationScreenInputRestaurante
               }
             />
+
             <Titles
               txtAlign="left"
               titleType=""
               title={titlesText.titleRegistrationVenta}
             />
-            <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxComida}
-              />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxServicio
-                }
-              />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxProducto
-                }
-              />
-            </View>
 
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationFormasPago}
-            </Text>
             <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxEfectivo
-                }
+              <CheckBoxCustom
+               
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxComida}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxTarjeta
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxServicio}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxTransferencia
-                }
-              />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxDeposito
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxProducto}
               />
             </View>
-            <Text style={styles.subtitle}>
-              {titlesText.titlteMyAccountTipoEntrega}
-            </Text>
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationFormasPago}
+            />
             <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxRecoger
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxEfectivo}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxTarjeta}
+              />
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxTransferencia}
+              />
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxDeposito}
+              />
+            </View>
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titlteMyAccountTipoEntrega}
+            />
+            <View style={styles.checkboxContainer}>
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxRecoger}
+              />
+              <CheckBoxCustom
+                value={false}
+                title={
                   contentText.textRegistrationScreenCheckboxServicioDomicilio
                 }
               />
             </View>
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationDiasAbierto}
-            </Text>
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationDiasAbierto}
+            />
             <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxLunes}
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxLunes}
               />
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxMartes}
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxMartes}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxMiercoles
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxMiercoles}
               />
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxJueves}
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxJueves}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxViernes
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxViernes}
               />
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxSabado}
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxSabado}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxDomingo
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxDomingo}
               />
             </View>
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationHorario}
-            </Text>
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationHorario}
+            />
             <View style={styles.timeContainer}>
               <TextInput
                 style={styles.inputTime}
                 placeholder={contentText.textRegistrationScreenInputHoraInicio}
               />
-              <Text style={{margin: 15}}>
-                {contentText.textRegistrationScreenA}
-              </Text>
+              <Titles
+                txtAlign="left"
+                titleType=""
+                title={titlesText.textRegistrationScreenA}
+              />
               <TextInput
                 style={styles.inputTime}
                 placeholder={contentText.textRegistrationScreenInputHoraFin}
@@ -281,13 +207,13 @@ const RegistrationScreen = () => {
             </View>
 
             <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxHeLeido
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxHeLeido}
               />
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxDeseo}
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxDeseo}
               />
             </View>
             <TouchableOpacity style={styles.registerButton}>
