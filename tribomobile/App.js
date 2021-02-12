@@ -13,7 +13,7 @@ import LogoTribo from './components/LogoTribo';
 import ExampleButtons from './ExampleButtons';
 import MainScreen from './components/MainScreen';
 //import ModalInfoStore from './components/modals/ModalInfoStore';
-import WelcomeScreen from './components/screens/welcome/WelcomeScreen'
+import SignUpScreen from './components/screens/welcome/SignUpScreen'
 //impot //textInputNull
 
 import {
@@ -30,7 +30,7 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         {/* <MainScreen /> */}
-        <WelcomeScreen />
+        <SignUpScreen />
       </SafeAreaView>
     </>
   );
