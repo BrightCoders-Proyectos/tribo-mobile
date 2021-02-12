@@ -13,10 +13,13 @@ import CheckBox from '@react-native-community/checkbox';
 import titlesText from '../src/TitlesText';
 import contentText from '../screensText/ContentText';
 import Mountains from '../assets/mountains.png';
+import LogoTribo from '../components/LogoTribo';
+import Titles from '../components/Titles';
+import TextInputs from '../components/TextInputs';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const FormInput = (props) => {
-  const {title, placeholderString} = props;
+  const {title, placeholderText} = props;
   return (
     <View style={{alignItems: 'flex-start', marginBottom: 10, width: '100%'}}>
       <TextInput
@@ -31,7 +34,7 @@ const FormInput = (props) => {
           paddingHorizontal: 10,
           width: '100%',
         }}
-        placeholder={placeholderString}
+        placeholder={placeholderText}
       />
     </View>
   );
@@ -69,78 +72,109 @@ const RegistrationScreen = () => {
     <View style={styles.container}>
       <ScrollView>
         <View style={{alignItems: 'center'}}>
-          <Image
-            resizeMode="contain"
-            style={{maxHeight: 100}}
-            source={Mountains}
-          />
+          <View style={{width: '100%', height: 100, marginTop: 20}}>
+            <LogoTribo width={150} height={150} line={true} sideNav={false} />
+          </View>
           <Text style={styles.title}> {titlesText.titleLogo} </Text>
           <View>
-            <Text style={styles.title}>
-              {titlesText.titleRegistrationBienvenida}
-            </Text>
-            <Text style={{color: '#4A4A4A', fontSize: 18}}>
-              {contentText.textRegistrationScreenLaMarket}
-            </Text>
+            <View style={{alignItems: 'center'}}>
+              <Titles
+                titleType="screenTitle"
+                title={titlesText.titleRegistrationBienvenida}
+              />
+              <Titles
+                txtAlign="center"
+                titleType="inputTitle"
+                title="Cuéntanos sobre tu negocio y empieza a conectar con tus clientes"
+              />
+            </View>
+            
           </View>
-          <View style={{alignItems: 'flex-start', width: '100%'}}>
-            <Text style={[styles.title, {marginTop: 40}]}>
-              {titlesText.titleRegistrationRegistro}
-            </Text>
-            <Text style={styles.subtitle}>
-              {titlesText.titlteMyAccountTelefono}
-            </Text>
-            <FormInput
-              placeholderString={contentText.textRegistrationScreenInputEscribe}
+          <View style={{alignItems: 'flex-start', width: '100%', marginTop:50}}>
+            <Titles
+              txtAlign="center"
+              titleType="formTitle"
+              title={titlesText.titleRegistrationRegistro}
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationCorreo}
-            </Text>
-            <FormInput
-              placeholderString={
-                contentText.textRegistrationScreenInputRecibirás
-              }
+            <Titles
+              txtAlign="left"
+              titleType="inputTitle"
+              title="Como se llama tu negocio?"
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationNombreResponsble}
-            </Text>
-            <FormInput
-              placeholderString={
-                contentText.textRegistrationScreenInputEgNombre
-              }
+            <TextInputs
+              textInputType=""
+              placeholderText={contentText.textRegistrationScreenInputEgNegocio}
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationNombreNegocio}
-            </Text>
-            <FormInput
-              placeholderString={
-                contentText.textRegistrationScreenInputEgNegocio
-              }
+            <Titles
+              txtAlign="left"
+              titleType="inputTitle"
+              title="Telefono de negocio"
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationDireccionNegocio}
-            </Text>
-            <FormInput
-              placeholderString={contentText.textRegistrationScreenInputCalle}
+            <TextInputs
+              textInputType=""
+              placeholderText="Ingresa el telefono celular"
             />
-            <FormInput
-              placeholderString={contentText.textRegistrationScreenInputColonia}
+            {/* <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titlteMyAccountTelefono}
             />
-            <FormInput
-              placeholderString={contentText.textRegistrationScreenInputCodigo}
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputEscribe}
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationGiroNegocio}
-            </Text>
-            <FormInput
-              placeholderString={
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationCorreo}
+            />
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputRecibirás}
+            /> 
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationNombreResponsble}
+            />
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputEgNombre}
+            />
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationNombreNegocio}
+            />
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputEgNegocio}
+            />*/}
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationDireccionNegocio}
+            />
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputCalle}
+            />
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputColonia}
+            />
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputCodigo}
+            />
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationGiroNegocio}
+            />
+            <TextInputs
+              placeholderText={
                 contentText.textRegistrationScreenInputRestaurante
               }
             />
-
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationVenta}
-            </Text>
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationVenta}
+            />
             <View style={styles.checkboxContainer}>
               <RegistrationCheckbox
                 checkboxLabel={contentText.textRegistrationScreenCheckboxComida}

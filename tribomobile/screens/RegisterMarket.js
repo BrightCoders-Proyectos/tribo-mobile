@@ -5,6 +5,7 @@ import Titles from '../components/Titles';
 import TextInputs from '../components/TextInputs';
 
 const RegisterMarKet = (props) => {
+  
   return (
     <View style={{width: '100%', height: '100%'}}>
       <View style={{width: '100%', height:100, marginTop:20}}>
@@ -21,12 +22,13 @@ const RegisterMarKet = (props) => {
                 <Titles txtAlign="center" titleType="inputTitle" title="Cuéntanos sobre tu negocio y empieza a conectar con tus clientes" />
             </View>
             <View style={{marginTop:30}}>
-                <Titles txtAlign="left" titleType="inputTitle" title="Como se llama tu negocio"/>
-                <TextInputs textInputType="searchBar" placeholderText="e.g Abarrotes Carranza"/>
+                <Titles txtAlign="left" titleType="inputTitle" title="Como se llama tu negocio?"/>
+                <TextInputs textInputType="" placeholderText="e.g Abarrotes Carranza"/>
             </View>
             <View style={{marginTop:10}}>
                 <Titles txtAlign="left" titleType="inputTitle" title="Telefono de negocio"/>
-                <TextInputs textInputType="searchBar" placeholderText="312 145 9032"/>
+                <TextInputs textInputType="" placeholderText="Ingresa el telefono celular"/>
+                
             </View>
         </View>
     </View>
