@@ -8,13 +8,7 @@
 
 import React from 'react';
 import {SafeAreaView, Text, StatusBar, Modal} from 'react-native';
-import titlesText from './src/TitlesText';
-import LogoTribo from './components/LogoTribo';
-import ExampleButtons from './ExampleButtons';
-import MainScreen from './components/MainScreen';
-//import ModalInfoStore from './components/modals/ModalInfoStore';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen'
-//impot //textInputNull
 
 import {
   ModalDeleteStore,
@@ -29,7 +23,6 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/* <MainScreen /> */}
         <WelcomeScreen />
       </SafeAreaView>
     </>
