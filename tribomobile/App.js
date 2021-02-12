@@ -8,7 +8,8 @@
 
 import React from 'react';
 import {SafeAreaView, Text, StatusBar, Modal} from 'react-native';
-import WelcomeScreen from './components/screens/welcome/WelcomeScreen'
+import WelcomeScreen from './components/screens/welcome/WelcomeScreen';
+import LoadingScreen from './components/screens/welcome/LoadingScreen';
 
 import {
   ModalDeleteStore,
@@ -23,7 +24,8 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <WelcomeScreen />
+        {/* <WelcomeScreen /> */}
+        <LoadingScreen />
       </SafeAreaView>
     </>
   );
