@@ -10,6 +10,7 @@ export default TitlesText = {
   titleLoginScreen: 'Para continuar inicia sesión en tribo',
   titleNotAccount: '¿Aún no tienes cuenta?',
   titleRegisteHere: 'Registrate aquí',
+  titleLoginError: 'El número telefónico no existe o la contraseña es incorrecta',
   //welcomescreens
   titleSplashGreeting: '¡Hola!',
   titleSplashWelcome: 'Te damos la bienvenida a',

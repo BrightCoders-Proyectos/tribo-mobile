@@ -4,9 +4,11 @@ import TitlesText from '../src/TitlesText';
 import {CustomButton, ConfigBtnCustom} from '../components/CustomButton';
 import TriboLogo from '../assets/tribologo.png';
 import TextInputCustom from '../components/TextInputs';
+import Colors from '../src/Colors';
 
 //textInputNull
 function WelcomeScreen() {
+  const [error, setError] = useState(false);
   return (
     <View style={styles.container}>
       <View style={styles.containerLogo}>
@@ -21,6 +23,9 @@ function WelcomeScreen() {
         textInputType={'searchBar'}
         placeholderText={TitlesText.titlePassword}
       />
+      {error &&
+        <Text style={styles.textError}>{TitlesText.titleLoginError}</Text> 
+      }
       <CustomButton
         size={ConfigBtnCustom.SIZE.SMALL}
         titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
@@ -86,6 +91,12 @@ const styles = StyleSheet.create({
     borderBottomColor: '#E5E5E5',
     width: '90%',
     marginHorizontal: 25,
+  },
+  textError: {
+    color: Colors.Red,
+    marginHorizontal: 20,
+    textAlign: 'center',
+    fontSize: 15,
   },
 });
 
