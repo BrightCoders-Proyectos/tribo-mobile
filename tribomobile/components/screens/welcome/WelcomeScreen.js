@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
 import {
-  TextInput,
   StyleSheet,
   Text,
   View,
-  Button,
-  TouchableOpacity,
   Image,
 } from 'react-native';
 import TitlesText from '../../../src/TitlesText';
