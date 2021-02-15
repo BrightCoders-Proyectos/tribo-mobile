@@ -5,9 +5,10 @@ import {CustomButton, ConfigBtnCustom} from '../components/CustomButton';
 import TriboLogo from '../assets/tribologo.png';
 import TextInputCustom from '../components/TextInputs';
 import Colors from '../src/Colors';
+import Logo from '../components/LogoTribo';
 
 //textInputNull
-function WelcomeScreen() {
+function LoginScreen() {
   const [error, setError] = useState(false);
   return (
     <View style={styles.container}>
@@ -100,4 +101,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default WelcomeScreen;
+export default LoginScreen;

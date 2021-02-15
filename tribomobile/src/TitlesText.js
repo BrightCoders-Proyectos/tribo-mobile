@@ -11,6 +11,12 @@ export default TitlesText = {
   titleNotAccount: '¿Aún no tienes cuenta?',
   titleRegisteHere: 'Registrate aquí',
   titleLoginError: 'El número telefónico no existe o la contraseña es incorrecta',
+  //Profile
+  titleProfileEditAccount: 'Editar mi cuenta',
+  titleProfileName: 'Nombre Completo',
+  titleProfileEmail: 'Correo Electrónico',
+  titleProfileChangePassword: 'Cambiar contraseña',
+  titleProfileEmaildIncorrect: 'Correo no válida',
   //welcomescreens
   titleSplashGreeting: '¡Hola!',
   titleSplashWelcome: 'Te damos la bienvenida a',
