@@ -10,7 +10,8 @@ import React from 'react';
 import {SafeAreaView, Text, StatusBar, Modal} from 'react-native';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen';
 import LoadingScreen from './components/screens/welcome/LoadingScreen';
-import LoginScreen from './screens/Login'
+import LoginScreen from './screens/Login';
+import EditAccountScreen from './screens/profile/EditAccountScreen';
 
 import {
   ModalDeleteStore,
@@ -19,15 +20,15 @@ import {
 import ModalInfoStore from './components/modals/LittlePinInfo';
 
 const App: () => React$Node = () => {
-  const nameBusinessDummy = 'La fonda de Doña Luisa';
-  const fullTextExampleWhenDeleteABussiness = `${ModalDeleteStoreTexts.description.business} "${nameBusinessDummy}" ?`;
+  const userDummy = {
+    name: 'Daniel Peña Sanchez',
+    email: 'daniel.peña@gmail.com',
+  };
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/* <WelcomeScreen /> */}
-        {/* <LoadingScreen /> */}
-        <LoginScreen />
+        <EditAccountScreen userAccount={userDummy} />
       </SafeAreaView>
     </>
   );
