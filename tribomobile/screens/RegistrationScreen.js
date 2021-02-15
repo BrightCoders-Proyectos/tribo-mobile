@@ -4,19 +4,18 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   TextInput,
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
 import titlesText from '../src/TitlesText';
 import contentText from '../screensText/ContentText';
-import Mountains from '../assets/mountains.png';
 import LogoTribo from '../components/LogoTribo';
 import Titles from '../components/Titles';
 import TextInputs from '../components/TextInputs';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import CheckBoxCustom from '../components/CheckBoxCustom';
+import {CustomButton, ConfigBtnCustom} from '../components/CustomButton';
 import {Dimensions} from 'react-native';
 
 const RegistrationScreen = () => {
@@ -188,35 +187,39 @@ const RegistrationScreen = () => {
               title={titlesText.titleRegistrationHorario}
             />
             <View style={styles.timeContainer}>
-              <TextInput
-                style={styles.inputTime}
-                placeholder={contentText.textRegistrationScreenInputHoraInicio}
-              />
+              <View>
+                <TextInputs
+                  textInputType=""
+                  placeholderText={
+                    contentText.textRegistrationScreenInputHoraInicio
+                  }
+                />
+              </View>
               <Titles
                 txtAlign="left"
                 titleType=""
-                title={titlesText.textRegistrationScreenA}
+                title={contentText.textRegistrationScreenA}
               />
-              <TextInput
-                style={styles.inputTime}
-                placeholder={contentText.textRegistrationScreenInputHoraFin}
+              <View>
+                <TextInputs
+                  textInputType=""
+                  placeholderText={
+                    contentText.textRegistrationScreenInputHoraFin
+                  }
+                />
+              </View>
+            </View>
+            <View style={{width:'100%'}}>
+              <CustomButton
+                size={36}
+                titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
+                bgBtn={ConfigBtnCustom.COLOR.GREEN}
+                borderColorBtn={ConfigBtnCustom.COLOR.GREEN}
+                titleColor={ConfigBtnCustom.COLOR.WHITE}
+                widthBtn={246}
+                title={contentText.textRegistrationScreenButtonAnadir}
               />
             </View>
-            <View style={styles.checkboxContainer}>
-              <CheckBoxCustom
-                value={false}
-                title={contentText.textRegistrationScreenCheckboxHeLeido}
-              />
-              <CheckBoxCustom
-                value={false}
-                title={contentText.textRegistrationScreenCheckboxDeseo}
-              />
-            </View>
-            <TouchableOpacity style={styles.registerButton}>
-              <Text style={styles.registerButtonText}>
-                {contentText.textRegistrationScreenButtonRegistrarme}
-              </Text>
-            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -265,9 +268,12 @@ const styles = StyleSheet.create({
   },
   timeContainer: {
     alignItems: 'center',
+    alignSelf: 'center',
     flexDirection: 'row',
+    width: '100%',
     marginTop: 5,
     marginBottom: 20,
+    justifyContent: 'space-around',
   },
   inputTime: {
     borderRadius: 10,

@@ -38,7 +38,7 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <RegistrationScreen/>
-        <EditAccountScreen userAccount={userDummy} />
+        {/* <ExampleButtons/> */}
       </SafeAreaView>
     </>
   );
