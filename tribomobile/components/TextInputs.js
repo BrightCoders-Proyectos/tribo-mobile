@@ -3,7 +3,7 @@ import {StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import Colors from '../src/Colors';
 
 const TextInputs = (props) => {
-  const {textInputType, placeholderText} = props;
+  const {textInputType, placeholderText, value} = props;
 
   const textInputStyling = (textInputType) => {
     let styleProperties = [];
@@ -40,6 +40,7 @@ const TextInputs = (props) => {
       placeholderTextColor={
         textInputType === 'textInputNull' ? Colors.Red : Colors.GrayDark
       }
+      value={value || ''}
     />
   );
 };

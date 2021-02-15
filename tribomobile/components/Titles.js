@@ -18,15 +18,19 @@ const styles = StyleSheet.create({
     color: Colors.BlueDark,
     fontSize: 30,
     fontWeight: 'bold',
+    marginBottom: 15,
   },
   formTitle: {
     color: Colors.BlueDark,
-    fontSize: 25,
+    fontSize: 24,
     fontWeight: 'bold',
+    marginBottom: 10,
   },
   inputTitle: {
     color: Colors.BlueDark,
-    fontSize: 20,
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 5, 
   },
 });
 

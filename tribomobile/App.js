@@ -18,14 +18,21 @@ import LittlePinInfo from './components/modals/LittlePinInfo';
 import SideNavScreen from './screens/SideNavScreen';
 import RegisterMarket  from './screens/RegisterMarket';
 import RegistrationScreen  from './screens/RegistrationScreen';
+import WelcomeScreen from './components/screens/welcome/WelcomeScreen';
+import LoadingScreen from './components/screens/welcome/LoadingScreen';
+import LoginScreen from './screens/Login';
+import EditAccountScreen from './screens/profile/EditAccountScreen';
+
 import {
   ModalDeleteStore,
   ModalDeleteStoreTexts,
 } from './components/modals/ModalDeleteStore';
 
 const App: () => React$Node = () => {
-  const nameBusinessDummy = 'La fonda de Doña Luisa';
-  const fullTextExampleWhenDeleteABussiness = `${ModalDeleteStoreTexts.description.business} "${nameBusinessDummy}" ?`;
+  const userDummy = {
+    name: 'Daniel Peña Sanchez',
+    email: 'daniel.peña@gmail.com',
+  };
   return (
     <>
       <StatusBar barStyle="dark-content" />
