@@ -34,7 +34,7 @@ const RegistrationScreen = () => {
               <Titles
                 txtAlign="center"
                 titleType="inputTitle"
-                title="Cuéntanos sobre tu negocio y empieza a conectar con tus clientes"
+                title={contentText.textRegistrationScreenCuentanos}
               />
             </View>
           </View>
@@ -48,7 +48,7 @@ const RegistrationScreen = () => {
             <Titles
               txtAlign="left"
               titleType="inputTitle"
-              title="Como se llama tu negocio?"
+              title={titlesText.titleRegistrationComoSeLama}
             />
             <TextInputs
               textInputType=""
@@ -57,11 +57,11 @@ const RegistrationScreen = () => {
             <Titles
               txtAlign="left"
               titleType="inputTitle"
-              title="Telefono de negocio"
+              title={titlesText.titleRegistrationTelefonoNegocio}
             />
             <TextInputs
               textInputType=""
-              placeholderText="Ingresa el telefono celular"
+              placeholderText={contentText.textRegistrationScreenInputIngresaTelefono}
             />
             <Titles
               txtAlign="left"

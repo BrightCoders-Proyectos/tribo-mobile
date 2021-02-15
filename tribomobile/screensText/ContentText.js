@@ -49,7 +49,9 @@ export default ContentText = {
   //RegistrationScreen
   textRegistrationScreenTribo:
     'Tribo te ayuda a estar más cerca de tus clientes, solo regístrate y estarás listo para venderle a los clientes de tu comunidad a través de una herramienta digital.',
+  textRegistrationScreenCuentanos: 'Cuéntanos sobre tu negocio y empieza a conectar con tus clientes',
   textRegistrationScreenInputEscribe: 'Escribe tu número telefónico',
+  textRegistrationScreenInputIngresaTelefono: 'Ingresa el telefono celular',
   textRegistrationScreenInputRecibirás: 'Recibirás información sobre la app',
   textRegistrationScreenInputEgNombre: 'e.g. José Ramírez',
   textRegistrationScreenInputEgNegocio: 'e.g. Abarrotes Memo',
