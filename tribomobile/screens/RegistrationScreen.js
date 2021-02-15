@@ -17,6 +17,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import CheckBoxCustom from '../components/CheckBoxCustom';
 import {CustomButton, ConfigBtnCustom} from '../components/CustomButton';
 import {Dimensions} from 'react-native';
+import { Left } from 'native-base';
 
 const RegistrationScreen = () => {
   const windowHeight = Dimensions.get('window').height;
@@ -92,7 +93,7 @@ const RegistrationScreen = () => {
               titleType=""
               title={titlesText.titleRegistrationVenta}
             />
-            <View style={styles.checkboxContainer}>
+            <View style={[styles.checkboxContainer],{flexDirection:'row',marginLeft:-20, marginBottom:10}}>
               <CheckBoxCustom
                 value={false}
                 title={contentText.textRegistrationScreenCheckboxComida}
@@ -111,7 +112,7 @@ const RegistrationScreen = () => {
               titleType=""
               title={titlesText.titleRegistrationFormasPago}
             />
-            <View style={styles.checkboxContainer}>
+            <View style={[styles.checkboxContainer]}>
               <CheckBoxCustom
                 value={false}
                 title={contentText.textRegistrationScreenCheckboxEfectivo}
@@ -151,7 +152,7 @@ const RegistrationScreen = () => {
               titleType=""
               title={titlesText.titleRegistrationDiasAbierto}
             />
-            <View style={styles.checkboxContainer}>
+            <View style={[styles.checkboxContainer,{flexDirection:'row'}]}>
               <CheckBoxCustom
                 value={false}
                 title={contentText.textRegistrationScreenCheckboxLunes}
@@ -242,13 +243,16 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
   },
+  checkboxContainerRow:{
+
+  },
   checkboxContainer: {
-    flexDirection: 'row',
     flexWrap: 'wrap',
     padding: 0,
     marginBottom: 20,
-    marginLeft: -5,
+    marginLeft: -15,
     width: '100%',
+    alignItems:'flex-start'
   },
   subtitle: {
     color: '#4A4A4A',
