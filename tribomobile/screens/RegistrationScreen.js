@@ -17,17 +17,17 @@ import Titles from '../components/Titles';
 import TextInputs from '../components/TextInputs';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import CheckBoxCustom from '../components/CheckBoxCustom';
+import {Dimensions} from 'react-native';
 
 const RegistrationScreen = () => {
+  const windowHeight = Dimensions.get('window').height;
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {height: windowHeight}]}>
+      <LogoTribo width={'100%'} height={70} line={true} sideNav={false} />
       <ScrollView>
-        <View style={{alignItems: 'center'}}>
+        <View style={styles.formContainer}>
           <View style={{width: '100%', height: 100, marginTop: 20}}>
-            <LogoTribo width={150} height={150} line={true} sideNav={false} />
-          </View>
-          <View style={{width: '100%', height: 100, marginTop: 20}}>
-            <View style={{alignItems: 'center',marginTop: 20}}>
+            <View style={{alignItems: 'center', marginTop: 20}}>
               <Titles
                 titleType="screenTitle"
                 title={titlesText.titleRegistrationBienvenida}
@@ -88,16 +88,13 @@ const RegistrationScreen = () => {
                 contentText.textRegistrationScreenInputRestaurante
               }
             />
-
             <Titles
               txtAlign="left"
               titleType=""
               title={titlesText.titleRegistrationVenta}
             />
-
             <View style={styles.checkboxContainer}>
               <CheckBoxCustom
-               
                 value={false}
                 title={contentText.textRegistrationScreenCheckboxComida}
               />
@@ -205,7 +202,6 @@ const RegistrationScreen = () => {
                 placeholder={contentText.textRegistrationScreenInputHoraFin}
               />
             </View>
-
             <View style={styles.checkboxContainer}>
               <CheckBoxCustom
                 value={false}
@@ -230,7 +226,11 @@ const RegistrationScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 40,
+    padding: 24,
+  },
+  formContainer: {
+    alignItems: 'center',
+    paddingBottom: 40,
   },
   title: {
     color: '#4A4A4A',

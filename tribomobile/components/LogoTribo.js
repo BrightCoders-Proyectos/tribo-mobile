@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     //height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom:10
   },
   regularicon: {
     tintColor: colors.BlueP,
