@@ -16,7 +16,7 @@ export default TitlesText = {
   titleProfileName: 'Nombre Completo',
   titleProfileEmail: 'Correo Electrónico',
   titleProfileChangePassword: 'Cambiar contraseña',
-  titleProfilePasswordIncorrect: 'Contraseña no válida',
+  titleProfileEmaildIncorrect: 'Correo no válida',
   //welcomescreens
   titleSplashGreeting: '¡Hola!',
   titleSplashWelcome: 'Te damos la bienvenida a',

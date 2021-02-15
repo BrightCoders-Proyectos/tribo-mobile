@@ -31,7 +31,7 @@ function EditAccountScreen(props) {
       />
       {error && (
         <Text style={styles.textError}>
-          {TitlesText.titleProfilePasswordIncorrect}
+          {TitlesText.titleProfileEmaildIncorrect}
         </Text>
       )}
       <Text style={styles.textChangePassword}>
