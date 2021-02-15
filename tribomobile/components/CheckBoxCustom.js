@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import { CheckBox } from 'native-base';
 import Colors from "../src/Colors";
 
-function CheckboxCustom ({title,value}) {
+function CheckBoxCustom ({title,value}) {
   return (
     <View style={styles.checkBoxView}>
       <CheckBox checked={value} color={Colors.BlueLight}/>
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CheckboxCustom;
+export default CheckBoxCustom;

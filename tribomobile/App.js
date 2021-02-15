@@ -8,6 +8,16 @@
 
 import React from 'react';
 import {SafeAreaView, Text, StatusBar, Modal} from 'react-native';
+import titlesText from './src/TitlesText';
+import ContentText from './screensText/ContentText';
+import LogoTribo from './components/LogoTribo';
+import ExampleButtons from './ExampleButtons';
+import MainScreen from './components/MainScreen';
+import ModalInfoStore from './components/modals/ModalInfoStore';
+import LittlePinInfo from './components/modals/LittlePinInfo';
+import SideNavScreen from './screens/SideNavScreen';
+import RegisterMarket  from './screens/RegisterMarket';
+import RegistrationScreen  from './screens/RegistrationScreen';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen';
 import LoadingScreen from './components/screens/welcome/LoadingScreen';
 import LoginScreen from './screens/Login';
@@ -17,7 +27,6 @@ import {
   ModalDeleteStore,
   ModalDeleteStoreTexts,
 } from './components/modals/ModalDeleteStore';
-import ModalInfoStore from './components/modals/LittlePinInfo';
 
 const App: () => React$Node = () => {
   const userDummy = {
@@ -28,7 +37,8 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <EditAccountScreen userAccount={userDummy} />
+        <RegistrationScreen/>
+        {/* <ExampleButtons/> */}
       </SafeAreaView>
     </>
   );
