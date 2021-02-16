@@ -10,20 +10,19 @@ import {
 } from 'react-native';
 
 const IconNav = ({image, text, markerSelection, name}) => {
-
   const changeIconNav = () => {
-    if (markerSelection === 'service' && name === 'service'){
-      return (<Image source={image} style={{tintColor: '#FFCF87'}} />)
-    }else if(markerSelection === 'store' && name === 'store'){
-      return (<Image source={image} style={{tintColor: '#29335C'}} />)
-    }else if(markerSelection === 'food' && name === 'food'){
-      return (<Image source={image} style={{tintColor: '#EFD13B'}} />)
+    if (markerSelection === 'service' && name === 'service') {
+      return <Image source={image} style={{tintColor: '#FFCF87'}} />;
+    } else if (markerSelection === 'store' && name === 'store') {
+      return <Image source={image} style={{tintColor: '#29335C'}} />;
+    } else if (markerSelection === 'food' && name === 'food') {
+      return <Image source={image} style={{tintColor: '#EFD13B'}} />;
     }
-    return(<Image source={image} style={style.imagenServices} />)
-  }
+    return <Image source={image} style={style.imagenServices} />;
+  };
 
   return (
-    <View style={{flexDirection: 'column', padding: 30}}>
+    <View style={style.iconContainer}>
       {changeIconNav()}
       <Text style={style.textDown}>{text}</Text>
     </View>
@@ -31,6 +30,12 @@ const IconNav = ({image, text, markerSelection, name}) => {
 };
 
 const style = StyleSheet.create({
+  iconContainer: {
+    flexDirection: 'column',
+    padding: 30,
+    alignContent: 'center',
+    alignItems:'center'
+  },
   textDown: {
     fontSize: 10,
     marginTop: 6,

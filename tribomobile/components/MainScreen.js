@@ -27,8 +27,8 @@ const MainScreen = () => {
   const regionMap = {
     latitude: 19.256127,
     longitude: -103.713536,
-    latitudeDelta: 0.08,
-    longitudeDelta: 0.07,
+    latitudeDelta: 0.04,
+    longitudeDelta: 0.03,
   };
 
   return (
@@ -105,15 +105,16 @@ const style = StyleSheet.create({
   },
   navDown: {
     width: '80%',
-    height: '8%',
+    height: '10%',
     marginLeft: Dimensions.get('window').width / 10,
-    marginTop: Dimensions.get('window').height / 1.099,
+    marginTop: Dimensions.get('window').height / 1.14,
     backgroundColor: 'white',
     zIndex: 2,
     position: 'absolute',
     borderRadius: 7,
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent:'center'
   },
   navBar: {
     marginTop: 10,
@@ -149,8 +150,8 @@ const style = StyleSheet.create({
     marginLeft: 15,
   },
   imagenServices: {
-    width: 15,
-    height: 20,
+    width: 30,
+    height: 40,
   },
 });
 
