@@ -20,9 +20,11 @@ import MapStyle from './MapStyle';
 import string from '../screensText/ContentText';
 import IconNav from './IconNav';
 import BtnHideShowMenu from '../components/BtnHideShowMenu';
+import LittlePinInfo from './modals/LittlePinInfo';
 
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
 
   const regionMap = {
     latitude: 19.256127,
@@ -33,6 +35,7 @@ const MainScreen = () => {
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
+      <LittlePinInfo modalVisible={modalVisible} setModalVisible={setModalVisible}/>
       <View style={{zIndex: 0, flexDirection: 'column'}}>
         <MapView
           style={{width: '100%', height: '100%'}}
@@ -44,7 +47,10 @@ const MainScreen = () => {
               longitude: -103.715864,
             }}
             title={string.product}
-            onPress={() => setMarkerSelection('store')}>
+            // onPress={() => setMarkerSelection('store')}
+            onPress={() => setModalVisible(true)}
+            
+            >
             <Image source={marker_store} style={style.imagenServices} />
           </Marker>
           <Marker
@@ -53,7 +59,9 @@ const MainScreen = () => {
               longitude: -103.705776,
             }}
             title={string.food}
-            onPress={() => setMarkerSelection('food')}>
+            // onPress={() => setMarkerSelection('food')}
+            onPress={() => setModalVisible(true)}
+            >
             <Image source={marker_food} style={style.imagenServices} />
           </Marker>
           <Marker
@@ -62,7 +70,9 @@ const MainScreen = () => {
               longitude: -103.715017,
             }}
             title={string.service}
-            onPress={() => setMarkerSelection('service')}>
+            // onPress={() => setMarkerSelection('service')}
+            onPress={() => setModalVisible(true)}
+            >
             <Image source={marker_service} style={style.imagenServices} />
           </Marker>
         </MapView>

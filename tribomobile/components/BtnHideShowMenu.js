@@ -7,7 +7,7 @@ import MenuComp from '../components/MenuComponent';
 const BtnHideShowMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  console.log(showMenu + ' menu');
+  //console.log(showMenu + ' menu');
 
   return (
     <>

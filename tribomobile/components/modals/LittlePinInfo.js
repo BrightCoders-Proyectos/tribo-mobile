@@ -26,9 +26,9 @@ function Description(props) {
 }
 
 function ModalInfoStore(props) {
-  const {serviceType} = props;
+  const {serviceType,modalVisible,setModalVisible} = props;
   let iconColor = 'red';
-  const [modalVisible, setModalVisible] = useState(false);
+  //const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
       <View style={styles.centeredView}>
@@ -84,13 +84,13 @@ function ModalInfoStore(props) {
           </View>
         </Modal>
       </View>
-      <TouchableOpacity
+      {/* <TouchableOpacity
         style={styles.openButton}
         onPress={() => {
           setModalVisible(true);
         }}>
         <Text style={styles.textStyle}>show info(store) in a little pin</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </>
   );
 }
