@@ -16,17 +16,17 @@ import MainScreen from './components/MainScreen';
 import ModalInfoStore from './components/modals/ModalInfoStore';
 import LittlePinInfo from './components/modals/LittlePinInfo';
 import SideNavScreen from './screens/SideNavScreen';
-import RegisterMarket  from './screens/RegisterMarket';
-import RegistrationScreen  from './screens/RegistrationScreen';
+import RegisterMarket from './screens/RegisterMarket';
+import RegistrationScreen from './screens/RegistrationScreen';
 import WelcomeScreen from './components/screens/welcome/WelcomeScreen';
 import LoadingScreen from './components/screens/welcome/LoadingScreen';
 import LoginScreen from './screens/Login';
 import EditAccountScreen from './screens/profile/EditAccountScreen';
 
 import {
-  ModalDeleteStore,
-  ModalDeleteStoreTexts,
-} from './components/modals/ModalDeleteStore';
+  ModalDeleteStoreOrAccount,
+  ModalDeleteTexts,
+} from './components/modals/ModalDeleteStoreOrAccout';
 
 const App: () => React$Node = () => {
   const userDummy = {
@@ -37,8 +37,15 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/* <RegistrationScreen/> */}
-        <EditAccountScreen userAccount={userDummy}/>
+        <ModalDeleteStoreOrAccount
+          isBussiness={true}
+          title={ModalDeleteTexts.title.business}
+          description={'La fonda de doña luisa'}
+        />
+        <ModalDeleteStoreOrAccount
+          title={ModalDeleteTexts.title.account}
+          description={ModalDeleteTexts.description.account}
+        />
       </SafeAreaView>
     </>
   );
