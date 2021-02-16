@@ -27,7 +27,6 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        
         <SideNavScreen/>
       </SafeAreaView>
     </>

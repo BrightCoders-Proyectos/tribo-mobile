@@ -3,13 +3,20 @@ import {View, Text, TouchableOpacity, Button, Pressable} from 'react-native';
 import MenusHide from '../components/menuHide';
 import SideBarOption from '../components/SideBarOption';
 import TitlesText from '../screensText/ContentText';
-// import LogoTribo from '../components/LogoTribo';
+import LogoTribo from '../components/LogoTribo';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
+import ClicableLink from '../components/ClicableLink';
 
 const MenuComp = (props) => {
 
-  const options = [1,2,3,4,5];
+  const options = [
+    TitlesText.title_1,
+    TitlesText.title_2,
+    TitlesText.title_3,
+    TitlesText.title_4,
+    TitlesText.title_5
+  ];
 
   return(
     
@@ -20,15 +27,20 @@ const MenuComp = (props) => {
       >
         <FontAwesomeIcon icon={faTimes} size={30} color={'white'} />
       </Pressable>
-      <View>
-        {/* <LogoTribo height={50} width={100} line={false}/> */}
+      <View style={{backgroundColor: 'red', width: '100%', height: 180}}>
+        <LogoTribo
+          height={240}
+          width={160}
+          line={false}
+        />
       </View>
+      
       {options.map((item) => 
         <SideBarOption
-          textBold={TitlesText.title_1}
+          textBold={item}
         /> 
       )}
-    
+      <ClicableLink/>
     </View>
   );
 }
