@@ -40,7 +40,7 @@ const TextInputs = (props) => {
       placeholderTextColor={
         textInputType === 'textInputNull' ? Colors.Red : Colors.GrayDark
       }
-      value={value || ''}
+      defaultValue={value}
     />
   );
 };
