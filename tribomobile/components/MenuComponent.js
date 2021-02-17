@@ -28,11 +28,7 @@ const MenuComp = (props) => {
         <FontAwesomeIcon icon={faTimes} size={30} color={'white'} />
       </Pressable>
       <View style={{backgroundColor: 'red', width: '100%', height: 180}}>
-        <LogoTribo
-          height={240}
-          width={160}
-          line={false}
-        />
+        <LogoTribo width={'100%'} height={70} line={false} sideNav={true} />
       </View>
       
       {options.map((item) => 
