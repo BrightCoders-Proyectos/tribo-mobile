@@ -16,8 +16,9 @@ const MenuComp = (props) => {
     TitlesText.title_3,
     TitlesText.title_4,
     TitlesText.title_5
-  ];
+  ]; 
 
+    
   return(
     
     <View style={{width: '80 %', height: '100%', backgroundColor: '#197d94',marginTop: 0, marginLeft: -16, borderTopRightRadius: 24}}>
