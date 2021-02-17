@@ -37,15 +37,8 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ModalDeleteStoreOrAccount
-          isBussiness={true}
-          title={ModalDeleteTexts.title.business}
-          description={'La fonda de doña luisa'}
-        />
-        <ModalDeleteStoreOrAccount
-          title={ModalDeleteTexts.title.account}
-          description={ModalDeleteTexts.description.account}
-        />
+
+        <SideNavScreen/>
       </SafeAreaView>
     </>
   );

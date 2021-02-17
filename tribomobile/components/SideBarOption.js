@@ -14,15 +14,15 @@ const SideBarOption = (props) => {
 
   return (
     <>
-      <TouchableHighlight
-        style={{
-          maxWidth: '80%',
-          borderTopRightRadius: 20,
+      <TouchableHighlight 
+        style={{    
+          maxWidth: '80%', 
+          borderTopRightRadius: 20, 
           borderBottomRightRadius: 20,
-        }}
+          }}
         onPress={onPress}
-        underlayColor="#FFCF87">
-        <View>
+        underlayColor= "#FFCF87"
+      >
           <View style={SideBarStyle.textContainer}>
             <View>
               <View>
@@ -37,7 +37,6 @@ const SideBarOption = (props) => {
               )}
             </View>
           </View>
-        </View>
       </TouchableHighlight>
     </>
   );
