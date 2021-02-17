@@ -12,13 +12,11 @@ import titlesText from './src/TitlesText';
 import ContentText from './screensText/ContentText';
 import LogoTribo from './components/LogoTribo';
 import ExampleButtons from './ExampleButtons';
-import MainScreen from './components/MainScreen';
 import ModalInfoStore from './components/modals/ModalInfoStore';
 import LittlePinInfo from './components/modals/LittlePinInfo';
 import SideNavScreen from './screens/SideNavScreen';
 import RegisterMarket from './screens/RegisterMarket';
 import RegistrationScreen from './screens/RegistrationScreen';
-import LoginScreen from './screens/Login';
 import EditAccountScreen from './screens/profile/EditAccountScreen';
 import {
   ModalDeleteStoreOrAccount,

@@ -8,7 +8,8 @@ import Colors from '../src/Colors';
 import Logo from '../components/LogoTribo';
 
 //textInputNull
-function LoginScreen() {
+function LoginScreen(props) {
+  const {navigation} = props;
   const [error, setError] = useState(false);
   return (
     <View style={styles.container}>
@@ -37,10 +38,11 @@ function LoginScreen() {
         title={'Inicia Sesión'}
         marginTop={20}
         disabled={false}
+        action={() => navigation.navigate("Map") }
       />
       <View style={styles.containerRegisterHere}>
         <Text style={styles.textNotAccount}>{TitlesText.titleNotAccount}</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
           <Text style={styles.textRegisterHere}>
             {TitlesText.titleRegisteHere}
           </Text>

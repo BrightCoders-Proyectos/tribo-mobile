@@ -51,7 +51,7 @@ function WelcomeScreen(props) {
         title={'Registrate'}
         marginTop={20}
         disabled={false}
-        action={() => navigation.navigate("Registration")}
+        action={() => navigation.navigate("SignUp")}
       />
     </View>
   );
