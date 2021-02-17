@@ -1,24 +1,31 @@
 export default ContentText = {
   //onBoardingScreen
-  textoOnBoardingScreenConnect:'Tribo te conecta con comercios y vendedores cerca de ti.',
-  textoOnBoardingScreenCall:'Sólo llama o envía un mensaje directamente desde tu celular para solicitar lo que necesites.',
-  textoOnBoardingScreenReceive:'Recibe tu pedido en la puerta de tu hogar o pasa directamente por el.',
+  textoOnBoardingScreenConnect:
+    'Tribo te conecta con comercios y vendedores cerca de ti.',
+  textoOnBoardingScreenCall:
+    'Sólo llama o envía un mensaje directamente desde tu celular para solicitar lo que necesites.',
+  textoOnBoardingScreenReceive:
+    'Recibe tu pedido en la puerta de tu hogar o pasa directamente por el.',
   textoOnBoardingScreenOmitir: 'Omitir',
-  textoOnBoardingScreenStart: '¡Comencemos!', 
+  textoOnBoardingScreenStart: '¡Comencemos!',
   //SplashScreen
   textoSplashScreenMade: 'Made with love in Colima, México',
   textoSplashScreenWe: '#WeAreMagma',
-  textoSplashScreenLaMarket: 'AMARKET.APP',
+  textoSplashScreenTribo: 'Tribo',
   textoSplashScreenL: 'L',
   //WelcomeScreen
-  textoWelcomeScreenComercios: 'Comercios y vendedores cerca de ti que envían a domicilio lo que necesitas de ellos.',
-  textoWelcomeScreenSolo: 'Sólo llama o envía un mensaje y recibe tu pedido en la puerta de tu hogar.',
+  textoWelcomeScreenComercios:
+    'Comercios y vendedores cerca de ti que envían a domicilio lo que necesitas de ellos.',
+  textoWelcomeScreenSolo:
+    'Sólo llama o envía un mensaje y recibe tu pedido en la puerta de tu hogar.',
   textoWelcomeScreenInputEscribe: 'Escribe tu número telefónico',
   textoWelcomeScreenButtonRegistra: 'Registrarme',
   textoWelcomeScreenOmitir: 'Omitir',
   //WelcomeScreenGuest
-  textoWelcomeScreenGuestLaMArket: 'LaMarket.app es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
-  textoWelcomeScreenGuestSolo: 'Sólo llama o envía un mensaje por WhatsApp y recibe tu pedido en la puerta de tu hogar.',
+  textoWelcomeScreenGuestTribo:
+    'Tribo es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
+  textoWelcomeScreenGuestSolo:
+    'Sólo llama o envía un mensaje por WhatsApp y recibe tu pedido en la puerta de tu hogar.',
   textoWelcomeScreenGuestInputEscribe: 'Escribe tu dirección',
   textoWelcomeScreenGuestEscribe:
     'Escribe tu dirección en la barra para ubicar los negocios cercanos',
@@ -40,9 +47,11 @@ export default ContentText = {
     'Recomendaciones para el aislamiento preventivo',
   textoSideNavScreenSalir: 'Salir de mi cuenta',
   //RegistrationScreen
-  textRegistrationScreenLaMarket:
-    'LaMarket.app te ayuda a estar más cerca de tus clientes, solo regístrate y estarás listo para venderle a los clientes de tu comunidad a través de una herramienta digital.',
+  textRegistrationScreenTribo:
+    'Tribo te ayuda a estar más cerca de tus clientes, solo regístrate y estarás listo para venderle a los clientes de tu comunidad a través de una herramienta digital.',
+  textRegistrationScreenCuentanos: 'Cuéntanos sobre tu negocio y empieza a conectar con tus clientes',
   textRegistrationScreenInputEscribe: 'Escribe tu número telefónico',
+  textRegistrationScreenInputIngresaTelefono: 'Ingresa el telefono celular',
   textRegistrationScreenInputRecibirás: 'Recibirás información sobre la app',
   textRegistrationScreenInputEgNombre: 'e.g. José Ramírez',
   textRegistrationScreenInputEgNegocio: 'e.g. Abarrotes Memo',
@@ -73,11 +82,12 @@ export default ContentText = {
   textRegistrationScreenCheckboxHeLeido:
     'He leído y acepto la Política de Privacidad',
   textRegistrationScreenCheckboxDeseo:
-    'Deseo recibir información de LaMarket.app',
+    'Deseo recibir información de Tribo',
   textRegistrationScreenButtonRegistrarme: 'Registrarme',
+  textRegistrationScreenButtonAnadir: 'Añadir mi negocio',
   //MyAccountScreen
   textMyAccountScreenTelefono: '333 333 333',
-  textMyAccountScreenMail: 'negocio@lamarket.app',
+  textMyAccountScreenMail: 'negocio@Tribo',
   textMyAccountScreenResponsable: 'José Ramírez',
   textMyAccountScreenNegocio: 'Abarrotes Don Memo',
   textMyAccountScreenDireccion:
@@ -90,6 +100,8 @@ export default ContentText = {
   textMyAccountScreenHorario: '9:00 a.m. a 9:00 p.m.',
   textMyAccountScreenButtonEditar: 'Editar info',
   textMyAccountScreenButtonEliminar: 'Eliminar cuenta',
+  textWelcomeScreenDescription:
+    'Conecta con comercios y vendedores cerca de ti que pueden enviar lo que necesitas de ellos.',
   //textReadmeScreen
   textReadmeScreenRecomendacionesP1:
     'A pesar de que cada uno reaccionamos de modo distinto a situaciones estresantes, una epidemia infeccionsa como el coronavirus puede generar rasgos comunes en lo que a salud mental se refiere. Las situaciones derivadas del estado de alarma implican así que las personas experimenten síntomas derivados del distanciamiento social, la cuarentena o el aislamiento, generando sensación de ansiedad, preocupación o miedo.',
@@ -102,7 +114,7 @@ export default ContentText = {
   textReadmeScreenTerminosP3:
     'Este documento es utilizado para regular las condiciones y reglas a las que se someten tanto los usuarios de un sitio web como su propietario y/o administrador, en lo referente al acceso y utilización del sitio web. De igual manera, hace referencia a las políticas de privacidad, protección de datos personales, enlaces, etc., que se tomarán para proteger la privacidad de los usuarios.',
   textReadmeScreenFAQP1:
-    'LaMarket.app es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
+    'Tribo es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
   textReadmeScreenFAQP2:
     'Sólo llama o envía un mensaje por WhatsApp y recibe tu pedido en la puerta de tu hogar.',
   textReadmeScreenPoliticaP1:
@@ -115,13 +127,14 @@ export default ContentText = {
     'El incumplimiento de estas leyes puede ocasionar graves sanciones e incluso una acusación formal.',
   textReadmeScreenPoliticaP5:
     '¿Qué son los datos personales? Los datos personales son un tipo de información a través de la cual se puede identificar a un individuo, ya sea directamente o cuando ésta se combina con otros datos.',
+  food: 'Comida',
+  product: 'Productos',
+  service: 'Servicios',
   //NavBartext
-  title_1:'Regístrate/Mi cuenta',
+  title_1: 'Regístrate/Mi cuenta',
   title_2: '#QuédateEnCasa',
-  title2_1: 'Recomendaciones para el aislamiento preventivo', 
-  title_3:'Términos y condiciones',
-  title_4:'FAQ',
-  title_5:'Políticas de privacidad'
+  title2_1: 'Recomendaciones para el aislamiento preventivo',
+  title_3: 'Términos y condiciones',
+  title_4: 'FAQ',
+  title_5: 'Políticas de privacidad',
 };
-
-

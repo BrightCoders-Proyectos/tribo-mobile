@@ -2,19 +2,21 @@ import React, {Component} from 'react';
 import {View, Image, Text, StyleSheet} from 'react-native';
 
 import Tribologo from '../assets/tribologo.png';
-import colors from '../src/Colors'
+import colors from '../src/Colors';
 
 const LogoTribo = (props) => {
-  const {height, width, line} = props;
+  const {height, width, line, sideNav} = props;
   return (
-    <View style={styles.logoView}>
+    <View style={[styles.logoView,{
+      width: width,
+      height: height,
+    }]}>
       <Image
         resizeMode="contain"
         style={[
-          styles.icon,
+          sideNav != true ? styles.regularicon : styles.sideNavicon,
           {
-            width: width,
-            height: height,
+            height: '57%',
           },
         ]}
         source={Tribologo}
@@ -22,10 +24,10 @@ const LogoTribo = (props) => {
       {line == true && (
         <View
           style={{
-            marginTop: 30,
             borderBottomWidth: 1,
             borderColor: '#9CA3AF',
             width: '80%',
+            paddingTop:32
           }}></View>
       )}
     </View>
@@ -34,12 +36,16 @@ const LogoTribo = (props) => {
 
 const styles = StyleSheet.create({
   logoView: {
-    height: '100%',
+    //height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom:10
   },
-  icon: {
-    tintColor:colors.BlueP
+  regularicon: {
+    tintColor: colors.BlueP,
+  },
+  sideNavicon: {
+    tintColor: colors.White,
   },
 });
 

@@ -1,20 +1,18 @@
 import React, {useState} from 'react';
-import { TouchableHighlight, Text, View, TouchableOpacity } from 'react-native';
+import {TouchableHighlight, Text, View, TouchableOpacity} from 'react-native';
 import SideBarStyle from '../styles/SideBarStyle';
-import ContentText from '../screensText/ContentText'
+import ContentText from '../screensText/ContentText';
 
-const SideBarOption = (props)=>{
+const SideBarOption = (props) => {
   const [hide, setHide] = useState(false);
 
-  const {
-    textBold,
-  } = props;
+  const {textBold} = props;
 
   const onPress = () => {
-    console.log('Pressed')  
-  }
+    console.log('Pressed');
+  };
 
-  return(
+  return (
     <>
       <TouchableHighlight 
         style={{    
@@ -30,15 +28,18 @@ const SideBarOption = (props)=>{
               <View>
                 <Text style={SideBarStyle.textBold}>{textBold}</Text>
               </View>
-              {textBold == '#QuédateEnCasa' &&
-              <View>
-                <Text style={SideBarStyle.textNormal}>{ContentText.title2_1}</Text>
-              </View>}
+              {textBold == '#QuédateEnCasa' && (
+                <View>
+                  <Text style={SideBarStyle.textNormal}>
+                    {ContentText.title2_1}
+                  </Text>
+                </View>
+              )}
             </View>
           </View>
       </TouchableHighlight>
     </>
-  );  
-}
+  );
+};
 
 export default SideBarOption;

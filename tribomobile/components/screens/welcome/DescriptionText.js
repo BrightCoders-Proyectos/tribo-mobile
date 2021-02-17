@@ -14,10 +14,10 @@ function DescriptionText(props) {
 
 const styles = StyleSheet.create({
   textDescription: {
-    color: '#828894',
+    color: '#262728',
     textAlign: 'center',
     marginTop: 20,
-    fontSize: 16,
+    fontSize: 24,
   },
 });
 

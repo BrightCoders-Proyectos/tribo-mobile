@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   View,
@@ -10,15 +10,20 @@ import {
 } from 'react-native';
 import MapView, {Marker} from 'react-native-maps';
 import menuImage from '../assets/menuImage.png';
+import marker_food from '../assets/marker_food.png';
 import food from '../assets/food.png';
+import marker_store from '../assets/marker_store.png';
 import store from '../assets/store.png';
-import user from '../assets/user1.png';
+import marker_service from '../assets/marker_service.png';
+import service from '../assets/services.png';
 import MapStyle from './MapStyle';
-import string from './constant';
+import string from '../screensText/ContentText';
 import IconNav from './IconNav';
+import BtnHideShowMenu from '../components/BtnHideShowMenu';
 
 const MainScreen = () => {
-  
+  const [markerSelection, setMarkerSelection] = useState('');
+
   const regionMap = {
     latitude: 19.256127,
     longitude: -103.713536,
@@ -28,7 +33,7 @@ const MainScreen = () => {
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
-      <View style={{zIndex: 0}}>
+      <View style={{zIndex: 0, flexDirection: 'column'}}>
         <MapView
           style={{width: '100%', height: '100%'}}
           region={regionMap}
@@ -38,37 +43,53 @@ const MainScreen = () => {
               latitude: 19.256205,
               longitude: -103.715864,
             }}
-            title={string.product}>
-            <Image source={store} style={style.imagenServices} />
+            title={string.product}
+            onPress={() => setMarkerSelection('store')}>
+            <Image source={marker_store} style={style.imagenServices} />
           </Marker>
           <Marker
             coordinate={{
               latitude: 19.261146,
               longitude: -103.705776,
             }}
-            title={string.food}>
-            <Image source={food} style={style.imagenServices} />
+            title={string.food}
+            onPress={() => setMarkerSelection('food')}>
+            <Image source={marker_food} style={style.imagenServices} />
           </Marker>
           <Marker
             coordinate={{
               latitude: 19.273768,
               longitude: -103.715017,
             }}
-            title={string.service}>
-            <Image source={user} style={style.imagenServices} />
+            title={string.service}
+            onPress={() => setMarkerSelection('service')}>
+            <Image source={marker_service} style={style.imagenServices} />
           </Marker>
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>
-        <TouchableOpacity>
-          <Image style={style.menuimage} source={menuImage} />
-        </TouchableOpacity>
+        <BtnHideShowMenu />
         <TextInput style={style.textinput} placeholder="Escribe tu dirección" />
       </View>
       <View elevation={5} style={[style.navDown, style.iconsDown]}>
-        <IconNav image={food} text={string.food} />
-        <IconNav image={store} text={string.product} />
-        <IconNav image={user} text={string.service} />
+        <IconNav
+          image={food}
+          text={string.food}
+          markerSelection={markerSelection}
+          name={'food'}
+        />
+        <IconNav
+          image={store}
+          text={string.product}
+          markerSelection={markerSelection}
+          name={'store'}
+        />
+        <IconNav
+          image={service}
+          text={string.service}
+          markerSelection={markerSelection}
+          name={'service'}
+        />
       </View>
     </View>
   );
@@ -77,7 +98,7 @@ const MainScreen = () => {
 const style = StyleSheet.create({
   navDireccion: {
     width: '100%',
-    height: 80,
+    height: 60,
     backgroundColor: 'white',
     zIndex: 2,
     position: 'absolute',
@@ -105,15 +126,15 @@ const style = StyleSheet.create({
   },
   textinput: {
     position: 'absolute',
-    padding: 4,
+    paddingLeft: 20,
     width: '80%',
-    height: 60,
+    height: 40,
     marginLeft: 60,
     marginTop: 10,
-    backgroundColor: '#F5F5F5',
-    borderRadius: 7,
+    backgroundColor: '#E1F1F5',
+    borderRadius: 15,
     textAlign: 'justify',
-    padding: 20,
+    fontSize: 13,
   },
   borderShadow: {
     shadowColor: '#000000',
@@ -124,14 +145,13 @@ const style = StyleSheet.create({
     width: 30,
     height: 30,
     tintColor: '#868686',
-    marginTop: 25,
-    marginLeft: 20,
+    marginTop: 15,
+    marginLeft: 15,
   },
   imagenServices: {
-    width: 30,
-    height: 30,
+    width: 15,
+    height: 20,
   },
 });
-
 
 export default MainScreen;
