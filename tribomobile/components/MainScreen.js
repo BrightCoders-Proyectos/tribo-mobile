@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
+import MapView, {Marker, Callout} from 'react-native-maps';
 import menuImage from '../assets/menuImage.png';
 import marker_food from '../assets/marker_food.png';
 import food from '../assets/food.png';
@@ -35,7 +35,7 @@ const MainScreen = () => {
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
-      <LittlePinInfo modalVisible={modalVisible} setModalVisible={setModalVisible}/>
+      {/* <LittlePinInfo modalVisible={modalVisible} setModalVisible={setModalVisible}/> */}
       <View style={{zIndex: 0, flexDirection: 'column'}}>
         <MapView
           style={{width: '100%', height: '100%'}}
@@ -47,11 +47,21 @@ const MainScreen = () => {
               longitude: -103.715864,
             }}
             title={string.product}
-            // onPress={() => setMarkerSelection('store')}
-            onPress={() => setModalVisible(true)}
-            
+            description='Prueba desde ramos arizpe'
+            image={marker_store}
             >
-            <Image source={marker_store} style={style.imagenServices} />
+            <Callout tooltip>
+              <View>
+                <View style={{flexDirection:'column', borderRadius:8, backgroundColor: 'white', borderColor:'#ccc', width: 150, borderWidth: 0.5}}>
+                    <Text style={{fontSize: 15 }}>Tienda de don Memo</Text>
+                    <Image 
+                      style={style.imagenServices} 
+                      source={require('../assets/marker_store.png')}  />
+                </View>
+                <View style={style.arrowBorder}></View>
+                <View style={style.arrow}></View>
+              </View>
+            </Callout>
           </Marker>
           <Marker
             coordinate={{
@@ -162,6 +172,22 @@ const style = StyleSheet.create({
   imagenServices: {
     width: 30,
     height: 40,
+  },
+  arrow: {
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+    borderTopColor: '#fff',
+    borderWidth: 16,
+    alignSelf: 'center',
+    marginTop: -32
+  },
+  arrowBorder: {
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+    borderTopColor: '#007a87',
+    borderWidth: 16,
+    alignSelf: 'center',
+    marginTop: -0.5
   },
 });
 
