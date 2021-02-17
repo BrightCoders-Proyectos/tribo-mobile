@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Button, Pressable} from 'react-native';
-import MenusHide from '../components/menuHide';
+import {Dimensions} from 'react-native';
+import MenusHide from '../components/MenuHide';
 import SideBarOption from '../components/SideBarOption';
 import TitlesText from '../screensText/ContentText';
 import LogoTribo from '../components/LogoTribo';
@@ -9,6 +10,9 @@ import {faTimes} from '@fortawesome/free-solid-svg-icons';
 import ClicableLink from '../components/ClicableLink';
 
 const MenuComp = (props) => {
+  const options = [1, 2, 3, 4, 5];
+  const windowWidth = Dimensions.get('window').width;
+  const windowHeight = Dimensions.get('window').height;
 
   const options = [
     TitlesText.title_1,
@@ -38,8 +42,9 @@ const MenuComp = (props) => {
         /> 
       )}
       <ClicableLink/>
+
     </View>
   );
-}
+};
 
 export default MenuComp;
