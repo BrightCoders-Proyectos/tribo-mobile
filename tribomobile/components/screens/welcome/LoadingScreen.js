@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   TextInput,
   StyleSheet,
@@ -18,7 +18,13 @@ import TextInputCustom from '../../TextInputs';
 
 
 
-function WelcomeScreen() {
+function LoadingScreen(props) {
+  const {navigation} = props;
+
+  useEffect(() => {
+    setTimeout(function(){ navigation.navigate('Welcome') }, 2000);
+  });
+
   return (
     <View style={styles.container}>
       <View>
@@ -38,4 +44,4 @@ const styles = StyleSheet.create({
   }
  });
 
-export default WelcomeScreen;
+export default LoadingScreen;
