@@ -15,7 +15,8 @@ import TextInputCustom from '../../TextInputs';
 
 
 
-function WelcomeScreen() {
+function WelcomeScreen(props) {
+  const {navigation} = props;
   return (
     <View style={styles.container}>
       <View>
@@ -38,6 +39,7 @@ function WelcomeScreen() {
         marginTop={30}
         title={'Inicia Sesión'}
         disabled={false}
+        action={() => navigation.navigate("Login")}
       />
       <CustomButton
         size={ConfigBtnCustom.SIZE.SMALL}
@@ -49,6 +51,7 @@ function WelcomeScreen() {
         title={'Registrate'}
         marginTop={20}
         disabled={false}
+        action={() => navigation.navigate("SignUp")}
       />
     </View>
   );

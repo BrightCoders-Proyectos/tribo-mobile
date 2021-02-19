@@ -40,6 +40,8 @@ export default TitlesText = {
   titleRegistrationCorreo: 'Correo electrónico (opcional)',
   titleRegistrationNombreResponsble: 'Nombre del responsable del negocio',
   titleRegistrationNombreNegocio: 'Nombre de tu negocio',
+  titleRegistrationComoSeLama:'Como se llama tu negocio?',
+  titleRegistrationTelefonoNegocio:'Telefono de negocio',
   titleRegistrationDireccionNegocio: 'Direccion de tu negocio',
   titleRegistrationGiroNegocio: 'Giro de tu negocio',
   titleRegistrationVenta: '¿Qué vendes?',

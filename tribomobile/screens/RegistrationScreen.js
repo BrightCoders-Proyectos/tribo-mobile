@@ -4,263 +4,223 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   TextInput,
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
 import titlesText from '../src/TitlesText';
 import contentText from '../screensText/ContentText';
-import Mountains from '../assets/mountains.png';
+import LogoTribo from '../components/LogoTribo';
+import Titles from '../components/Titles';
+import TextInputs from '../components/TextInputs';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-
-const FormInput = (props) => {
-  const {title, placeholderString} = props;
-  return (
-    <View style={{alignItems: 'flex-start', marginBottom: 10, width: '100%'}}>
-      <TextInput
-        style={{
-          backgroundColor: 'white',
-          borderWidth: 1,
-          borderRadius: 5,
-          color: '#4A4A4A',
-          fontSize: 16,
-          fontWeight: 'bold',
-          height: 50,
-          paddingHorizontal: 10,
-          width: '100%',
-        }}
-        placeholder={placeholderString}
-      />
-    </View>
-  );
-};
-
-const RegistrationCheckbox = (props) => {
-  const [toggleCheckBox, setToggleCheckBox] = useState(false);
-  const {checkboxLabel} = props;
-  return (
-    <View
-      style={{
-        alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-      }}>
-      <CheckBox
-        disabled={false}
-        value={toggleCheckBox}
-        onValueChange={(newValue) => setToggleCheckBox(newValue)}
-      />
-      <Text
-        style={{
-          color: '#4A4A4A',
-          fontSize: 14,
-          fontWeight: 'bold',
-        }}>
-        {checkboxLabel}
-      </Text>
-    </View>
-  );
-};
+import CheckBoxCustom from '../components/CheckBoxCustom';
+import {CustomButton, ConfigBtnCustom} from '../components/CustomButton';
+import {Dimensions} from 'react-native';
+import { Left } from 'native-base';
 
 const RegistrationScreen = () => {
+  const windowHeight = Dimensions.get('window').height;
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {height: windowHeight}]}>
+      <LogoTribo width={'100%'} height={70} line={true} sideNav={false} />
       <ScrollView>
-        <View style={{alignItems: 'center'}}>
-          <Image
-            resizeMode="contain"
-            style={{maxHeight: 100}}
-            source={Mountains}
-          />
-          <Text style={styles.title}> {titlesText.titleLogo} </Text>
-          <View>
-            <Text style={styles.title}>
-              {titlesText.titleRegistrationBienvenida}
-            </Text>
-            <Text style={{color: '#4A4A4A', fontSize: 18}}>
-              {contentText.textRegistrationScreenLaMarket}
-            </Text>
+        <View style={styles.formContainer}>
+          <View style={{width: '100%', height: 100, marginTop: 20}}>
+            <View style={{alignItems: 'center', marginTop: 20}}>
+              <Titles
+                titleType="screenTitle"
+                title={titlesText.titleRegistrationBienvenida}
+              />
+              <Titles
+                txtAlign="center"
+                titleType="inputTitle"
+                title={contentText.textRegistrationScreenCuentanos}
+              />
+            </View>
           </View>
-          <View style={{alignItems: 'flex-start', width: '100%'}}>
-            <Text style={[styles.title, {marginTop: 40}]}>
-              {titlesText.titleRegistrationRegistro}
-            </Text>
-            <Text style={styles.subtitle}>
-              {titlesText.titlteMyAccountTelefono}
-            </Text>
-            <FormInput
-              placeholderString={contentText.textRegistrationScreenInputEscribe}
+          <View
+            style={{alignItems: 'flex-start', width: '100%', marginTop: 50}}>
+            <Titles
+              txtAlign="center"
+              titleType="formTitle"
+              title={titlesText.titleRegistrationRegistro}
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationCorreo}
-            </Text>
-            <FormInput
-              placeholderString={
-                contentText.textRegistrationScreenInputRecibirás
-              }
+            <Titles
+              txtAlign="left"
+              titleType="inputTitle"
+              title={titlesText.titleRegistrationComoSeLama}
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationNombreResponsble}
-            </Text>
-            <FormInput
-              placeholderString={
-                contentText.textRegistrationScreenInputEgNombre
-              }
+            <TextInputs
+              textInputType=""
+              placeholderText={contentText.textRegistrationScreenInputEgNegocio}
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationNombreNegocio}
-            </Text>
-            <FormInput
-              placeholderString={
-                contentText.textRegistrationScreenInputEgNegocio
-              }
+            <Titles
+              txtAlign="left"
+              titleType="inputTitle"
+              title={titlesText.titleRegistrationTelefonoNegocio}
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationDireccionNegocio}
-            </Text>
-            <FormInput
-              placeholderString={contentText.textRegistrationScreenInputCalle}
+            <TextInputs
+              textInputType=""
+              placeholderText={contentText.textRegistrationScreenInputIngresaTelefono}
             />
-            <FormInput
-              placeholderString={contentText.textRegistrationScreenInputColonia}
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationDireccionNegocio}
             />
-            <FormInput
-              placeholderString={contentText.textRegistrationScreenInputCodigo}
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputCalle}
             />
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationGiroNegocio}
-            </Text>
-            <FormInput
-              placeholderString={
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputColonia}
+            />
+            <TextInputs
+              placeholderText={contentText.textRegistrationScreenInputCodigo}
+            />
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationGiroNegocio}
+            />
+            <TextInputs
+              placeholderText={
                 contentText.textRegistrationScreenInputRestaurante
               }
             />
-
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationVenta}
-            </Text>
-            <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxComida}
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationVenta}
+            />
+            <View style={[styles.checkboxContainer],{flexDirection:'row',marginLeft:-20, marginBottom:10}}>
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxComida}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxServicio
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxServicio}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxProducto
-                }
-              />
-            </View>
-
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationFormasPago}
-            </Text>
-            <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxEfectivo
-                }
-              />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxTarjeta
-                }
-              />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxTransferencia
-                }
-              />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxDeposito
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxProducto}
               />
             </View>
-            <Text style={styles.subtitle}>
-              {titlesText.titlteMyAccountTipoEntrega}
-            </Text>
-            <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxRecoger
-                }
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationFormasPago}
+            />
+            <View style={[styles.checkboxContainer]}>
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxEfectivo}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxTarjeta}
+              />
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxTransferencia}
+              />
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxDeposito}
+              />
+            </View>
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titlteMyAccountTipoEntrega}
+            />
+            <View style={styles.checkboxContainer}>
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxRecoger}
+              />
+              <CheckBoxCustom
+                value={false}
+                title={
                   contentText.textRegistrationScreenCheckboxServicioDomicilio
                 }
               />
             </View>
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationDiasAbierto}
-            </Text>
-            <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxLunes}
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationDiasAbierto}
+            />
+            <View style={[styles.checkboxContainer,{flexDirection:'row'}]}>
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxLunes}
               />
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxMartes}
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxMartes}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxMiercoles
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxMiercoles}
               />
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxJueves}
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxJueves}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxViernes
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxViernes}
               />
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxSabado}
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxSabado}
               />
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxDomingo
-                }
+              <CheckBoxCustom
+                value={false}
+                title={contentText.textRegistrationScreenCheckboxDomingo}
               />
             </View>
-            <Text style={styles.subtitle}>
-              {titlesText.titleRegistrationHorario}
-            </Text>
+            <Titles
+              txtAlign="left"
+              titleType=""
+              title={titlesText.titleRegistrationHorario}
+            />
             <View style={styles.timeContainer}>
-              <TextInput
-                style={styles.inputTime}
-                placeholder={contentText.textRegistrationScreenInputHoraInicio}
+              <View>
+                <TextInputs
+                  textInputType=""
+                  placeholderText={
+                    contentText.textRegistrationScreenInputHoraInicio
+                  }
+                />
+              </View>
+              <Titles
+                txtAlign="left"
+                titleType=""
+                title={contentText.textRegistrationScreenA}
               />
-              <Text style={{margin: 15}}>
-                {contentText.textRegistrationScreenA}
-              </Text>
-              <TextInput
-                style={styles.inputTime}
-                placeholder={contentText.textRegistrationScreenInputHoraFin}
+              <View>
+                <TextInputs
+                  textInputType=""
+                  placeholderText={
+                    contentText.textRegistrationScreenInputHoraFin
+                  }
+                />
+              </View>
+            </View>
+            <View style={{width:'100%'}}>
+              <CustomButton
+                size={36}
+                titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
+                bgBtn={ConfigBtnCustom.COLOR.GREEN}
+                borderColorBtn={ConfigBtnCustom.COLOR.GREEN}
+                titleColor={ConfigBtnCustom.COLOR.WHITE}
+                widthBtn={246}
+                title={contentText.textRegistrationScreenButtonAnadir}
               />
             </View>
-
-            <View style={styles.checkboxContainer}>
-              <RegistrationCheckbox
-                checkboxLabel={
-                  contentText.textRegistrationScreenCheckboxHeLeido
-                }
-              />
-              <RegistrationCheckbox
-                checkboxLabel={contentText.textRegistrationScreenCheckboxDeseo}
-              />
-            </View>
-            <TouchableOpacity style={styles.registerButton}>
-              <Text style={styles.registerButtonText}>
-                {contentText.textRegistrationScreenButtonRegistrarme}
-              </Text>
-            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -270,7 +230,11 @@ const RegistrationScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 40,
+    padding: 24,
+  },
+  formContainer: {
+    alignItems: 'center',
+    paddingBottom: 40,
   },
   title: {
     color: '#4A4A4A',
@@ -279,13 +243,16 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
   },
+  checkboxContainerRow:{
+
+  },
   checkboxContainer: {
-    flexDirection: 'row',
     flexWrap: 'wrap',
     padding: 0,
     marginBottom: 20,
-    marginLeft: -5,
+    marginLeft: -15,
     width: '100%',
+    alignItems:'flex-start'
   },
   subtitle: {
     color: '#4A4A4A',
@@ -305,9 +272,12 @@ const styles = StyleSheet.create({
   },
   timeContainer: {
     alignItems: 'center',
+    alignSelf: 'center',
     flexDirection: 'row',
+    width: '100%',
     marginTop: 5,
     marginBottom: 20,
+    justifyContent: 'space-around',
   },
   inputTime: {
     borderRadius: 10,

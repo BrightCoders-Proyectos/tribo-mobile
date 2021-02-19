@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import   {TouchableOpacity, Text, View} from 'react-native'
-import MenuHide from '../components/menuHide'
+import MenuHide from '../components/MenuHide'
 import SideBarOption from '../components/SideBarOption'
 import ContentText from '../screensText/ContentText'
 import ClicableLink from '../components/ClicableLink'
