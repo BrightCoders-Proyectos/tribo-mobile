@@ -20,7 +20,22 @@ import MapStyle from './MapStyle';
 import string from '../screensText/ContentText';
 import IconNav from './IconNav';
 import BtnHideShowMenu from '../components/BtnHideShowMenu';
-import LittlePinInfo from './modals/LittlePinInfo';
+
+const CustomCallot = props => {
+  return (
+    <View>
+    <View style={{backgroundColor: 'white', width: 150,height: 110, flexDirection: 'row', borderRadius:10, padding:6 }}>
+        <Text><Image source={props.image} style={{width:45, height: 60}} /></Text>
+        <View style={{flex: 1,width:'100%', height:'100%', flexDirection:'column', justifyContent: 'center',marginLeft: 5, alignItems:'center'}}>
+          <Text>La fonda de Doña Luisa</Text>
+          <Text>+ info <Text style={{fontSize: 20}}>{`-->`}</Text> </Text>
+        </View>
+    </View>
+    <View style={style.arrowBorder}></View>
+    <View style={style.arrow}></View>
+    </View>
+  );
+}
 
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
@@ -35,7 +50,6 @@ const MainScreen = () => {
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
-      {/* <LittlePinInfo modalVisible={modalVisible} setModalVisible={setModalVisible}/> */}
       <View style={{zIndex: 0, flexDirection: 'column'}}>
         <MapView
           style={{width: '100%', height: '100%'}}
@@ -47,14 +61,12 @@ const MainScreen = () => {
               latitude: 19.256205,
               longitude: -103.715864,
             }}
-            // title={string.product}
-            description="Prueba desde ramos arizpe"
-            image={marker_store}
-            onPress={() => setModalVisible(true)}>
+            image={marker_store}>
             <Callout tooltip>
-              <LittlePinInfo serviceType={''} />
+             <CustomCallot
+              image={marker_store} 
+              />
             </Callout>
-            {/* <Image source={marker_store} style={style.imagenServices} /> */}
           </Marker>
           <Marker
             style={style.imagenServices}
@@ -62,14 +74,13 @@ const MainScreen = () => {
               latitude: 19.261146,
               longitude: -103.705776,
             }}
-            title={string.food}
             image={marker_food}
-            // onPress={() => setMarkerSelection('food')}
-            onPress={() => setModalVisible(true)}>
+            >
             <Callout tooltip>
-              <LittlePinInfo serviceType={'Food'} />
+            <CustomCallot
+              image={marker_food} 
+              />
             </Callout>
-            {/* <Image source={marker_food} style={style.imagenServices} /> */}
           </Marker>
           <Marker
             style={style.imagenServices}
@@ -77,15 +88,14 @@ const MainScreen = () => {
               latitude: 19.273768,
               longitude: -103.715017,
             }}
-            title={string.service}
             image={marker_service}
-            // onPress={() => setMarkerSelection('service')}
-            onPress={() => setModalVisible(true)}>
+            >
             <Callout tooltip>
-              <LittlePinInfo serviceType={'Service'} />
+              <CustomCallot
+                image={marker_service} 
+                />
             </Callout>
-            {/* <Image source={marker_service} style={style.imagenServices} /> */}
-          </Marker>
+            </Marker>
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>
