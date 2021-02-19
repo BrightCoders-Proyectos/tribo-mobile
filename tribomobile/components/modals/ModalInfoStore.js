@@ -34,15 +34,15 @@ function Contact(props) {
   );
 }
 
-function ModalInfoStore() {
-  const [modalVisible, setModalVisible] = useState(false);
+function ModalInfoStore(props) {
+  // const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
       <View style={styles.centeredView}>
         <Modal
           animationType="slide"
           transparent={true}
-          visible={modalVisible}
+          visible={props.modalVisible}
           onRequestClose={() => {
             console.log('Modal has been closed.');
           }}>
@@ -50,9 +50,7 @@ function ModalInfoStore() {
             <View style={styles.modalView}>
               <View style={styles.iconCloseView}>
                 <TouchableOpacity
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}>
+                  onPress={ props.close }>
                   <Image style={styles.icon} source={CloseIcon} />
                 </TouchableOpacity>
               </View>
@@ -85,13 +83,13 @@ function ModalInfoStore() {
         </Modal>
       </View>
 
-      <TouchableOpacity
+      {/* <TouchableOpacity
         style={styles.openButton}
         onPress={() => {
           setModalVisible(true);
         }}>
         <Text style={styles.textStyle}>Show Modal Map with info of store</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </>
   );
 }

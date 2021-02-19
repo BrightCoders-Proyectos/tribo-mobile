@@ -20,17 +20,18 @@ import MapStyle from './MapStyle';
 import string from '../screensText/ContentText';
 import IconNav from './IconNav';
 import BtnHideShowMenu from '../components/BtnHideShowMenu';
+import ModalInfoStore from '../components/modals/ModalInfoStore';
 
 const CustomCallot = props => {
   return (
     <View>
-    <View style={{backgroundColor: 'white', width: 150,height: 110, flexDirection: 'row', borderRadius:10, padding:6 }}>
-        <Text><Image source={props.image} style={{width:45, height: 60}} /></Text>
-        <View style={{flex: 1,width:'100%', height:'100%', flexDirection:'column', justifyContent: 'center',marginLeft: 5, alignItems:'center'}}>
-          <Text>La fonda de Doña Luisa</Text>
-          <Text>+ info <Text style={{fontSize: 20}}>{`-->`}</Text> </Text>
-        </View>
-    </View>
+      <View style={{backgroundColor: 'white', width: 150,height: 110, flexDirection: 'row', borderRadius:10, padding:6 }}>
+          <Text><Image source={props.image} style={{width:45, height: 60}} /></Text>
+          <View style={{flex: 1,width:'100%', height:'100%', flexDirection:'column', justifyContent: 'center',marginLeft: 5, alignItems:'center'}}>
+            <Text>La fonda de Doña Luisa</Text>
+              <Text>+ info <Text style={{fontSize: 20}}>{`-->`}</Text> </Text>
+          </View>
+      </View>
     <View style={style.arrowBorder}></View>
     <View style={style.arrow}></View>
     </View>
@@ -50,6 +51,7 @@ const MainScreen = () => {
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
+      <ModalInfoStore modalVisible={modalVisible} close={()=> setModalVisible(!modalVisible)}/>
       <View style={{zIndex: 0, flexDirection: 'column'}}>
         <MapView
           style={{width: '100%', height: '100%'}}
@@ -62,10 +64,12 @@ const MainScreen = () => {
               longitude: -103.715864,
             }}
             image={marker_store}>
-            <Callout tooltip>
-             <CustomCallot
-              image={marker_store} 
-              />
+            <Callout 
+              tooltip
+              onPress={()=> setModalVisible(true)}>
+                <CustomCallot
+                  image={marker_store} 
+                  />
             </Callout>
           </Marker>
           <Marker
@@ -76,10 +80,13 @@ const MainScreen = () => {
             }}
             image={marker_food}
             >
-            <Callout tooltip>
-            <CustomCallot
-              image={marker_food} 
-              />
+            <Callout 
+              tooltip
+              onPress={()=> setModalVisible(true)}>
+
+                <CustomCallot
+                  image={marker_food} 
+                  />
             </Callout>
           </Marker>
           <Marker
@@ -90,10 +97,12 @@ const MainScreen = () => {
             }}
             image={marker_service}
             >
-            <Callout tooltip>
-              <CustomCallot
-                image={marker_service} 
-                />
+            <Callout 
+              tooltip
+              onPress={()=> setModalVisible(true)}>
+                <CustomCallot
+                  image={marker_service} 
+                  />
             </Callout>
             </Marker>
         </MapView>
