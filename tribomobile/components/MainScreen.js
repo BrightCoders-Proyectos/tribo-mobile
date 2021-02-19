@@ -42,48 +42,49 @@ const MainScreen = () => {
           region={regionMap}
           customMapStyle={MapStyle}>
           <Marker
+            style={style.imagenServices}
             coordinate={{
               latitude: 19.256205,
               longitude: -103.715864,
             }}
-            title={string.product}
-            description='Prueba desde ramos arizpe'
+            // title={string.product}
+            description="Prueba desde ramos arizpe"
             image={marker_store}
-            >
+            onPress={() => setModalVisible(true)}>
             <Callout tooltip>
-              <View>
-                <View style={{flexDirection:'column', borderRadius:8, backgroundColor: 'white', borderColor:'#ccc', width: 150, borderWidth: 0.5}}>
-                    <Text style={{fontSize: 15 }}>Tienda de don Memo</Text>
-                    <Image 
-                      style={style.imagenServices} 
-                      source={require('../assets/marker_store.png')}  />
-                </View>
-                <View style={style.arrowBorder}></View>
-                <View style={style.arrow}></View>
-              </View>
+              <LittlePinInfo serviceType={''} />
             </Callout>
+            {/* <Image source={marker_store} style={style.imagenServices} /> */}
           </Marker>
           <Marker
+            style={style.imagenServices}
             coordinate={{
               latitude: 19.261146,
               longitude: -103.705776,
             }}
             title={string.food}
+            image={marker_food}
             // onPress={() => setMarkerSelection('food')}
-            onPress={() => setModalVisible(true)}
-            >
-            <Image source={marker_food} style={style.imagenServices} />
+            onPress={() => setModalVisible(true)}>
+            <Callout tooltip>
+              <LittlePinInfo serviceType={'Food'} />
+            </Callout>
+            {/* <Image source={marker_food} style={style.imagenServices} /> */}
           </Marker>
           <Marker
+            style={style.imagenServices}
             coordinate={{
               latitude: 19.273768,
               longitude: -103.715017,
             }}
             title={string.service}
+            image={marker_service}
             // onPress={() => setMarkerSelection('service')}
-            onPress={() => setModalVisible(true)}
-            >
-            <Image source={marker_service} style={style.imagenServices} />
+            onPress={() => setModalVisible(true)}>
+            <Callout tooltip>
+              <LittlePinInfo serviceType={'Service'} />
+            </Callout>
+            {/* <Image source={marker_service} style={style.imagenServices} /> */}
           </Marker>
         </MapView>
       </View>
@@ -134,7 +135,7 @@ const style = StyleSheet.create({
     borderRadius: 7,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent:'center'
+    justifyContent: 'center',
   },
   navBar: {
     marginTop: 10,
@@ -179,7 +180,7 @@ const style = StyleSheet.create({
     borderTopColor: '#fff',
     borderWidth: 16,
     alignSelf: 'center',
-    marginTop: -32
+    marginTop: -32,
   },
   arrowBorder: {
     backgroundColor: 'transparent',
@@ -187,7 +188,7 @@ const style = StyleSheet.create({
     borderTopColor: '#007a87',
     borderWidth: 16,
     alignSelf: 'center',
-    marginTop: -0.5
+    marginTop: -0.5,
   },
 });
 
