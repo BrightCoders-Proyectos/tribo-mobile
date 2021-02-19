@@ -38,6 +38,7 @@ const ReadmeScreens = (props) => {
             </Pressable>
             <Title titleType="screenTitle" title={TitlesText.titleStayHome} />
             <Title
+              style={styles.formTitleStyle}
               titleType="formTitle"
               title={TitlesText.titleRecomendations}
             />
@@ -204,6 +205,9 @@ const styles = StyleSheet.create({
   closeButton: {
     height: '100%',
     width: '100%',
+  },
+  formTitleStyle: {
+    marginBottom: 10,
   },
   paragraph: {
     color: Colors.BlueDark,

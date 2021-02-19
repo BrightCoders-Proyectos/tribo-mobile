@@ -12,6 +12,7 @@ import WelcomeScreen from './components/screens/welcome/WelcomeScreen';
 import LoadingScreen from './components/screens/welcome/LoadingScreen';
 import LoginScreen from './screens/Login';
 import EditAccountScreen from './screens/profile/EditAccountScreen';
+import ProfileEditScreen from './screens/ProfileScreen';
 
 import {
   ModalDeleteStore,
@@ -28,7 +29,8 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <EditAccountScreen userAccount={userDummy} />
+        {/* <EditAccountScreen userAccount={userDummy} /> */}
+        <ProfileEditScreen />
       </SafeAreaView>
     </>
   );

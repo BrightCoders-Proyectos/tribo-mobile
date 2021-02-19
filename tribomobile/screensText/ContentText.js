@@ -82,6 +82,8 @@ export default ContentText = {
   textRegistrationScreenCheckboxDeseo:
     'Deseo recibir información de Tribo',
   textRegistrationScreenButtonRegistrarme: 'Registrarme',
+  textRegistrationScreenButtonCancelar: 'Cancelar',
+  textRegistrationScreenButtonGuardar: 'Guardar',
   //MyAccountScreen
   textMyAccountScreenTelefono: '333 333 333',
   textMyAccountScreenMail: 'negocio@Tribo',
