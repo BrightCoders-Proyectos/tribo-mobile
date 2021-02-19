@@ -9,6 +9,10 @@ import {
 } from 'react-native';
 import {CustomButton, ConfigBtnCustom} from '../components/CustomButton';
 import Colors from '../src/Colors';
+import {
+  ModalDeleteStoreOrAccount,
+  ModalDeleteTexts,
+} from '../components/modals/ModalDeleteStoreOrAccout';
 import TriboLogo from '../assets/tribologo.png';
 import Profile from '../data/ProfileData';
 import Titles from '../components/Titles';
@@ -20,7 +24,7 @@ const ProfileDataText = (props) => {
 };
 
 function profileDataCheck(item) {
-  item.length === 7 ? item = ['Lunes - Domingo'] : item;
+  item.length === 7 ? (item = ['Lunes - Domingo']) : item;
   return (
     <FlatList
       data={item}
@@ -114,16 +118,10 @@ const ProfileScreen = () => {
                 <ProfileDataText dataText={item.bussinessScheduleFin} />
               </View>
               <View style={styles.myBussinessButtonContainer}>
-                <CustomButton
-                  size={ConfigBtnCustom.SIZE.SMALL}
-                  titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
-                  bgBtn={ConfigBtnCustom.COLOR.DISABLED}
-                  borderColorBtn={ConfigBtnCustom.COLOR.DISABLED}
-                  titleColor={ConfigBtnCustom.COLOR.WHITE}
-                  widthBtn={'82%'}
-                  title={TitlesText.titleMyAccountButtonEliminar}
-                  marginTop={10}
-                  disabled={false}
+                <ModalDeleteStoreOrAccount
+                  isBussiness={true}
+                  title={ModalDeleteTexts.title.business}
+                  description={item.bussinessName}
                 />
                 <CustomButton
                   size={ConfigBtnCustom.SIZE.SMALL}
@@ -150,22 +148,15 @@ const ProfileScreen = () => {
                 marginTop={0}
                 disabled={false}
               />
+              <ModalDeleteStoreOrAccount
+                title={ModalDeleteTexts.title.account}
+                description={ModalDeleteTexts.description.account}
+              />
               <CustomButton
                 size={ConfigBtnCustom.SIZE.SMALL}
                 titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
                 bgBtn={ConfigBtnCustom.COLOR.YELLOW}
                 borderColorBtn={ConfigBtnCustom.COLOR.YELLOW}
-                titleColor={ConfigBtnCustom.COLOR.WHITE}
-                widthBtn={'100%'}
-                title={TitlesText.titleMyAccountButtonBorrarCuenta}
-                marginTop={64}
-                disabled={false}
-              />
-              <CustomButton
-                size={ConfigBtnCustom.SIZE.SMALL}
-                titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
-                bgBtn={ConfigBtnCustom.COLOR.DISABLED}
-                borderColorBtn={ConfigBtnCustom.COLOR.DISABLED}
                 titleColor={ConfigBtnCustom.COLOR.WHITE}
                 widthBtn={'100%'}
                 title={TitlesText.titleMyAccountButtonEditarInfo}
@@ -200,6 +191,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   myBussinessButtonContainer: {
+    alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'center',
     marginVertical: 16,

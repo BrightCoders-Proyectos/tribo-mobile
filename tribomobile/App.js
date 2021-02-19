@@ -18,7 +18,6 @@ import SideNavScreen from './screens/SideNavScreen';
 import RegisterMarket from './screens/RegisterMarket';
 import RegistrationScreen from './screens/RegistrationScreen';
 import EditAccountScreen from './screens/profile/EditAccountScreen';
-import ProfileEditScreen from './screens/ProfileScreen';
 
 import {
   ModalDeleteStoreOrAccount,
@@ -37,7 +36,6 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <NavigationContainer>
         <Navigation />
-        <ProfileEditScreen />
       </NavigationContainer>
     </>
   );
