@@ -13,12 +13,21 @@ import MapsPin from '../../assets/maps-pin.png';
 import PhoneIcon from '../../assets/phone-call.png';
 import WhatsappIcon from '../../assets/whatsapp.png';
 import TitlesText from '../../src/TitlesText';
+import Titles from '../Titles';
+import marker_food from '../../assets/marker_food.png';
+import marker_store from '../../assets/marker_store.png';
+import marker_service from '../../assets/marker_service.png';
 
 function Description(props) {
   const {title, information, style} = props;
   return (
     <View style={style}>
-      <Text style={styles.descriptionTitle}>{title}</Text>
+      <Titles
+        txtAlign="left"
+        titleType="screenTitle"
+        title={title}
+      />
+      {/* <Text style={styles.descriptionTitle}>{title}</Text> */}
       <Text style={styles.descriptionInfo}>{information}</Text>
     </View>
   );
@@ -35,7 +44,9 @@ function Contact(props) {
 }
 
 function ModalInfoStore(props) {
+  const {serviceType, storeID} = props;
   // const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <>
       <View style={styles.centeredView}>
@@ -49,14 +60,22 @@ function ModalInfoStore(props) {
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <View style={styles.iconCloseView}>
-                <TouchableOpacity
-                  onPress={ props.close }>
+                <TouchableOpacity onPress={props.close}>
                   <Image style={styles.icon} source={CloseIcon} />
                 </TouchableOpacity>
               </View>
               <View style={styles.mapsPinView}>
-                <View>
-                  <Image style={styles.iconMapsPin} source={MapsPin} />
+                <View style={{height: 110}}>
+                  <Image
+                    style={styles.iconMapsPin}
+                    source={
+                      serviceType === 'Food'
+                        ? marker_food
+                        : serviceType === 'Service'
+                        ? marker_service
+                        : marker_store
+                    }
+                  />
                 </View>
                 <Description
                   title={'La tiendita de Don Memo'}
@@ -136,9 +155,9 @@ const styles = StyleSheet.create({
     tintColor: '#828894',
   },
   iconMapsPin: {
-    width: 78,
-    height: 76,
-    tintColor: 'black',
+    width: 72,
+    height: 96,
+    //tintColor: 'black',
     marginLeft: -10,
   },
   mapsPinView: {

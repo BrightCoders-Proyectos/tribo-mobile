@@ -11,11 +11,11 @@ import {
 
 const IconNav = ({image, text, markerSelection, name}) => {
   const changeIconNav = () => {
-    if (markerSelection === 'service' && name === 'service') {
+    if (markerSelection === 'Service' && name === 'Service') {
       return <Image source={image} style={{tintColor: '#FFCF87'}} />;
-    } else if (markerSelection === 'store' && name === 'store') {
+    } else if (markerSelection === 'Store' && name === 'Store') {
       return <Image source={image} style={{tintColor: '#29335C'}} />;
-    } else if (markerSelection === 'food' && name === 'food') {
+    } else if (markerSelection === 'Food' && name === 'Food') {
       return <Image source={image} style={{tintColor: '#EFD13B'}} />;
     }
     return <Image source={image} style={style.imagenServices} />;

@@ -32,31 +32,14 @@ function LittlePinInfo(props) {
   //const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
-      {/* <View style={styles.centeredView}>*/}
-      {/* <Modal
-          animationType="slide"
-          transparent={true}
-          visible={false}
-          onRequestClose={() => {
-            console.log('Modal has been closed.');
-          }}>  */}
       <View style={styles.centeredView}>
         <View style={[styles.modalView, styles.shadowStyle]}>
-          {/* <View style={styles.iconCloseView}>
-                <TouchableOpacity
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}>
-                  <Image style={styles.icon} source={CloseIcon} />
-                </TouchableOpacity>
-              </View> */}
           <View style={styles.mapsPinView}>
             <View style={styles.iconContainer}>
               <Text style={{height:95}}>
                 <Image
                   resizeMode="cover"
                   style={[
-                    //styles.iconMapsPin,
                     serviceType === 'Food'
                       ? styles.foodPin
                       : serviceType === 'Service'
@@ -89,23 +72,12 @@ function LittlePinInfo(props) {
         </View>
         <View style={[styles.modalArrow, styles.shadowStyle]}></View>
       </View>
-      {/* </Modal> */}
-      {/* </View> */}
-      {/* <TouchableOpacity
-        style={styles.openButton}
-        onPress={() => {
-          setModalVisible(true);
-        }}>
-        <Text style={styles.textStyle}>show info(store) in a little pin</Text>
-      </TouchableOpacity> */}
     </>
   );
 }
 const styles = StyleSheet.create({
   iconCloseView: {
-    //height:0,
     alignItems: 'flex-end',
-    //marginHorizontal: 15,
   },
   icon: {
     width: 20,

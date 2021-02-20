@@ -22,25 +22,47 @@ import IconNav from './IconNav';
 import BtnHideShowMenu from '../components/BtnHideShowMenu';
 import ModalInfoStore from '../components/modals/ModalInfoStore';
 
-const CustomCallot = props => {
+const CustomCallot = (props) => {
   return (
     <View>
-      <View style={{backgroundColor: 'white', width: 150,height: 110, flexDirection: 'row', borderRadius:10, padding:6 }}>
-          <Text><Image source={props.image} style={{width:45, height: 60}} /></Text>
-          <View style={{flex: 1,width:'100%', height:'100%', flexDirection:'column', justifyContent: 'center',marginLeft: 5, alignItems:'center'}}>
-            <Text>La fonda de Doña Luisa</Text>
-              <Text>+ info <Text style={{fontSize: 20}}>{`-->`}</Text> </Text>
-          </View>
+      <View
+        style={{
+          backgroundColor: 'white',
+          width: 150,
+          height: 110,
+          flexDirection: 'row',
+          borderRadius: 10,
+          padding: 6,
+        }}>
+        <Text>
+          <Image source={props.image} style={{width: 45, height: 60}} />
+        </Text>
+        <View
+          style={{
+            flex: 1,
+            width: '100%',
+            height: '100%',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            marginLeft: 5,
+            alignItems: 'center',
+          }}>
+          <Text>La fonda de Doña Luisa</Text>
+          <Text>
+            + info <Text style={{fontSize: 20}}>{`-->`}</Text>{' '}
+          </Text>
+        </View>
       </View>
-    <View style={style.arrowBorder}></View>
-    <View style={style.arrow}></View>
+      <View style={style.arrowBorder}></View>
+      <View style={style.arrow}></View>
     </View>
   );
-}
+};
 
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
+  const [imageToShow,setImageToShow] = useState('');
 
   const regionMap = {
     latitude: 19.256127,
@@ -51,7 +73,11 @@ const MainScreen = () => {
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
-      <ModalInfoStore modalVisible={modalVisible} close={()=> setModalVisible(!modalVisible)}/>
+      <ModalInfoStore
+        modalVisible={modalVisible}
+        serviceType={markerSelection}
+        close={() => setModalVisible(!modalVisible)}
+      />
       <View style={{zIndex: 0, flexDirection: 'column'}}>
         <MapView
           style={{width: '100%', height: '100%'}}
@@ -63,13 +89,13 @@ const MainScreen = () => {
               latitude: 19.256205,
               longitude: -103.715864,
             }}
-            image={marker_store}>
-            <Callout 
-              tooltip
-              onPress={()=> setModalVisible(true)}>
-                <CustomCallot
-                  image={marker_store} 
-                  />
+            image={marker_store} 
+            onPress={
+              ()=>setMarkerSelection('Store')
+            }
+            > 
+            <Callout tooltip onPress={() => setModalVisible(true)}>
+              <CustomCallot image={marker_store} />
             </Callout>
           </Marker>
           <Marker
@@ -79,14 +105,12 @@ const MainScreen = () => {
               longitude: -103.705776,
             }}
             image={marker_food}
+            onPress={
+              ()=>setMarkerSelection('Food')
+            }
             >
-            <Callout 
-              tooltip
-              onPress={()=> setModalVisible(true)}>
-
-                <CustomCallot
-                  image={marker_food} 
-                  />
+            <Callout tooltip onPress={() => setModalVisible(true)}>
+              <CustomCallot image={marker_food} />
             </Callout>
           </Marker>
           <Marker
@@ -96,15 +120,14 @@ const MainScreen = () => {
               longitude: -103.715017,
             }}
             image={marker_service}
+            onPress={
+              ()=>setMarkerSelection('Service')
+            }
             >
-            <Callout 
-              tooltip
-              onPress={()=> setModalVisible(true)}>
-                <CustomCallot
-                  image={marker_service} 
-                  />
+            <Callout tooltip onPress={() => setModalVisible(true)}>
+              <CustomCallot image={marker_service} />
             </Callout>
-            </Marker>
+          </Marker>
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>
@@ -116,19 +139,19 @@ const MainScreen = () => {
           image={food}
           text={string.food}
           markerSelection={markerSelection}
-          name={'food'}
+          name={'Food'}
         />
         <IconNav
           image={store}
           text={string.product}
           markerSelection={markerSelection}
-          name={'store'}
+          name={'Store'}
         />
         <IconNav
           image={service}
           text={string.service}
           markerSelection={markerSelection}
-          name={'service'}
+          name={'Service'}
         />
       </View>
     </View>
