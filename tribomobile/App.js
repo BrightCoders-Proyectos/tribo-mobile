@@ -18,6 +18,7 @@ import SideNavScreen from './screens/SideNavScreen';
 import RegisterMarket from './screens/RegisterMarket';
 import RegistrationScreen from './screens/RegistrationScreen';
 import EditAccountScreen from './screens/profile/EditAccountScreen';
+
 import {
   ModalDeleteStoreOrAccount,
   ModalDeleteTexts,
