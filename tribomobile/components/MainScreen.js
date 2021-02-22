@@ -113,7 +113,7 @@ const MainScreen = () => {
           <Marker
             style={style.imagenServices}
             coordinate={{
-              latitude: 19.273768,
+              latitude: 19.263768,
               longitude: -103.715017,
             }}
             image={marker_service}
@@ -177,7 +177,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
   },
   navBar: {
-    marginTop: 10,
+    //marginTop: 10,
   },
   iconsDown: {
     padding: 10,

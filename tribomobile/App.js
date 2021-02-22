@@ -37,7 +37,7 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         {/* <LittlePinInfo/> */}
-        <ModalNotFound/>
+        <MainScreen/>
       </SafeAreaView>
     </>
   );
