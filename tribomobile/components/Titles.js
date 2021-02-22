@@ -3,13 +3,13 @@ import {StyleSheet, Text} from 'react-native';
 import Colors from '../src/Colors';
 
 const Titles = (props) => {
-  const {titleType, title, txtAlign} = props;
+  const {style, titleType, title, txtAlign} = props;
   if (titleType === 'screenTitle') {
-    return <Text style={styles.screenTitle}>{title}</Text>;
+    return <Text style={[styles.screenTitle, style]}>{title}</Text>;
   } else if (titleType === 'formTitle') {
-    return <Text style={styles.formTitle}>{title}</Text>;
+    return <Text style={[styles.formTitle, style]}>{title}</Text>;
   } else {
-    return <Text style={[styles.inputTitle,{textAlign:txtAlign}]}>{title}</Text>;
+    return <Text style={[style, styles.inputTitle,{textAlign:txtAlign}]}>{title}</Text>;
   }
 };
 
@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     color: Colors.BlueDark,
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
   },
   inputTitle: {
     color: Colors.BlueDark,
