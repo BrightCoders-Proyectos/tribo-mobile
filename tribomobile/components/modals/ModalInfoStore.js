@@ -6,9 +6,11 @@ import {
   Text,
   TouchableOpacity,
   View,
+  ScrollView,
 } from 'react-native';
 
 import CloseIcon from '../../assets/close.png';
+import NewClose from '../../assets/newclose.png';
 import MapsPin from '../../assets/maps-pin.png';
 import PhoneIcon from '../../assets/phone-call.png';
 import WhatsappIcon from '../../assets/whatsapp.png';
@@ -36,7 +38,7 @@ function Description(props) {
 }
 
 function Contact(props) {
-  const {icon, title,color} = props;
+  const {icon, title, color} = props;
   return (
     <View style={styles.contactView}>
       <CustomButton
@@ -54,6 +56,25 @@ function Contact(props) {
     //   <Image style={styles.icon} source={icon} />
     //   <Text style={styles.contactTitle}>{title}</Text>
     // </View>
+  );
+}
+
+function TypesContent(props) {
+  const {icon, serviceType, text} = props;
+  return (
+    <View style={styles.tiposContainer}>
+      <Image
+        source={icon}
+        style={[
+          serviceType === 'Food'
+            ? styles.foodPin
+            : serviceType === 'Service'
+            ? styles.servicePin
+            : styles.storePin,
+        ]}
+      />
+      <Text style={styles.tiposText}>{text}</Text>
+    </View>
   );
 }
 
@@ -75,7 +96,7 @@ function ModalInfoStore(props) {
             <View style={styles.modalView}>
               <View style={styles.iconCloseView}>
                 <TouchableOpacity onPress={props.close}>
-                  <Image style={styles.icon} source={CloseIcon} />
+                  <Image style={styles.icon} source={NewClose} />
                 </TouchableOpacity>
               </View>
               <View style={styles.mapsPinView}>
@@ -97,74 +118,80 @@ function ModalInfoStore(props) {
                   style={styles.descriptionLeft}
                 />
               </View>
-              <View>
-                <Text style={styles.infoText}>
-                  {ContentText.textMyAccountScreenServicio}
-                </Text>
-                <Text style={styles.infoText}>
-                  {ContentText.textMyAccountScreenHorario}
-                </Text>
-                <View style={{marginBottom: 15}}>
-                  <Titles
-                    txtAlign="left"
-                    titleType=""
-                    title={TitlesText.titleStoreInfoAddress}
-                  />
-                  <Text style={{fontSize: 16}}>
-                    {ContentText.textoStoreInformationScreenDireccion}
+              <ScrollView>
+                <View>
+                  <Text style={styles.infoText}>
+                    {ContentText.textMyAccountScreenServicio}
                   </Text>
-                </View>
-                <View style={{marginBottom: 15}}>
-                  <Titles
-                    txtAlign="left"
-                    titleType=""
-                    title={TitlesText.titleStoreInfoTiposEntrega}
-                  />
-                  <View style={styles.tiposContainer}>
-                    <Image source={PickupProduct} />
-                    <Text style={styles.tiposText}>
-                      {ContentText.textoStoreInformationRecogerProducto}
-                    </Text>
-                  </View>
-                  <View style={styles.tiposContainer}>
-                    <Image source={DeliveryIcon} />
-                    <Text style={styles.tiposText}>
-                      {ContentText.textoStoreInformationEnvioADomicilio}
-                    </Text>
-                  </View>
-                </View>
-                <View style={{marginBottom: 15}}>
-                  <Titles
-                    txtAlign="left"
-                    titleType=""
-                    title={TitlesText.titleStoreInfoTiposPagos}
-                  />
-                  <View style={styles.tiposContainer}>
-                    <Image source={Cash} />
-                    <Text style={styles.tiposText}>
-                      {ContentText.textoStoreInformationEfectivo}
-                    </Text>
-                  </View>
-                  <View style={styles.tiposContainer}>
-                    <Image source={Card} />
-                    <Text style={styles.tiposText}>
-                      {ContentText.textoStoreInformationTarjeta}
-                    </Text>
-                  </View>
-                </View>
-                <View style={{marginBottom: 15}}>
-                  <Titles
-                    txtAlign="left"
-                    titleType=""
-                    title={TitlesText.titleStoreInfoPhone}
-                  />
-                  <Text style={{fontSize: 16}}>
-                    {ContentText.textoStoreInformationScreenTelefono}
+                  <Text style={styles.infoText}>
+                    {ContentText.textMyAccountScreenHorario}
                   </Text>
+                  <View style={{marginBottom: 15}}>
+                    <Titles
+                      txtAlign="left"
+                      titleType=""
+                      title={TitlesText.titleStoreInfoAddress}
+                    />
+                    <Text style={{fontSize: 16}}>
+                      {ContentText.textoStoreInformationScreenDireccion}
+                    </Text>
+                  </View>
+                  <View style={{marginBottom: 15}}>
+                    <Titles
+                      txtAlign="left"
+                      titleType=""
+                      title={TitlesText.titleStoreInfoTiposEntrega}
+                    />
+                    <TypesContent
+                      icon={PickupProduct}
+                      serviceType={serviceType}
+                      text={ContentText.textoStoreInformationRecogerProducto}
+                    />
+                    <TypesContent
+                      icon={DeliveryIcon}
+                      serviceType={serviceType}
+                      text={ContentText.textoStoreInformationEnvioADomicilio}
+                    />
+                  </View>
+                  <View style={{marginBottom: 15}}>
+                    <Titles
+                      txtAlign="left"
+                      titleType=""
+                      title={TitlesText.titleStoreInfoTiposPagos}
+                    />
+                    <TypesContent
+                      icon={Cash}
+                      serviceType={serviceType}
+                      text={ContentText.textoStoreInformationEfectivo}
+                    />
+                    <TypesContent
+                      icon={Card}
+                      serviceType={serviceType}
+                      text={ContentText.textoStoreInformationTarjeta}
+                    />
+                  </View>
+                  <View style={{marginBottom: 15}}>
+                    <Titles
+                      txtAlign="left"
+                      titleType=""
+                      title={TitlesText.titleStoreInfoPhone}
+                    />
+                    <Text style={{fontSize: 16}}>
+                      {ContentText.textoStoreInformationScreenTelefono}
+                    </Text>
+                  </View>
                 </View>
-              </View>
-              <Contact color={ConfigBtnCustom.COLOR.YELLOW} icon={PhoneIcon} title={'Llamar por teléfono'} />
-              <Contact color={ConfigBtnCustom.COLOR.GREEN} icon={WhatsappIcon} title={'Envía un Whatsapp'} />
+                <Contact
+                  color={ConfigBtnCustom.COLOR.YELLOW}
+                  icon={PhoneIcon}
+                  title={'Llamar por teléfono'}
+                />
+                <Contact
+                  color={ConfigBtnCustom.COLOR.GREEN}
+                  icon={WhatsappIcon}
+                  title={'Envía un Whatsapp'}
+                />
+              </ScrollView>
             </View>
           </View>
         </Modal>
@@ -195,7 +222,7 @@ const styles = StyleSheet.create({
     margin: 20,
     backgroundColor: '#ffffff',
     borderRadius: 7,
-    paddingTop: 25,
+    paddingTop: 20,
     paddingBottom: 40,
     paddingHorizontal: 25,
     shadowColor: '#000',
@@ -224,18 +251,18 @@ const styles = StyleSheet.create({
   icon: {
     width: 20,
     height: 20,
-    tintColor: '#828894',
+    tintColor: '#000000',
   },
   iconMapsPin: {
     width: 72,
     height: 96,
-    //tintColor: 'black',
     marginLeft: -10,
   },
   mapsPinView: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 25,
+    marginTop: 5,
+    marginBottom:20
   },
   descriptionLeft: {
     maxWidth: '75%',
@@ -250,7 +277,8 @@ const styles = StyleSheet.create({
     color: '#828282',
   },
   descriptionInfo: {
-    color: '#828894',
+    color: '#000000',
+    fontSize: 18,
   },
   contactView: {
     flexDirection: 'row',
