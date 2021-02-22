@@ -130,6 +130,9 @@ export default ContentText = {
   food: 'Comida',
   product: 'Productos',
   service: 'Servicios',
+  //Modal not found
+  textModalNotFound: 'No pudimos encontrar negocios en el área, intenta probar con una dirección diferente',
+  textModalNotFoundButton: 'Ingresa otra dirección',
   //NavBartext
   title_1: 'Regístrate/Mi cuenta',
   title_2: '#QuédateEnCasa',
