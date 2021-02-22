@@ -105,7 +105,8 @@ function ModalDeleteStoreOrAccount(props) {
         bgBtn={ConfigBtnCustom.COLOR.DISABLED}
         borderColorBtn={ConfigBtnCustom.COLOR.DISABLED}
         titleColor={ConfigBtnCustom.COLOR.WHITE}
-        widthBtn={isBussiness ? '40%' : '80%'}
+        widthBtn={isBussiness ? '82%' : '100%'}
+        marginTop={isBussiness ? 11 : 64}
         title={isBussiness ? 'Eliminar' : 'Borrar Cuenta'}
         disabled={false}
         action={() => setModalVisible(true)}

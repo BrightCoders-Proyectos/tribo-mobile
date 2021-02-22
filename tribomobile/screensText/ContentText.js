@@ -42,6 +42,10 @@ export default ContentText = {
   textoStoreInformationScreenTelefono: '333 333 333',
   textoStoreInformationScreenButtonLlamar: 'Llamar por Teléfono',
   textoStoreInformationScreenButtonEnvía: 'Envía un mensaje',
+  textoStoreInformationRecogerProducto: 'Recoger Producto',
+  textoStoreInformationEnvioADomicilio:'Envío a domicilio',
+  textoStoreInformationEfectivo: 'Efectivo',
+  textoStoreInformationTarjeta: 'Tarjeta de débito/crédito',
   //SideNavScreen
   textoSideNavScreenRecomendaciones:
     'Recomendaciones para el aislamiento preventivo',
@@ -84,6 +88,8 @@ export default ContentText = {
   textRegistrationScreenCheckboxDeseo:
     'Deseo recibir información de Tribo',
   textRegistrationScreenButtonRegistrarme: 'Registrarme',
+  textRegistrationScreenButtonCancelar: 'Cancelar',
+  textRegistrationScreenButtonGuardar: 'Guardar',
   textRegistrationScreenButtonAnadir: 'Añadir mi negocio',
   //MyAccountScreen
   textMyAccountScreenTelefono: '333 333 333',

@@ -3,13 +3,13 @@ import {StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import Colors from '../src/Colors';
 
 const TextInputs = (props) => {
-  const {textInputType, placeholderText, value} = props;
+  const {customStyle , textInputType, placeholderText, value} = props;
 
   const textInputStyling = (textInputType) => {
     let styleProperties = [];
     switch (textInputType) {
       case 'searchBar':
-        styleProperties = [styles.container, styles.searchBar];
+        styleProperties = [styles.container, styles.searchBar, customStyle];
         break;
       case 'textInputNull':
         styleProperties = [
@@ -26,7 +26,7 @@ const TextInputs = (props) => {
         ];
         break;
       default:
-        styleProperties = [styles.container, styles.inputTextForm];
+        styleProperties = [styles.container, styles.inputTextForm, customStyle];
         break;
     }
 
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     height: 40,
     paddingLeft: 20,
     paddingRight: 20,
+    width: '100%'
   },
   textInputError: {
     borderWidth: 1,

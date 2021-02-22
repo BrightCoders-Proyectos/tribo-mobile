@@ -1,25 +1,30 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import { CheckBox } from 'native-base';
-import Colors from "../src/Colors";
+import CheckBox from '@react-native-community/checkbox';
+import Colors from '../src/Colors';
 
-function CheckBoxCustom ({title,value}) {
+function CheckboxCustom({customStyle, onChange, title, value}) {
   return (
-    <View style={styles.checkBoxView}>
-      <CheckBox checked={value} color={Colors.BlueLight}/>
-      <Text style={{marginLeft: 15}}>{title}</Text>
+    <View style={[customStyle, styles.checkBoxView]}>
+      {/* <CheckBox checked={value} color={Colors.BlueLight}/>
+       */}
+      <CheckBox
+        disabled={false}
+        value={value}
+        onValueChange={onChange}
+        tintColors={{true: Colors.BlueP}}
+      />
+      <Text>{title}</Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
-  checkBoxView:{
-    flexDirection: 'row', 
-    alignItems:'center', 
-    justifyContent:'center',
-    marginLeft:35, 
-    marginTop:10
-  }
+  checkBoxView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 10,
+  },
 });
 
-export default CheckBoxCustom;
+export default CheckboxCustom;

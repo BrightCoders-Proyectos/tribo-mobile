@@ -8,7 +8,7 @@
 
 import React from 'react';
 import {SafeAreaView, Text, StatusBar, Modal} from 'react-native';
-import titlesText from './src/TitlesText';
+import TitlesText from './src/TitlesText';
 import ContentText from './screensText/ContentText';
 import LogoTribo from './components/LogoTribo';
 import ExampleButtons from './ExampleButtons';

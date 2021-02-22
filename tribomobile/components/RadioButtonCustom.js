@@ -5,30 +5,23 @@ import ContentText from '../screensText/ContentText';
 import Colors from "../src/Colors";
 
 var radio_props = [
-    {label: ContentText.textRegistrationScreenCheckboxServicio, value: 0 },
+    {label: ContentText.textRegistrationScreenCheckboxComida, value: 0 },
     {label: ContentText.textRegistrationScreenCheckboxProducto, value: 1 },
-    {label: ContentText.textRegistrationScreenCheckboxEfectivo, value: 2 }
+    {label: ContentText.textRegistrationScreenCheckboxServicio, value: 2 }
   ];
  
-function RadioButtomCustom () {
+function RadioButtomCustom ({customStyle, formHorizontal}) {
   return (
-    <View style={styles.radioForm}>
+    <View>
          <RadioForm
+          style={customStyle}
           radio_props={radio_props}
           initial={0}
-          formHorizontal={true}
+          formHorizontal={formHorizontal}
           buttonColor={Colors.BlueLight}
         />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  radioForm:{
-    flexDirection: 'row', 
-    alignItems:'center', 
-    justifyContent:'center'
-  }
-});
 
 export default RadioButtomCustom;
