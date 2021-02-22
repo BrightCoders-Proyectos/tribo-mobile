@@ -14,6 +14,8 @@ function Description(props) {
   );
 }
 
+//VisibleState shows or hide the modal
+
 export default function ModalNotFound({visibleState}) {
   return (
     <SafeAreaView>
