@@ -21,8 +21,10 @@ import string from '../screensText/ContentText';
 import IconNav from './IconNav';
 import BtnHideShowMenu from '../components/BtnHideShowMenu';
 import ModalInfoStore from '../components/modals/ModalInfoStore';
+import Colors from '../src/Colors';
 
 const CustomCallot = (props) => {
+  const {txtColor} = props;
   return (
     <View>
       <View
@@ -48,8 +50,11 @@ const CustomCallot = (props) => {
             alignItems: 'center',
           }}>
           <Text>La fonda de Doña Luisa</Text>
-          <Text>
-            + info <Text style={{fontSize: 20}}>{`-->`}</Text>{' '}
+          <Text
+            style={{
+              color: txtColor,
+            }}>
+            + info <Text style={[{fontSize: 20}]}>{`-->`}</Text>{' '}
           </Text>
         </View>
       </View>
@@ -62,8 +67,6 @@ const CustomCallot = (props) => {
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
-  const [imageToShow,setImageToShow] = useState('');
-
   const regionMap = {
     latitude: 19.256127,
     longitude: -103.713536,
@@ -89,13 +92,10 @@ const MainScreen = () => {
               latitude: 19.256205,
               longitude: -103.715864,
             }}
-            image={marker_store} 
-            onPress={
-              ()=>setMarkerSelection('Store')
-            }
-            > 
+            image={marker_store}
+            onPress={() => setMarkerSelection('Store')}>
             <Callout tooltip onPress={() => setModalVisible(true)}>
-              <CustomCallot image={marker_store} />
+              <CustomCallot image={marker_store} txtColor={Colors.BlueStore} />
             </Callout>
           </Marker>
           <Marker
@@ -105,12 +105,9 @@ const MainScreen = () => {
               longitude: -103.705776,
             }}
             image={marker_food}
-            onPress={
-              ()=>setMarkerSelection('Food')
-            }
-            >
+            onPress={() => setMarkerSelection('Food')}>
             <Callout tooltip onPress={() => setModalVisible(true)}>
-              <CustomCallot image={marker_food} />
+              <CustomCallot image={marker_food} txtColor={Colors.YellowFood} />
             </Callout>
           </Marker>
           <Marker
@@ -120,12 +117,12 @@ const MainScreen = () => {
               longitude: -103.715017,
             }}
             image={marker_service}
-            onPress={
-              ()=>setMarkerSelection('Service')
-            }
-            >
+            onPress={() => setMarkerSelection('Service')}>
             <Callout tooltip onPress={() => setModalVisible(true)}>
-              <CustomCallot image={marker_service} />
+              <CustomCallot
+                image={marker_service}
+                txtColor={Colors.OrangeService}
+              />
             </Callout>
           </Marker>
         </MapView>
