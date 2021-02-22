@@ -27,6 +27,8 @@ export default TitlesText = {
   //Store info
   titleStoreInfoAddress: 'Dirección:',
   titleStoreInfoPhone: 'Teléfono',
+  titleStoreInfoTiposEntrega: 'Tipo(s) de entrega:',
+  titleStoreInfoTiposPagos: 'Acepta pagos con:',
   //SideNavScreen
   titleSideNavRegister: 'Regístrate/Mi Cuenta',
   titleSideNavTerms: 'Términos y condiciones',

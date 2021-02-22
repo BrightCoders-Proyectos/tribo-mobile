@@ -42,6 +42,10 @@ export default ContentText = {
   textoStoreInformationScreenTelefono: '333 333 333',
   textoStoreInformationScreenButtonLlamar: 'Llamar por Teléfono',
   textoStoreInformationScreenButtonEnvía: 'Envía un mensaje',
+  textoStoreInformationRecogerProducto: 'Recoger Producto',
+  textoStoreInformationEnvioADomicilio:'Envío a domicilio',
+  textoStoreInformationEfectivo: 'Efectivo',
+  textoStoreInformationTarjeta: 'Tarjeta de débito/crédito',
   //SideNavScreen
   textoSideNavScreenRecomendaciones:
     'Recomendaciones para el aislamiento preventivo',
