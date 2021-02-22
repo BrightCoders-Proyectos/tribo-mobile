@@ -25,13 +25,13 @@ import marker_store from '../../assets/marker_store.png';
 import marker_service from '../../assets/marker_service.png';
 import ContentText from '../../screensText/ContentText';
 import {CustomButton, ConfigBtnCustom} from '../CustomButton';
+import Colors from '../../src/Colors';
 
 function Description(props) {
   const {title, information, style} = props;
   return (
     <View style={style}>
       <Titles txtAlign="left" titleType="screenTitle" title={title} />
-      {/* <Text style={styles.descriptionTitle}>{title}</Text> */}
       <Text style={styles.descriptionInfo}>{information}</Text>
     </View>
   );
@@ -52,10 +52,6 @@ function Contact(props) {
         title={title}
       />
     </View>
-    // <View style={styles.contactView}>
-    //   <Image style={styles.icon} source={icon} />
-    //   <Text style={styles.contactTitle}>{title}</Text>
-    // </View>
   );
 }
 
@@ -292,6 +288,15 @@ const styles = StyleSheet.create({
     color: '#828282',
     paddingLeft: 10,
     fontSize: 19,
+  },
+  foodPin: {
+    tintColor: Colors.YellowFood,
+  },
+  servicePin: {
+    tintColor: Colors.OrangeService,
+  },
+  storePin: {
+    tintColor: Colors.BlueStore,
   },
 });
 
