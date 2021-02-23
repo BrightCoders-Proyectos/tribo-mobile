@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   View,
@@ -67,12 +67,25 @@ const CustomCallot = (props) => {
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
+  const [storesData, setStoresData] = useState({});
   const regionMap = {
     latitude: 19.256127,
     longitude: -103.713536,
     latitudeDelta: 0.04,
     longitudeDelta: 0.03,
   };
+
+  useEffect(() => {
+    fetch('https://bc-tribo-web-staging.herokuapp.com/api/v1/market_places')
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(data);
+        return data.names;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
