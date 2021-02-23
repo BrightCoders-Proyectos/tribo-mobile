@@ -67,20 +67,20 @@ const CustomCallot = (props) => {
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
-  const [storesData, setStoresData] = useState({});
+  const [storesData, setStoresData] = useState([]);
   const regionMap = {
     latitude: 19.256127,
     longitude: -103.713536,
-    latitudeDelta: 0.04,
-    longitudeDelta: 0.03,
+    latitudeDelta: 0.08,
+    longitudeDelta: 0.08,
   };
 
   useEffect(() => {
     fetch('https://bc-tribo-web-staging.herokuapp.com/api/v1/market_places')
       .then((response) => response.json())
-      .then((json) => {
-        console.log(data);
-        return data.names;
+      .then((response) => {
+        console.log(response);
+        setStoresData(response);
       })
       .catch((error) => {
         console.error(error);
@@ -99,45 +99,41 @@ const MainScreen = () => {
           style={{width: '100%', height: '100%'}}
           region={regionMap}
           customMapStyle={MapStyle}>
-          <Marker
-            style={style.imagenServices}
-            coordinate={{
-              latitude: 19.256205,
-              longitude: -103.715864,
-            }}
-            image={marker_store}
-            onPress={() => setMarkerSelection('Store')}>
-            <Callout tooltip onPress={() => setModalVisible(true)}>
-              <CustomCallot image={marker_store} txtColor={Colors.BlueStore} />
-            </Callout>
-          </Marker>
-          <Marker
-            style={style.imagenServices}
-            coordinate={{
-              latitude: 19.261146,
-              longitude: -103.705776,
-            }}
-            image={marker_food}
-            onPress={() => setMarkerSelection('Food')}>
-            <Callout tooltip onPress={() => setModalVisible(true)}>
-              <CustomCallot image={marker_food} txtColor={Colors.YellowFood} />
-            </Callout>
-          </Marker>
-          <Marker
-            style={style.imagenServices}
-            coordinate={{
-              latitude: 19.263768,
-              longitude: -103.715017,
-            }}
-            image={marker_service}
-            onPress={() => setMarkerSelection('Service')}>
-            <Callout tooltip onPress={() => setModalVisible(true)}>
-              <CustomCallot
-                image={marker_service}
-                txtColor={Colors.OrangeService}
-              />
-            </Callout>
-          </Marker>
+          {storesData.map((data) => {
+            <Marker
+              style={style.imagenServices}
+              coordinate={{
+                latitude: data.latitud,
+                longitude: data.longitud,
+              }}
+              image={
+                data.business_line === 'Services'
+                  ? marker_service
+                  : data.business_line === 'Food'
+                  ? marker_food
+                  : marker_store
+              }
+              onPress={() => setMarkerSelection(data.business_line)}>
+              <Callout tooltip onPress={() => setModalVisible(true)}>
+                <CustomCallot
+                  image={
+                    data.business_line === 'Services'
+                      ? marker_service
+                      : data.business_line === 'Food'
+                      ? marker_food
+                      : marker_store
+                  }
+                  txtColor={
+                    data.business_line === 'Services'
+                  ? Colors.OrangeService
+                  : data.business_line === 'Food'
+                  ? Colors.YellowFood
+                  : Colors.BlueStore
+                  }
+                />
+              </Callout>
+            </Marker>;
+          })}
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>
