@@ -66,7 +66,7 @@ const CustomCallot = (props) => {
 
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
-  const [details,setDetails] = useState([]);
+  const [details,setDetails] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [storesData, setStoresData] = useState([]);
   const regionMap = {
@@ -81,6 +81,7 @@ const MainScreen = () => {
       .then((response) => response.json())
       .then((response) => {
         setStoresData(response);
+        setDetails(response[0]);
       })
       .catch((error) => {
         console.error(error);

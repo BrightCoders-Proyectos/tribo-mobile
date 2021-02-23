@@ -77,122 +77,120 @@ function TypesContent(props) {
 function ModalInfoStore(props) {
   const {dataDetail} = props;
 
-  return (
-    <>
-      <View style={styles.centeredView}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={props.modalVisible}
-          onRequestClose={() => {
-            console.log('Modal has been closed.');
-          }}>
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <View style={styles.iconCloseView}>
-                <TouchableOpacity onPress={props.close}>
-                  <Image style={styles.icon} source={NewClose} />
-                </TouchableOpacity>
-              </View>
-              <View style={styles.mapsPinView}>
-                <View style={{height: 110}}>
-                  <Image
-                    style={styles.iconMapsPin}
-                    source={
-                      dataDetail.business_line === 'Food'
-                        ? marker_food
-                        : dataDetail.business_line === 'Services'
-                        ? marker_service
-                        : marker_store
-                    }
+  if (dataDetail != null) {
+    return (
+      <>
+        <View style={styles.centeredView}>
+          <Modal
+            animationType="slide"
+            transparent={true}
+            visible={props.modalVisible}
+            onRequestClose={() => {
+              console.log('Modal has been closed.');
+            }}>
+            <View style={styles.centeredView}>
+              <View style={styles.modalView}>
+                <View style={styles.iconCloseView}>
+                  <TouchableOpacity onPress={props.close}>
+                    <Image style={styles.icon} source={NewClose} />
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.mapsPinView}>
+                  <View style={{height: 110}}>
+                    <Image
+                      style={styles.iconMapsPin}
+                      source={
+                        dataDetail.business_line === 'Food'
+                          ? marker_food
+                          : dataDetail.business_line === 'Services'
+                          ? marker_service
+                          : marker_store
+                      }
+                    />
+                  </View>
+                  <Description
+                    title={dataDetail.business_name}
+                    information={dataDetail.selling}
+                    style={styles.descriptionLeft}
                   />
                 </View>
-                <Description
-                  title={dataDetail.business_name}
-                  information={dataDetail.selling}
-                  style={styles.descriptionLeft}
-                />
+                <ScrollView>
+                  <View>
+                    <Text style={styles.infoText}>
+                      {dataDetail.service_days}
+                    </Text>
+                    <Text style={styles.infoText}>
+                      {ContentText.textMyAccountScreenHorario}
+                    </Text>
+                    <View style={{marginBottom: 15}}>
+                      <Titles
+                        txtAlign="left"
+                        titleType=""
+                        title={TitlesText.titleStoreInfoAddress}
+                      />
+                      <Text style={{fontSize: 16}}>{dataDetail.address}</Text>
+                    </View>
+                    <View style={{marginBottom: 15}}>
+                      <Titles
+                        txtAlign="left"
+                        titleType=""
+                        title={TitlesText.titleStoreInfoTiposEntrega}
+                      />
+                      {dataDetail.pickup_type.split(', ').map((itemData) => (
+                        <TypesContent
+                          key={itemData.id}
+                          icon={DeliveryIcon}
+                          serviceType={dataDetail.business_line}
+                          text={itemData}
+                        />
+                      ))}
+                    </View>
+                    <View style={{marginBottom: 15}}>
+                      <Titles
+                        txtAlign="left"
+                        titleType=""
+                        title={TitlesText.titleStoreInfoTiposPagos}
+                      />
+                      {dataDetail.payment.split('y ').map((itemData) => (
+                        <TypesContent
+                          key={itemData.id}
+                          icon={Card}
+                          serviceType={dataDetail.business_line}
+                          text={itemData}
+                        />
+                      ))}
+                    </View>
+                    <View style={{marginBottom: 15}}>
+                      <Titles
+                        txtAlign="left"
+                        titleType=""
+                        title={TitlesText.titleStoreInfoPhone}
+                      />
+                      <Text style={{fontSize: 16}}>
+                        {ContentText.textoStoreInformationScreenTelefono}
+                      </Text>
+                    </View>
+                  </View>
+                  <Contact
+                    color={ConfigBtnCustom.COLOR.YELLOW}
+                    icon={PhoneIcon}
+                    title={'Llamar por teléfono'}
+                  />
+                  <Contact
+                    color={ConfigBtnCustom.COLOR.GREEN}
+                    icon={WhatsappIcon}
+                    title={'Envía un Whatsapp'}
+                  />
+                </ScrollView>
               </View>
-              <ScrollView>
-                <View>
-                  <Text style={styles.infoText}>
-                    {dataDetail.service_days}
-                  </Text>
-                  <Text style={styles.infoText}>
-                    {ContentText.textMyAccountScreenHorario}
-                  </Text>
-                  <View style={{marginBottom: 15}}>
-                    <Titles
-                      txtAlign="left"
-                      titleType=""
-                      title={TitlesText.titleStoreInfoAddress}
-                    />
-                    <Text style={{fontSize: 16}}>
-                      {dataDetail.address}
-                    </Text>
-                  </View>
-                  <View style={{marginBottom: 15}}>
-                    <Titles
-                      txtAlign="left"
-                      titleType=""
-                      title={TitlesText.titleStoreInfoTiposEntrega}
-                    />
-                    <TypesContent
-                      icon={PickupProduct}
-                      serviceType={dataDetail.business_line}
-                      text={ContentText.textoStoreInformationRecogerProducto}
-                    />
-                    <TypesContent
-                      icon={DeliveryIcon}
-                      serviceType={dataDetail.business_line}
-                      text={ContentText.textoStoreInformationEnvioADomicilio}
-                    />
-                  </View>
-                  <View style={{marginBottom: 15}}>
-                    <Titles
-                      txtAlign="left"
-                      titleType=""
-                      title={TitlesText.titleStoreInfoTiposPagos}
-                    />
-                    <TypesContent
-                      icon={Cash}
-                      serviceType={dataDetail.business_line}
-                      text={ContentText.textoStoreInformationEfectivo}
-                    />
-                    <TypesContent
-                      icon={Card}
-                      serviceType={dataDetail.business_line}
-                      text={ContentText.textoStoreInformationTarjeta}
-                    />
-                  </View>
-                  <View style={{marginBottom: 15}}>
-                    <Titles
-                      txtAlign="left"
-                      titleType=""
-                      title={TitlesText.titleStoreInfoPhone}
-                    />
-                    <Text style={{fontSize: 16}}>
-                      {ContentText.textoStoreInformationScreenTelefono}
-                    </Text>
-                  </View>
-                </View>
-                <Contact
-                  color={ConfigBtnCustom.COLOR.YELLOW}
-                  icon={PhoneIcon}
-                  title={'Llamar por teléfono'}
-                />
-                <Contact
-                  color={ConfigBtnCustom.COLOR.GREEN}
-                  icon={WhatsappIcon}
-                  title={'Envía un Whatsapp'}
-                />
-              </ScrollView>
             </View>
-          </View>
-        </Modal>
-      </View>
-    </>
-  );
+          </Modal>
+        </View>
+      </>
+    );
+  }else{
+    return <Text>No Data Available</Text>
+  }
 }
 const styles = StyleSheet.create({
   tiposContainer: {
@@ -257,7 +255,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 5,
-    marginBottom:20
+    marginBottom: 20,
   },
   descriptionLeft: {
     maxWidth: '75%',
