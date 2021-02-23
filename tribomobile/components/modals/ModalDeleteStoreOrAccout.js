@@ -23,7 +23,7 @@ function Description(props) {
   );
 }
 
-const ModalDeleteStoreTexts = {
+const ModalDeleteTexts = {
   title: {
     business: TitlesText.titleDeleteBusiness,
     account: TitlesText.titleDeleteAccount,
@@ -35,9 +35,14 @@ const ModalDeleteStoreTexts = {
   },
 };
 
-function ModalDeleteStore(props) {
-  const {title, description} = props;
+function ModalDeleteStoreOrAccount(props) {
+  const {title, description, isBussiness} = props;
   const [modalVisible, setModalVisible] = useState(false);
+  let newDescription='';
+  if (isBussiness) {
+    newDescription = `${ModalDeleteTexts.description.business} 
+    "${description}" ${ModalDeleteTexts.description.interrogationSimbol}`;
+  }
 
   const closeModal = () => {
     setModalVisible(!modalVisible);
@@ -62,7 +67,7 @@ function ModalDeleteStore(props) {
               </View>
               <Description
                 title={title}
-                information={description}
+                information={isBussiness ? newDescription : description}
                 style={styles.description}
               />
               <View style={styles.containerButtons}>
@@ -94,13 +99,18 @@ function ModalDeleteStore(props) {
         </Modal>
       </View>
 
-      <TouchableOpacity
-        style={styles.openButton}
-        onPress={() => {
-          setModalVisible(true);
-        }}>
-        <Text style={styles.textStyle}>Show Modal delete</Text>
-      </TouchableOpacity>
+      <CustomButton
+        size={ConfigBtnCustom.SIZE.SMALL}
+        titleSize={ConfigBtnCustom.TITLE_SIZE.SMALL}
+        bgBtn={ConfigBtnCustom.COLOR.DISABLED}
+        borderColorBtn={ConfigBtnCustom.COLOR.DISABLED}
+        titleColor={ConfigBtnCustom.COLOR.WHITE}
+        widthBtn={isBussiness ? '82%' : '100%'}
+        marginTop={isBussiness ? 11 : 64}
+        title={isBussiness ? 'Eliminar' : 'Borrar Cuenta'}
+        disabled={false}
+        action={() => setModalVisible(true)}
+      />
     </>
   );
 }
@@ -114,7 +124,7 @@ const styles = StyleSheet.create({
   modalView: {
     margin: 20,
     backgroundColor: '#f7f4f4',
-    borderRadius: 7,
+    borderRadius: 15,
     paddingTop: 25,
     paddingBottom: 40,
     shadowColor: '#000',
@@ -156,6 +166,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'black',
     textAlign: 'center',
+    marginBottom: 20,
   },
   descriptionInfo: {
     color: 'black',
@@ -166,12 +177,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 10,
+    paddingTop: 35,
   },
 });
 
-ModalDeleteStore.propTypes = {
+ModalDeleteStoreOrAccount.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
 };
 
-export {ModalDeleteStore, ModalDeleteStoreTexts};
+export {ModalDeleteStoreOrAccount, ModalDeleteTexts};

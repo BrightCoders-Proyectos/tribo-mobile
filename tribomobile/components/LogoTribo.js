@@ -7,15 +7,16 @@ import colors from '../src/Colors';
 const LogoTribo = (props) => {
   const {height, width, line, sideNav} = props;
   return (
-    <View style={styles.logoView}>
+    <View style={[styles.logoView,{
+      width: width,
+      height: height,
+    }]}>
       <Image
         resizeMode="contain"
         style={[
           sideNav != true ? styles.regularicon : styles.sideNavicon,
-          // styles.icon,
           {
-            width: width,
-            height: height,
+            height: '57%',
           },
         ]}
         source={Tribologo}
@@ -23,10 +24,10 @@ const LogoTribo = (props) => {
       {line == true && (
         <View
           style={{
-            marginTop: 30,
             borderBottomWidth: 1,
             borderColor: '#9CA3AF',
             width: '80%',
+            paddingTop:32
           }}></View>
       )}
     </View>
@@ -35,9 +36,10 @@ const LogoTribo = (props) => {
 
 const styles = StyleSheet.create({
   logoView: {
-    height: '100%',
+    //height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom:10
   },
   regularicon: {
     tintColor: colors.BlueP,

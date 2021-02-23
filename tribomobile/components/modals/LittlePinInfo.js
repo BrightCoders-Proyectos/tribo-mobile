@@ -14,6 +14,7 @@ import Store from '../../assets/storeicon.png';
 import Service from '../../assets/serviceicon.png';
 import CloseIcon from '../../assets/close.png';
 import Colors from '../../src/Colors';
+import { Content } from 'native-base';
 
 function Description(props) {
   const {title, information, style} = props;
@@ -25,80 +26,58 @@ function Description(props) {
   );
 }
 
-function ModalInfoStore(props) {
-  const {serviceType} = props;
+function LittlePinInfo(props) {
+  const {serviceType, modalVisible, setModalVisible} = props;
   let iconColor = 'red';
-  const [modalVisible, setModalVisible] = useState(false);
+  //const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
       <View style={styles.centeredView}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-          onRequestClose={() => {
-            console.log('Modal has been closed.');
-          }}>
-          <View style={styles.centeredView}>
-            <View style={[styles.modalView, styles.shadowStyle]}>
-              <View style={styles.iconCloseView}>
-                <TouchableOpacity
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}>
-                  <Image style={styles.icon} source={CloseIcon} />
-                </TouchableOpacity>
-              </View>
-              <View style={styles.mapsPinView}>
-                <View style={styles.iconContainer}>
-                  <Image
-                    style={[
-                      styles.iconMapsPin,
-                      serviceType === 'Food'
-                        ? styles.foodPin
-                        : serviceType === 'Service'
-                        ? styles.servicePin
-                        : styles.storePin,
-                    ]}
-                    source={Backicon}
-                  />
-                  <Image
-                    style={styles.iconImagePin}
-                    source={
-                      serviceType === 'Food'
-                        ? Food
-                        : serviceType === 'Service'
-                        ? Service
-                        : Store
-                    }
-                  />
-                </View>
-                <Description
-                  title={'La tiendita de Don Memo'}
-                  information={'+ INFO'}
-                  style={styles.descriptionLeft}
+        <View style={[styles.modalView, styles.shadowStyle]}>
+          <View style={styles.mapsPinView}>
+            <View style={styles.iconContainer}>
+              <Text style={{height:95}}>
+                <Image
+                  resizeMode="cover"
+                  style={[
+                    serviceType === 'Food'
+                      ? styles.foodPin
+                      : serviceType === 'Service'
+                      ? styles.servicePin
+                      : styles.storePin,
+                  ]}
+                  source={Backicon}
                 />
-              </View>
+              </Text>
+              <Text style={{height: 40,top: -65,left:8}}>
+                <Image
+                  resizeMode="cover"
+                  style={styles.iconImagePin}
+                  source={
+                    serviceType === 'Food'
+                      ? Food
+                      : serviceType === 'Service'
+                      ? Service
+                      : Store
+                  }
+                />
+              </Text>
             </View>
-            <View style={[styles.modalArrow, styles.shadowStyle]}></View>
+            <Description
+              title={'La tiendita de Don Memo'}
+              information={'+ INFO'}
+              style={styles.descriptionLeft}
+            />
           </View>
-        </Modal>
+        </View>
+        <View style={[styles.modalArrow, styles.shadowStyle]}></View>
       </View>
-      <TouchableOpacity
-        style={styles.openButton}
-        onPress={() => {
-          setModalVisible(true);
-        }}>
-        <Text style={styles.textStyle}>show info(store) in a little pin</Text>
-      </TouchableOpacity>
     </>
   );
 }
 const styles = StyleSheet.create({
   iconCloseView: {
-    //height:0,
     alignItems: 'flex-end',
-    //marginHorizontal: 15,
   },
   icon: {
     width: 20,
@@ -115,7 +94,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f7f4f4',
     borderRadius: 7,
     paddingTop: 12,
-    paddingBottom: 12,
+    paddingBottom: 5,
     paddingHorizontal: 15,
     maxWidth: '50%',
     zIndex: 1,
@@ -151,19 +130,19 @@ const styles = StyleSheet.create({
   iconContainer: {
     alignContent: 'center',
     flexDirection: 'column',
+    justifyContent:'center'
   },
   iconMapsPin: {
-    height: 71,
+    height: 70,
     justifyContent: 'flex-start',
     backgroundColor: Colors.BackgroundLight,
-    left: -10,
     width: 53,
   },
   iconImagePin: {
     tintColor: Colors.White,
     top: -60,
-    height: 30,
-    width: 34,
+    height: 25,
+    width: 30,
     zIndex: 1,
   },
   foodPin: {
@@ -193,4 +172,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ModalInfoStore;
+export default LittlePinInfo;

@@ -11,7 +11,7 @@ export default ContentText = {
   //SplashScreen
   textoSplashScreenMade: 'Made with love in Colima, México',
   textoSplashScreenWe: '#WeAreMagma',
-  textoSplashScreenLaMarket: 'AMARKET.APP',
+  textoSplashScreenTribo: 'Tribo',
   textoSplashScreenL: 'L',
   //WelcomeScreen
   textoWelcomeScreenComercios:
@@ -22,8 +22,8 @@ export default ContentText = {
   textoWelcomeScreenButtonRegistra: 'Registrarme',
   textoWelcomeScreenOmitir: 'Omitir',
   //WelcomeScreenGuest
-  textoWelcomeScreenGuestLaMArket:
-    'LaMarket.app es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
+  textoWelcomeScreenGuestTribo:
+    'Tribo es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
   textoWelcomeScreenGuestSolo:
     'Sólo llama o envía un mensaje por WhatsApp y recibe tu pedido en la puerta de tu hogar.',
   textoWelcomeScreenGuestInputEscribe: 'Escribe tu dirección',
@@ -42,14 +42,20 @@ export default ContentText = {
   textoStoreInformationScreenTelefono: '333 333 333',
   textoStoreInformationScreenButtonLlamar: 'Llamar por Teléfono',
   textoStoreInformationScreenButtonEnvía: 'Envía un mensaje',
+  textoStoreInformationRecogerProducto: 'Recoger Producto',
+  textoStoreInformationEnvioADomicilio:'Envío a domicilio',
+  textoStoreInformationEfectivo: 'Efectivo',
+  textoStoreInformationTarjeta: 'Tarjeta de débito/crédito',
   //SideNavScreen
   textoSideNavScreenRecomendaciones:
     'Recomendaciones para el aislamiento preventivo',
   textoSideNavScreenSalir: 'Salir de mi cuenta',
   //RegistrationScreen
-  textRegistrationScreenLaMarket:
-    'LaMarket.app te ayuda a estar más cerca de tus clientes, solo regístrate y estarás listo para venderle a los clientes de tu comunidad a través de una herramienta digital.',
+  textRegistrationScreenTribo:
+    'Tribo te ayuda a estar más cerca de tus clientes, solo regístrate y estarás listo para venderle a los clientes de tu comunidad a través de una herramienta digital.',
+  textRegistrationScreenCuentanos: 'Cuéntanos sobre tu negocio y empieza a conectar con tus clientes',
   textRegistrationScreenInputEscribe: 'Escribe tu número telefónico',
+  textRegistrationScreenInputIngresaTelefono: 'Ingresa el telefono celular',
   textRegistrationScreenInputRecibirás: 'Recibirás información sobre la app',
   textRegistrationScreenInputEgNombre: 'e.g. José Ramírez',
   textRegistrationScreenInputEgNegocio: 'e.g. Abarrotes Memo',
@@ -80,11 +86,14 @@ export default ContentText = {
   textRegistrationScreenCheckboxHeLeido:
     'He leído y acepto la Política de Privacidad',
   textRegistrationScreenCheckboxDeseo:
-    'Deseo recibir información de LaMarket.app',
+    'Deseo recibir información de Tribo',
   textRegistrationScreenButtonRegistrarme: 'Registrarme',
+  textRegistrationScreenButtonCancelar: 'Cancelar',
+  textRegistrationScreenButtonGuardar: 'Guardar',
+  textRegistrationScreenButtonAnadir: 'Añadir mi negocio',
   //MyAccountScreen
   textMyAccountScreenTelefono: '333 333 333',
-  textMyAccountScreenMail: 'negocio@lamarket.app',
+  textMyAccountScreenMail: 'negocio@Tribo',
   textMyAccountScreenResponsable: 'José Ramírez',
   textMyAccountScreenNegocio: 'Abarrotes Don Memo',
   textMyAccountScreenDireccion:
@@ -111,7 +120,7 @@ export default ContentText = {
   textReadmeScreenTerminosP3:
     'Este documento es utilizado para regular las condiciones y reglas a las que se someten tanto los usuarios de un sitio web como su propietario y/o administrador, en lo referente al acceso y utilización del sitio web. De igual manera, hace referencia a las políticas de privacidad, protección de datos personales, enlaces, etc., que se tomarán para proteger la privacidad de los usuarios.',
   textReadmeScreenFAQP1:
-    'LaMarket.app es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
+    'Tribo es una plataforma digital que te conecta con comercios y vendedores cerca de ti y que pueden enviar a domicilio lo que necesitas de ellos.',
   textReadmeScreenFAQP2:
     'Sólo llama o envía un mensaje por WhatsApp y recibe tu pedido en la puerta de tu hogar.',
   textReadmeScreenPoliticaP1:
@@ -127,6 +136,9 @@ export default ContentText = {
   food: 'Comida',
   product: 'Productos',
   service: 'Servicios',
+  //Modal not found
+  textModalNotFound: 'No pudimos encontrar negocios en el área, intenta probar con una dirección diferente',
+  textModalNotFoundButton: 'Ingresa otra dirección',
   //NavBartext
   title_1: 'Regístrate/Mi cuenta',
   title_2: '#QuédateEnCasa',
