@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   View,
@@ -24,7 +24,7 @@ import ModalInfoStore from '../components/modals/ModalInfoStore';
 import Colors from '../src/Colors';
 
 const CustomCallot = (props) => {
-  const {txtColor} = props;
+  const {txtColor,textDescription} = props;
   return (
     <View>
       <View
@@ -49,7 +49,7 @@ const CustomCallot = (props) => {
             marginLeft: 5,
             alignItems: 'center',
           }}>
-          <Text>La fonda de Doña Luisa</Text>
+          <Text>{textDescription}</Text>
           <Text
             style={{
               color: txtColor,
@@ -66,19 +66,38 @@ const CustomCallot = (props) => {
 
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
+  const [details,setDetails] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
+  const [storesData, setStoresData] = useState([]);
   const regionMap = {
     latitude: 19.256127,
     longitude: -103.713536,
-    latitudeDelta: 0.04,
-    longitudeDelta: 0.03,
+    latitudeDelta: 0.08,
+    longitudeDelta: 0.08,
   };
+
+  useEffect(() => {
+    fetch('https://bc-tribo-web-staging.herokuapp.com/api/v1/market_places')
+      .then((response) => response.json())
+      .then((response) => {
+        setStoresData(response);
+        setDetails(response[0]);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  },[]);
+
+  const dataHandler = (dl,data) => {
+    setMarkerSelection(dl);
+    setDetails(data);
+  }
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
       <ModalInfoStore
+        dataDetail={details}
         modalVisible={modalVisible}
-        serviceType={markerSelection}
         close={() => setModalVisible(!modalVisible)}
       />
       <View style={{zIndex: 0, flexDirection: 'column'}}>
@@ -86,45 +105,43 @@ const MainScreen = () => {
           style={{width: '100%', height: '100%'}}
           region={regionMap}
           customMapStyle={MapStyle}>
-          <Marker
-            style={style.imagenServices}
-            coordinate={{
-              latitude: 19.256205,
-              longitude: -103.715864,
-            }}
-            image={marker_store}
-            onPress={() => setMarkerSelection('Store')}>
-            <Callout tooltip onPress={() => setModalVisible(true)}>
-              <CustomCallot image={marker_store} txtColor={Colors.BlueStore} />
-            </Callout>
-          </Marker>
-          <Marker
-            style={style.imagenServices}
-            coordinate={{
-              latitude: 19.261146,
-              longitude: -103.705776,
-            }}
-            image={marker_food}
-            onPress={() => setMarkerSelection('Food')}>
-            <Callout tooltip onPress={() => setModalVisible(true)}>
-              <CustomCallot image={marker_food} txtColor={Colors.YellowFood} />
-            </Callout>
-          </Marker>
-          <Marker
-            style={style.imagenServices}
-            coordinate={{
-              latitude: 19.263768,
-              longitude: -103.715017,
-            }}
-            image={marker_service}
-            onPress={() => setMarkerSelection('Service')}>
-            <Callout tooltip onPress={() => setModalVisible(true)}>
-              <CustomCallot
-                image={marker_service}
-                txtColor={Colors.OrangeService}
-              />
-            </Callout>
-          </Marker>
+          {storesData.map(data => (
+            <Marker
+              key={data.id}
+              style={style.imagenServices}
+              coordinate={{
+                latitude: data.latitud,
+                longitude: data.longitud,
+              }}
+              image={
+                data.business_line === 'Services'
+                  ? marker_service
+                  : data.business_line === 'Food'
+                  ? marker_food
+                  : marker_store
+              }
+              onPress={() => dataHandler(data.business_line,data)}>
+              <Callout tooltip onPress={() => setModalVisible(true)}>
+                <CustomCallot
+                  image={
+                    data.business_line === 'Services'
+                      ? marker_service
+                      : data.business_line === 'Food'
+                      ? marker_food
+                      : marker_store
+                  }
+                  txtColor={
+                    data.business_line === 'Services'
+                  ? Colors.OrangeService
+                  : data.business_line === 'Food'
+                  ? Colors.YellowFood
+                  : Colors.BlueStore
+                  }
+                  textDescription={data.business_name}
+                />
+              </Callout>
+            </Marker>
+          ))}
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>
