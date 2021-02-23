@@ -24,7 +24,7 @@ import ModalInfoStore from '../components/modals/ModalInfoStore';
 import Colors from '../src/Colors';
 
 const CustomCallot = (props) => {
-  const {txtColor} = props;
+  const {txtColor,textDescription} = props;
   return (
     <View>
       <View
@@ -49,7 +49,7 @@ const CustomCallot = (props) => {
             marginLeft: 5,
             alignItems: 'center',
           }}>
-          <Text>La fonda de Doña Luisa</Text>
+          <Text>{textDescription}</Text>
           <Text
             style={{
               color: txtColor,
@@ -66,6 +66,7 @@ const CustomCallot = (props) => {
 
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
+  const [details,setDetails] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [storesData, setStoresData] = useState([]);
   const regionMap = {
@@ -79,19 +80,23 @@ const MainScreen = () => {
     fetch('https://bc-tribo-web-staging.herokuapp.com/api/v1/market_places')
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         setStoresData(response);
       })
       .catch((error) => {
         console.error(error);
       });
-  });
+  },[]);
+
+  const dataHandler = (dl,data) => {
+    setMarkerSelection(dl);
+    setDetails(data);
+  }
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
       <ModalInfoStore
+        dataDetail={details}
         modalVisible={modalVisible}
-        serviceType={markerSelection}
         close={() => setModalVisible(!modalVisible)}
       />
       <View style={{zIndex: 0, flexDirection: 'column'}}>
@@ -99,8 +104,9 @@ const MainScreen = () => {
           style={{width: '100%', height: '100%'}}
           region={regionMap}
           customMapStyle={MapStyle}>
-          {storesData.map((data) => {
+          {storesData.map(data => (
             <Marker
+              key={data.id}
               style={style.imagenServices}
               coordinate={{
                 latitude: data.latitud,
@@ -113,7 +119,7 @@ const MainScreen = () => {
                   ? marker_food
                   : marker_store
               }
-              onPress={() => setMarkerSelection(data.business_line)}>
+              onPress={() => dataHandler(data.business_line,data)}>
               <Callout tooltip onPress={() => setModalVisible(true)}>
                 <CustomCallot
                   image={
@@ -130,10 +136,11 @@ const MainScreen = () => {
                   ? Colors.YellowFood
                   : Colors.BlueStore
                   }
+                  textDescription={data.business_name}
                 />
               </Callout>
-            </Marker>;
-          })}
+            </Marker>
+          ))}
         </MapView>
       </View>
       <View elevation={7} style={[style.navDireccion, style.navBar]}>

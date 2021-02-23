@@ -64,7 +64,7 @@ function TypesContent(props) {
         style={[
           serviceType === 'Food'
             ? styles.foodPin
-            : serviceType === 'Service'
+            : serviceType === 'Services'
             ? styles.servicePin
             : styles.storePin,
         ]}
@@ -75,8 +75,7 @@ function TypesContent(props) {
 }
 
 function ModalInfoStore(props) {
-  const {serviceType, storeID} = props;
-  // const [modalVisible, setModalVisible] = useState(false);
+  const {dataDetail} = props;
 
   return (
     <>
@@ -100,24 +99,24 @@ function ModalInfoStore(props) {
                   <Image
                     style={styles.iconMapsPin}
                     source={
-                      serviceType === 'Food'
+                      dataDetail.business_line === 'Food'
                         ? marker_food
-                        : serviceType === 'Service'
+                        : dataDetail.business_line === 'Services'
                         ? marker_service
                         : marker_store
                     }
                   />
                 </View>
                 <Description
-                  title={'La tiendita de Don Memo'}
-                  information={'Tienda de abarrotes, frutas y verduras'}
+                  title={dataDetail.business_name}
+                  information={dataDetail.selling}
                   style={styles.descriptionLeft}
                 />
               </View>
               <ScrollView>
                 <View>
                   <Text style={styles.infoText}>
-                    {ContentText.textMyAccountScreenServicio}
+                    {dataDetail.service_days}
                   </Text>
                   <Text style={styles.infoText}>
                     {ContentText.textMyAccountScreenHorario}
@@ -129,7 +128,7 @@ function ModalInfoStore(props) {
                       title={TitlesText.titleStoreInfoAddress}
                     />
                     <Text style={{fontSize: 16}}>
-                      {ContentText.textoStoreInformationScreenDireccion}
+                      {dataDetail.address}
                     </Text>
                   </View>
                   <View style={{marginBottom: 15}}>
@@ -140,12 +139,12 @@ function ModalInfoStore(props) {
                     />
                     <TypesContent
                       icon={PickupProduct}
-                      serviceType={serviceType}
+                      serviceType={dataDetail.business_line}
                       text={ContentText.textoStoreInformationRecogerProducto}
                     />
                     <TypesContent
                       icon={DeliveryIcon}
-                      serviceType={serviceType}
+                      serviceType={dataDetail.business_line}
                       text={ContentText.textoStoreInformationEnvioADomicilio}
                     />
                   </View>
@@ -157,12 +156,12 @@ function ModalInfoStore(props) {
                     />
                     <TypesContent
                       icon={Cash}
-                      serviceType={serviceType}
+                      serviceType={dataDetail.business_line}
                       text={ContentText.textoStoreInformationEfectivo}
                     />
                     <TypesContent
                       icon={Card}
-                      serviceType={serviceType}
+                      serviceType={dataDetail.business_line}
                       text={ContentText.textoStoreInformationTarjeta}
                     />
                   </View>
