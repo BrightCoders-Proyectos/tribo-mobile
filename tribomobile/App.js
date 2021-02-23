@@ -19,6 +19,10 @@ import RegisterMarket from './screens/RegisterMarket';
 import RegistrationScreen from './screens/RegistrationScreen';
 import EditAccountScreen from './screens/profile/EditAccountScreen';
 import MainScreen from './components/MainScreen';
+
+//import ModalInfoStore from './components/modals/ModalInfoStore';
+import SignUpScreen from './components/screens/welcome/SignUpScreen'
+//impot //textInputNull
 import ModalNotFound from './components/modals/ModalNotFound';
 import {
   ModalDeleteStoreOrAccount,
@@ -36,7 +40,6 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/* <LittlePinInfo/> */}
         <MainScreen/>
       </SafeAreaView>
     </>
