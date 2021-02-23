@@ -28,6 +28,8 @@ export default TitlesText = {
   //Store info
   titleStoreInfoAddress: 'Dirección:',
   titleStoreInfoPhone: 'Teléfono',
+  titleStoreInfoTiposEntrega: 'Tipo(s) de entrega:',
+  titleStoreInfoTiposPagos: 'Acepta pagos con:',
   //SideNavScreen
   titleSideNavRegister: 'Regístrate/Mi Cuenta',
   titleSideNavTerms: 'Términos y condiciones',
@@ -72,6 +74,7 @@ export default TitlesText = {
   titleFAQFunciona: '¿Cómo funciona la plataforma?',
   //Randoms
   titleRecomendations: 'Recomendaciones para el aislamiento preventivo',
+  titleBussinessNotFound: 'Oops, parece que no hay nada aquí aún',
   //delete
   titleDeleteBusiness: 'Eliminar tu negocio',
   titleDeleteAccount: 'Eliminar tu cuenta',

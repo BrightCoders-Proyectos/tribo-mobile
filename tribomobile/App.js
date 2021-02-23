@@ -8,7 +8,7 @@
 
 import React from 'react';
 import {SafeAreaView, Text, StatusBar, Modal} from 'react-native';
-import titlesText from './src/TitlesText';
+import TitlesText from './src/TitlesText';
 import ContentText from './screensText/ContentText';
 import LogoTribo from './components/LogoTribo';
 import ExampleButtons from './ExampleButtons';
@@ -18,7 +18,8 @@ import SideNavScreen from './screens/SideNavScreen';
 import RegisterMarket from './screens/RegisterMarket';
 import RegistrationScreen from './screens/RegistrationScreen';
 import EditAccountScreen from './screens/profile/EditAccountScreen';
-
+import MainScreen from './components/MainScreen';
+import ModalNotFound from './components/modals/ModalNotFound';
 import {
   ModalDeleteStoreOrAccount,
   ModalDeleteTexts,
@@ -34,9 +35,10 @@ const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <NavigationContainer>
-        <Navigation />
-      </NavigationContainer>
+      <SafeAreaView>
+        {/* <LittlePinInfo/> */}
+        <MainScreen/>
+      </SafeAreaView>
     </>
   );
 };

@@ -16,32 +16,35 @@ const MenuComp = (props) => {
   const options = [
     TitlesText.title_1,
     TitlesText.title_2,
-    TitlesText.title_3, 
+    TitlesText.title_3,
     TitlesText.title_4,
-    TitlesText.title_5
-  ]; 
+    TitlesText.title_5,
+  ];
 
-    
-  return(
-    
-    <View style={{width: '80 %', height: '100%', backgroundColor: '#197d94',marginTop: 0, marginLeft: -16, borderTopRightRadius: 24}}>
-      <Pressable 
-        style={{ alignSelf: 'flex-end',marginTop: 24, marginRight: 24}}
-        onPress={props.tap}
-      >
+  return (
+    <View
+      style={{
+        width: '80 %',
+        windowHeight: '100%',
+        backgroundColor: '#197d94',
+        marginTop: 0,
+        marginLeft: -16,
+        borderTopRightRadius: 24,
+        zIndex:2,
+      }}>
+      <Pressable
+        style={{alignSelf: 'flex-end', marginTop: 24, marginRight: 24}}
+        onPress={props.tap}>
         <FontAwesomeIcon icon={faTimes} size={30} color={'white'} />
       </Pressable>
-      <View style={{ width: '100%', height: 180}}>
+      <View style={{width: '100%', height: 180}}>
         <LogoTribo width={'100%'} height={150} line={false} sideNav={true} />
       </View>
-      
-      {options.map((item) => 
-        <SideBarOption
-          textBold={item}
-        /> 
-      )}
-      <ClicableLink/>
 
+      {options.map((item) => (
+        <SideBarOption textBold={item} />
+      ))}
+      <ClicableLink />
     </View>
   );
 };

@@ -42,6 +42,10 @@ export default ContentText = {
   textoStoreInformationScreenTelefono: '333 333 333',
   textoStoreInformationScreenButtonLlamar: 'Llamar por Teléfono',
   textoStoreInformationScreenButtonEnvía: 'Envía un mensaje',
+  textoStoreInformationRecogerProducto: 'Recoger Producto',
+  textoStoreInformationEnvioADomicilio:'Envío a domicilio',
+  textoStoreInformationEfectivo: 'Efectivo',
+  textoStoreInformationTarjeta: 'Tarjeta de débito/crédito',
   //SideNavScreen
   textoSideNavScreenRecomendaciones:
     'Recomendaciones para el aislamiento preventivo',
@@ -132,6 +136,9 @@ export default ContentText = {
   food: 'Comida',
   product: 'Productos',
   service: 'Servicios',
+  //Modal not found
+  textModalNotFound: 'No pudimos encontrar negocios en el área, intenta probar con una dirección diferente',
+  textModalNotFoundButton: 'Ingresa otra dirección',
   //NavBartext
   title_1: 'Regístrate/Mi cuenta',
   title_2: '#QuédateEnCasa',

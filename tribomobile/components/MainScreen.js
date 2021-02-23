@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
+import MapView, {Marker, Callout} from 'react-native-maps';
 import menuImage from '../assets/menuImage.png';
 import marker_food from '../assets/marker_food.png';
 import food from '../assets/food.png';
@@ -20,50 +20,110 @@ import MapStyle from './MapStyle';
 import string from '../screensText/ContentText';
 import IconNav from './IconNav';
 import BtnHideShowMenu from '../components/BtnHideShowMenu';
+import ModalInfoStore from '../components/modals/ModalInfoStore';
+import Colors from '../src/Colors';
+
+const CustomCallot = (props) => {
+  const {txtColor} = props;
+  return (
+    <View>
+      <View
+        style={{
+          backgroundColor: 'white',
+          width: 150,
+          height: 110,
+          flexDirection: 'row',
+          borderRadius: 10,
+          padding: 6,
+        }}>
+        <Text>
+          <Image source={props.image} style={{width: 45, height: 60}} />
+        </Text>
+        <View
+          style={{
+            flex: 1,
+            width: '100%',
+            height: '100%',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            marginLeft: 5,
+            alignItems: 'center',
+          }}>
+          <Text>La fonda de Doña Luisa</Text>
+          <Text
+            style={{
+              color: txtColor,
+            }}>
+            + info <Text style={[{fontSize: 20}]}>{`-->`}</Text>{' '}
+          </Text>
+        </View>
+      </View>
+      <View style={style.arrowBorder}></View>
+      <View style={style.arrow}></View>
+    </View>
+  );
+};
 
 const MainScreen = () => {
   const [markerSelection, setMarkerSelection] = useState('');
-
+  const [modalVisible, setModalVisible] = useState(false);
   const regionMap = {
     latitude: 19.256127,
     longitude: -103.713536,
-    latitudeDelta: 0.08,
-    longitudeDelta: 0.07,
+    latitudeDelta: 0.04,
+    longitudeDelta: 0.03,
   };
 
   return (
     <View sylte={{position: 'absolute', flexDirection: 'row'}}>
+      <ModalInfoStore
+        modalVisible={modalVisible}
+        serviceType={markerSelection}
+        close={() => setModalVisible(!modalVisible)}
+      />
       <View style={{zIndex: 0, flexDirection: 'column'}}>
         <MapView
           style={{width: '100%', height: '100%'}}
           region={regionMap}
           customMapStyle={MapStyle}>
           <Marker
+            style={style.imagenServices}
             coordinate={{
               latitude: 19.256205,
               longitude: -103.715864,
             }}
-            title={string.product}
-            onPress={() => setMarkerSelection('store')}>
-            <Image source={marker_store} style={style.imagenServices} />
+            image={marker_store}
+            onPress={() => setMarkerSelection('Store')}>
+            <Callout tooltip onPress={() => setModalVisible(true)}>
+              <CustomCallot image={marker_store} txtColor={Colors.BlueStore} />
+            </Callout>
           </Marker>
           <Marker
+            style={style.imagenServices}
             coordinate={{
               latitude: 19.261146,
               longitude: -103.705776,
             }}
-            title={string.food}
-            onPress={() => setMarkerSelection('food')}>
-            <Image source={marker_food} style={style.imagenServices} />
+            image={marker_food}
+            onPress={() => setMarkerSelection('Food')}>
+            <Callout tooltip onPress={() => setModalVisible(true)}>
+              <CustomCallot image={marker_food} txtColor={Colors.YellowFood} />
+            </Callout>
           </Marker>
           <Marker
+            style={style.imagenServices}
             coordinate={{
-              latitude: 19.273768,
+              latitude: 19.263768,
               longitude: -103.715017,
             }}
-            title={string.service}
-            onPress={() => setMarkerSelection('service')}>
-            <Image source={marker_service} style={style.imagenServices} />
+            image={marker_service}
+            onPress={() => setMarkerSelection('Service')}>
+            <Callout tooltip onPress={() => setModalVisible(true)}>
+              <CustomCallot
+                image={marker_service}
+                txtColor={Colors.OrangeService}
+              />
+            </Callout>
           </Marker>
         </MapView>
       </View>
@@ -76,19 +136,19 @@ const MainScreen = () => {
           image={food}
           text={string.food}
           markerSelection={markerSelection}
-          name={'food'}
+          name={'Food'}
         />
         <IconNav
           image={store}
           text={string.product}
           markerSelection={markerSelection}
-          name={'store'}
+          name={'Store'}
         />
         <IconNav
           image={service}
           text={string.service}
           markerSelection={markerSelection}
-          name={'service'}
+          name={'Service'}
         />
       </View>
     </View>
@@ -105,18 +165,19 @@ const style = StyleSheet.create({
   },
   navDown: {
     width: '80%',
-    height: '8%',
+    height: '10%',
     marginLeft: Dimensions.get('window').width / 10,
-    marginTop: Dimensions.get('window').height / 1.099,
+    marginTop: Dimensions.get('window').height / 1.14,
     backgroundColor: 'white',
     zIndex: 2,
     position: 'absolute',
     borderRadius: 7,
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   navBar: {
-    marginTop: 10,
+    //marginTop: 10,
   },
   iconsDown: {
     padding: 10,
@@ -149,8 +210,24 @@ const style = StyleSheet.create({
     marginLeft: 15,
   },
   imagenServices: {
-    width: 15,
-    height: 20,
+    width: 30,
+    height: 40,
+  },
+  arrow: {
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+    borderTopColor: '#fff',
+    borderWidth: 16,
+    alignSelf: 'center',
+    marginTop: -32,
+  },
+  arrowBorder: {
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+    borderTopColor: '#007a87',
+    borderWidth: 16,
+    alignSelf: 'center',
+    marginTop: -0.5,
   },
 });
 

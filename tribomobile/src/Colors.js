@@ -16,5 +16,8 @@ const Colors = {
   OrangeDark: '#fe8500',
   Yellow: '#FFCA00',
   White: '#ffffff',
+  BlueStore:'#29335C',
+  OrangeService:'#FFCF87',
+  YellowFood:'#EFD13B'
 };
 export default Colors;
